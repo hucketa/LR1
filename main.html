@@ -2,63 +2,50 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Моя перша сторінка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <meta name="description" content="Особистий сайт Гуненко Ярослава - портфоліо веб-розробника">
+    <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
+    <title>Головна - ЛР2</title>
 </head>
 <body>
-    <h1>Лабораторна робота Гуненко ПЗ01-24т 2026</h1>
-        <h2 >Про мене</h2>
-    <p class="about">Мене звати <b>Гуненко Ярослав</b>. Я вивчаю веб-технології та створюю свою першу HTML-сторінку.</p>
-    <p class="about">Це дуже захоплюючий процес вивчення основ веб-розробки!</p>
-    <p class="about">Я вивчаю <abbr title="HyperText Markup Language">HTML</abbr> та інші веб-технології.</p>
-    <blockquote>
-        <p>"Подорож у тисячу миль починається з одного кроку."</p>
-        <cite>— Лао-цзи</cite>
-    </blockquote>
-    <div class="lists">
-    <div class="lists_member">
-        <h2 class="List_name">Мої захоплення</h2>
-        <ul>
-        <li>Читання книг</li>
-        <li>Волейбол</li>
-        <li>Вивчення нових технологій</li>
-        <li>Відеоігри</li>
-        <li>Вивчення іноземних мов</li>
-        </ul>
-    </div>
-    <div class="lists_member">
-        <h2 class="List_name">Мої цілі у вивченні веб-технологій</h2>
-    <ol>
-        <li>Оволодіти основами HTML</li>
-        <li>Навчитися створювати веб-сторінки</li>
-        <li>Працювати з CSS для стилізації сторінок</li>
-    </ol>
-    </div>
-    <div class="lists_member">
-         <h2 class="List_name">Плани на місяць</h2>
-    <ol>
-        <li>Виконати лабораторні роботи у вказанні терміни</li>
-        <li>Освоїти навчальну програму</li>
-        <li>Покращити навички програмування</li>
-    </ol>
-    </div>
-    </div>     
-    <hr>
-    <h2 id="links_name">Як зі мною зв'язатися</h2>
-    <div id="links">
-           <p>Email: <strong>gunenkoym@gmail.com</strong></p>
-        <p>Телефон: <em>+38 (099) 123-45-67</em></p>
-    </div>  
-    <hr>
-    <h2>Корисне посилання</h2>
-    <div id="w3links">
-        <p>Вивчаю веб-технології на сайті:
-        <a href="https://www.w3schools.com/tags/" target="_blank">W3School</a>
-        </p>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main>
+        <section id="welcome">
+            <h2>Ласкаво просимо на мій сайт!</h2>
+            <p>Я вивчаю веб-технології та створюю свої перші проекти. Цей сайт - мій навчальний проект, де я практикую HTML, CSS та
+JavaScript.</p>
+            <img src="images/photo1.jpg" alt="Моя фотографія" width="200" height="150">
+        </section>
+        <section id="news">
+            <h2>Останні досягнення</h2>
+            <article>
+                <h3>Завершив перший HTML-проект</h3>
+                <time datetime="2026-02-15">15 лютого 2026</time>
+                <p>Сьогодні я завершив своє перше практичне завдання з HTML. Створив базову структуру веб-сторінки та навчився
+працювати з основними тегами.</p>
+            </article>
+        <article>
+            <h3>Почав вивчати CSS</h3>
+            <time datetime="2026-03-1">1 березня 2026</time>
+            <p>Розпочав вивчення стилізації веб-сторінок. Дуже цікаво, як можна змінювати зовнішній вигляд елементів!</p>
+        </article>
+        </section>
+    </main>
     <footer>
-        <p> 2026 Гуненко Ярослав. Всі права захищені<sup>&copy;</sup>.</p>
+        <p>&copy; 2026 Гуненко Ярослав ПЗ01-24т. Усі права захищені.</p>
+        <address>
+        Email: <a href="mailto:gunenkoym@gmail.com">gunenkoym@gmail.com</a>
+        </address>
     </footer>
 </body>
 </html>

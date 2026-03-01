@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Мій особистий сайт</title>
+</head>
+<body>
+    <header>
+        <h1>Контакти</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про мене</a></li>
+            <li><a href="portfolio.html">Портфоліо</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="blog.html">Блог</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="contact-info">
+        <h2>Як зі мною зв'язатися</h2>
+        <address>
+            <p><strong>Email:</strong> <a href="mailto:gunenkoym@gmail.com">gunenkoym@gmail.com</a></p>
+            <p><strong>Телефон:</strong> <a href="tel:+380967825712">+38 (096) 782-57-12</a></p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/HucketaMeowUA" target="_blank">Мій телеграм</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hunenko-yaroslav-0339951b2/" target="_blank">Мій профіль</a></p>
+        </address>
+    </section>
+
+    <section id="contact-form">
+        <h2>Напишіть мені</h2>
+        <form action="#" method="post">
+        <fieldset>
+            <legend>Особиста інформація</legend>
+            <label for="name">Ім'я *:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email *:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone">
+        </fieldset>
+        <fieldset>
+            <legend>Повідомлення</legend>
+            <label for="subject">Тема:</label>
+            <select id="subject" name="subject">
+                <option value="">Оберіть тему</option>
+                <option value="collaboration">Співпраця</option>
+                <option value="feedback">Відгук</option>
+                <option value="question">Питання</option>
+                <option value="other">Інше</option>
+            </select>
+            <label for="priority">Пріоритет:</label>
+            <input type="radio" id="low" name="priority" value="low">
+            <label for="low">Низький</label>
+            <input type="radio" id="medium" name="priority" value="medium" checked>
+            <label for="medium">Середній</label>
+            <input type="radio" id="high" name="priority" value="high">
+            <label for="high">Високий</label>
+            <label for="message">Текст повідомлення *:</label>
+            <textarea id="message" name="message" rows="5" cols="40" required
+placeholder="Введіть ваше повідомлення тут..."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Додаткові опції</legend>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="newsletter">Підписатися на новини</label>
+            <input type="checkbox" id="copy" name="copy" value="yes">
+            <label for="copy">Отримати копію листа</label>
+        </fieldset>
+            <button type="submit">Надіслати повідомлення</button>
+            <button type="reset">Очистити форму</button>
+        </form>
+    </section>
+    <section id="faq">
+        <h2>Часті питання</h2>
+        <dl>
+            <dd>Зазвичай я відповідаю протягом 24 годин у робочі дні.</dd>
+            <dt>Чи можна замовити у вас сайт?</dt>
+            <dd>Поки що я тільки вивчаю веб-розробку, але буду радий обговорити прості проекти для практики.</dd>
+            <dt>Які технології ви використовуєте?</dt>
+            <dd>Зараз я вивчаю HTML, CSS та готуюся до JavaScript. Планую освоїти React та Node.js.</dd>
+        </dl>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 Гуненко Ярослав. Усі права захищені.</p>
+    <p><small>Форма поки не працює - це навчальний проект</small></p>
+</footer>
+</body>
+</html>
