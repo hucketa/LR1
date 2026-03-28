@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Мої контакти для зв'язку та співпраці. Зв'яжіться зі мною через email, телефон або соціальні мережі. Я відкритий до нових можливостей та співпраці в сфері веб-розробки.">
     <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <title>Контакти - Мій особистий сайт</title>
 </head>
 <body>
@@ -33,7 +37,7 @@
 
     <section id="contact-form">
         <h2>Напишіть мені</h2>
-        <form action="#" method="post">
+        <form action="#" method="get">
         <fieldset>
             <legend>Особиста інформація</legend>
             <label for="name">Ім'я *:</label>
@@ -41,7 +45,8 @@
             <label for="email">Email *:</label>
             <input type="email" id="email" name="email" required>
             <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone">
+            <!-- <input type="tel" id="phone" name="phone"> -->
+            <input type="tel" id="phone" name="phone" required pattern="[0-9+\-\s]{10,}" placeholder="+380XXXXXXXXX">
         </fieldset>
         <fieldset>
             <legend>Повідомлення</legend>

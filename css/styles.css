@@ -1,0 +1,804 @@
+/* ======================
+БАЗОВІ СТИЛІ ТА ОБНУЛЕННЯ
+====================== */
+/* Обнулення стандартних відступів */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Базові стилі для html та body */
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman',
+    serif; 
+    color: #333333;
+    background-color:#ffffff;
+    /*color: var(--text-color);
+    background-color: var(--bg-color);*/ 
+}
+
+/* Стилі для зображень*/ 
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Стилі для посилань*/
+
+a {
+    color: #2c5aa0;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #1a3d73;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #5d4e75;
+}
+
+/* Стилі для кнопок */
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ======================
+        ШАПКА САЙТУ
+====================== */
+
+header {
+    background: linear-gradient(135deg, #2c5aa0 0%, #1a3d73 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0,0.1); 
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0,0.3); 
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ======================
+НАВІГАЦІЙНЕ МЕНЮ
+====================== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 2px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+nav a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ======================
+ОСНОВНИЙ КОНТЕНТ
+====================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.8;
+}
+
+/* Секції */
+
+section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.1); 
+}
+
+section:nth-child(even) {
+    background-color:#e9ecef; 
+}
+
+/* Заголовки */
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #2c5aa0;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #1a3d73;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%); 
+    width:4px;
+    height: 100%;
+    background-color:#2c5aa0; 
+    border-radius:2px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #495057;
+    margin-bottom:0.75rem;
+    margin-top: 1.5rem;
+}
+/* Параграфи */
+p {
+    margin-bottom:1rem;
+    text-align: justify;
+}
+
+/* Виділення тексту*/
+
+strong {
+    color: #2c5aa0;
+    font-weight:bold;
+}
+
+em {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Час та адреса*/
+time {
+    color: #6c757d;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+address {
+    font-style: normal;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+
+/* ======================
+СПИСКИ
+====================== */
+
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-bottom:0.5rem;
+     padding-left:0.5rem;
+}
+
+ol li {
+    margin-bottom:0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* Стилі для списку навичок*/
+
+#skills ul li, #hobbies ol li {
+    background-color: white;
+    padding: 0.75rem;
+    margin-bottom:0.5rem;
+    border-radius:5px;
+    border-left: 4px solid #2c5aa0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0,0.1);
+    list-style: none;
+    margin-left: 0;
+}
+
+/* Список визначень */
+
+dl {
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+dd {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* ======================
+ТАБЛИЦІ
+====================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.1); 
+}
+
+caption {
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; 
+}
+
+th {
+    background-color: #2c5aa0;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+tfoot td {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+/*======================
+ФОРМИ
+====================== */
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+fieldset {
+    border: 2px solid #e9ecef; 
+    border-radius:5px;
+    padding: 1.5rem;
+    margin-bottom:1.5rem; 
+}
+
+legend {
+    background-color:#2c5aa0;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Стилі для полів вводу */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2c5aa0;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160,0.1); 
+}
+
+/* Радіо кнопки та чекбокси */
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+/* Радіо кнопки в рядок */
+
+input[type="radio"] + label {
+    display: inline;
+    margin-right: 1rem;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Чекбокси */
+input[type="checkbox"] + label
+{ 
+    display: inline;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Textarea */
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Кнопки */
+
+button {
+    background-color: #2c5aa0;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a3d73;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0,0.2); 
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+/* ======================
+СПЕЦІАЛЬНІ ЕЛЕМЕНТИ
+====================== */
+
+/* Розгортувані деталі */
+
+details {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+summary {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2c5aa0;
+    user-select: none;
+    transition: background-color 0.3s ease; 
+}
+
+summary:hover {
+    background-color: #e9ecef;
+}
+
+details[open] summary {
+    background-color: #2c5aa0;
+    color: white;
+}
+
+details p {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Статті в портфоліо */
+.project {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.project:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.15); 
+}
+
+.project img {
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+/* ======================
+        ПІДВАЛ САЙТУ
+====================== */
+
+footer {
+    background-color: #343a40; 
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom:
+    0.5rem; 
+}
+
+footer a {
+    color: #adb5bd;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer small {
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+/* ======================
+    ДОДАТКОВІ СТИЛІ
+====================== */
+
+/* Горизонтальна лінія */
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #2c5aa0, transparent);
+    margin: 2rem 0;
+}
+/* Цитати */
+blockquote {
+    background-color: #f8f9fa;
+    border-left: 4px solid #2c5aa0;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    position: relative;
+}
+
+blockquote::before {
+    content: "\"";;
+    font-size: 4rem;
+    color: #2c5aa0;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.3;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* Скорочення */
+
+abbr {
+    border-bottom: 2px dotted #2c5aa0;
+    cursor: help;
+}
+
+/* Анімація для зображень */
+
+#welcome img,
+#bio img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin: 1rem auto;
+}
+
+#welcome img:hover,
+#bio img:hover {
+transform: scale(1.05) rotate(2deg); 
+}
+
+/* Responsive зображення в проектах*/
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    display: block;
+}
+
+
+
+
+
+
+
+:root {
+    --primary-color: #2c5aa0;
+    --secondary-color: #1a3d73;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f8f9fa;
+}
+
+/* Темна тема */
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --primary-color: #4dabf7;
+    --secondary-color: #339af0;
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    }
+}
+
+
+
+/* ======================
+ЯСКРАВА АНІМАЦІЯ ЗАВАНТАЖЕННЯ
+====================== */
+@keyframes zoomFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+main {
+    animation: zoomFadeIn 1s ease-out;
+}
+
+/* ======================
+ВАЛІДАЦІЯ ФОРМИ
+====================== */
+
+/* Общий стиль перехода */
+input, textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ВАЛИДНОЕ поле (только если пользователь что-то ввёл) */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+}
+
+/* НЕВАЛИДНОЕ поле (только если пользователь начал ввод) */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Фокус на невалидном поле */
+input:focus:invalid:not(:placeholder-shown),
+textarea:focus:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+/* Фокус на валидном поле */
+input:focus:valid:not(:placeholder-shown),
+textarea:focus:valid:not(:placeholder-shown) {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* ======================
+ДОМАШНЄ ЗАВДАННЯ
+1. Градієнти для секцій
+2. Hover-ефекти для карток проєктів
+3. Google Fonts
+4. CSS-змінні для кольорів та розмірів
+====================== */
+
+/* CSS-змінні */
+:root {
+    --home-primary: #2c5aa0;
+    --home-secondary: #1a3d73;
+    --home-accent: #6ea8ff;
+    --home-soft-blue: #eaf3ff;
+    --home-soft-violet: #f1ecff;
+    --home-soft-mint: #e9f9f1;
+    --home-text: #2f3742;
+
+    --home-radius-sm: 6px;
+    --home-radius-md: 10px;
+    --home-radius-lg: 16px;
+
+    --home-shadow-sm: 0 4px 10px rgba(44, 90, 160, 0.10);
+    --home-shadow-md: 0 8px 20px rgba(44, 90, 160, 0.16);
+    --home-shadow-lg: 0 14px 30px rgba(44, 90, 160, 0.22);
+
+    --home-transition: 0.35s ease;
+}
+
+/* Шрифти з Google Fonts */
+body {
+    font-family: 'Source Serif 4', serif;
+    color: var(--home-text);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+nav a,
+button,
+legend,
+caption {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+/* 1. Градієнти до фонів секцій */
+section {
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(234, 243, 255, 0.96) 52%,
+            rgba(223, 240, 255, 0.96) 100%);
+    border-radius: var(--home-radius-lg);
+    box-shadow: var(--home-shadow-sm);
+    border: 1px solid rgba(44, 90, 160, 0.08);
+}
+
+section:nth-child(even) {
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(241, 236, 255, 0.94) 50%,
+            rgba(233, 249, 241, 0.94) 100%);
+}
+
+/* 2. Hover-ефекти для карток проектів */
+.project {
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(234, 243, 255, 0.95) 55%,
+            rgba(241, 236, 255, 0.92) 100%);
+    border: 1px solid rgba(44, 90, 160, 0.12);
+    border-radius: var(--home-radius-lg);
+    box-shadow: var(--home-shadow-sm);
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform var(--home-transition),
+        box-shadow var(--home-transition),
+        border-color var(--home-transition);
+}
+
+.project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--home-primary), var(--home-accent), #8f7bff);
+    transition: left 0.45s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--home-shadow-lg);
+    border-color: rgba(44, 90, 160, 0.28);
+}
+
+.project:hover::before {
+    left: 0;
+}
+
+.project h3 {
+    transition: color var(--home-transition), transform var(--home-transition);
+}
+
+.project:hover h3 {
+    color: var(--home-secondary);
+    transform: translateX(4px);
+}
+
+.project img {
+    border-radius: var(--home-radius-md);
+    transition: transform var(--home-transition), box-shadow var(--home-transition), filter var(--home-transition);
+    box-shadow: var(--home-shadow-sm);
+}
+
+.project:hover img {
+    transform: scale(1.05);
+    box-shadow: var(--home-shadow-md);
+    filter: saturate(1.08);
+}
