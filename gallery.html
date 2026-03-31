@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - Мій особистий сайт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <header>
+        <h1>Галерея робіт</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Перейти на головну сторінку">Головна</a></li>
+                <li><a href="about.html" data-tooltip="Дізнатися більше про мене">Про мене</a></li>
+                <li><a href="portfolio.html" data-tooltip="Переглянути мої роботи">Портфоліо</a></li>
+                <li><a href="gallery.html" data-tooltip="Відкрити фотогалерею">Галерея</a></li>
+                <li><a href="contact.html" data-tooltip="Перейти до контактів і форми">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+  <aside class="sticky-note">
+    <h4>Навігація</h4>
+    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+    </aside>
+    <main>
+        <!-- Демонстрація Box Model -->
+        <section class="box-demo">
+            <h2>Розуміння CSS Box Model</h2>
+
+            <div class="box-visual">
+                <div style="background-color: #4caf50; padding: 10px; margin: 10px; color: white;">
+                    CONTENT
+                </div>
+                <small>PADDING</small>
+            </div>
+
+            <h3>Порівняння box-sizing</h3>
+
+            <div class="box-example box-content-box">
+                <strong>content-box</strong><br>
+                Загальна ширина: 250px<br>
+                (200px + 20px + 20px + 5px + 5px)
+            </div>
+
+            <div class="box-example box-border-box">
+                <strong>border-box</strong><br>
+                Загальна ширина: 200px<br>
+                (включає padding і border)
+            </div>
+        </section>
+
+        <!-- Галерея з позиціонуванням -->
+        <section id="image-gallery">
+            <h2>Моя фотогалерея</h2>
+
+            <div class="relative-container">
+                <div class="decorative-element">1</div>
+                <h3>Природа</h3>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gallery1.jpg" alt="Фото природи 1">
+                        <div class="gallery-overlay">
+                            <h4>Захід сонця</h4>
+                            <p>Красивий захід над озером</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/gallery2.jpg" alt="Фото природи 2">
+                        <div class="gallery-overlay">
+                            <h4>Гори</h4>
+                            <p>Ранковий туман в горах</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative-container">
+                <div class="decorative-element">2</div>
+                <h3>Архітектура</h3>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gallery3.jpg" alt="Архітектура 1">
+                        <div class="gallery-overlay">
+                            <h4>Сучасний будинок</h4>
+                            <p>Мінімалістичний дизайн</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/gallery4.jpg" alt="Архітектура 2">
+                        <div class="gallery-overlay">
+                            <h4>Історична будівля</h4>
+                            <p>Архітектура 19 століття</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-box" id="image-gallery">
+            <h2>Моя фотогалерея</h2>
+
+            <div class="float-container clearfix">
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <a href="#modal1">
+                            <img src="images/mygallery/gallery1.jpg" alt="Фото 1">
+                            <div class="gallery-overlay"><h4>Фото 1</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal2">
+                            <img src="images/mygallery/gallery2.jpg" alt="Фото 2">
+                            <div class="gallery-overlay"><h4>Фото 2</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal3">
+                            <img src="images/mygallery/gallery3.jpg" alt="Фото 3">
+                            <div class="gallery-overlay"><h4>Фото 3</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal4">
+                            <img src="images/mygallery/gallery4.jpg" alt="Фото 4">
+                            <div class="gallery-overlay"><h4>Фото 4</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal5">
+                            <img src="images/mygallery/gallery5.jpg" alt="Фото 5">
+                            <div class="gallery-overlay"><h4>Фото 5</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal6">
+                            <img src="images/mygallery/gallery6.jpg" alt="Фото 6">
+                            <div class="gallery-overlay"><h4>Фото 6</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal7">
+                            <img src="images/mygallery/gallery7.jpg" alt="Фото 7">
+                            <div class="gallery-overlay"><h4>Фото 7</h4></div>
+                        </a>
+                    </div>
+
+                    <div class="gallery-item">
+                        <a href="#modal8">
+                            <img src="images/mygallery/gallery8.jpg" alt="Фото 8">
+                            <div class="gallery-overlay"><h4>Фото 8</h4></div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Модальні вікна -->
+            <div id="modal1" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery1.jpg" alt="Фото 1">
+                    <h3>Фото 1</h3>
+                    <p>Описание для первого изображения.</p>
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery2.jpg" alt="Фото 2">
+                    <h3>Фото 2</h3>
+                    <p>Описание для второго изображения.</p>
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery3.jpg" alt="Фото 3">
+                    <h3>Фото 3</h3>
+                    <p>Описание для третьего изображения.</p>
+                </div>
+            </div>
+            <div id="modal4" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery4.jpg" alt="Фото 4">
+                    <h3>Фото 4</h3>
+                    <p>Описание для четвертого изображения.</p>
+                </div>
+            </div>
+            <div id="modal5" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery5.jpg" alt="Фото 5">
+                    <h3>Фото 5</h3>
+                    <p>Описание для пятого изображения.</p>
+                </div>
+            </div>
+            <div id="modal6" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery6.jpg" alt="Фото 6">
+                    <h3>Фото 6</h3>
+                    <p>Описание для шестого изображения.</p>
+                </div>
+            </div>
+            <div id="modal7" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery7.jpg" alt="Фото 7">
+                    <h3>Фото 7</h3>
+                    <p>Описание для седьмого изображения.</p>
+                </div>
+            </div>
+            <div id="modal8" class="modal">
+                <div class="modal-window">
+                    <a href="#image-gallery" class="modal-close">×</a>
+                    <img src="images/mygallery/gallery8.jpg" alt="Фото 8">
+                    <h3>Фото 8</h3>
+                    <p>Описание для восьмого изображения.</p>
+                </div>
+            </div>
+        <!-- Демонстрація float -->
+        <section id="layout-demo">
+            <h2>Демонстрація Float Layout</h2>
+
+            <div class="float-container clearfix">
+                <div class="float-left">
+                    <h3>Ліва колонка</h3>
+                    <p>
+                        Цей блок використовує float: left. Він займає 30% ширини контейнера.
+                    </p>
+                </div>
+
+                <div class="float-right">
+                    <h3>Права колонка</h3>
+                    <p>
+                        Цей блок використовує float: right. Також займає 30% ширини.
+                    </p>
+                </div>
+
+                <div class="float-center">
+                    <h3>Центральна колонка</h3>
+                    <p>
+                        Центральний блок займає 36% ширини і центрується за допомогою margin: auto.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Sticky sidebar -->
+        <section id="content-with-sidebar">
+            <h2>Контент з бічною панеллю</h2>
+
+            <div class="content-layout">
+                <aside class="sticky-sidebar">
+                    <h3>Швидка навігація</h3>
+                    <ul>
+                        <li><a href="#image-gallery">Галерея</a></li>
+                        <li><a href="#layout-demo">Float демо</a></li>
+                        <li><a href="#positioning-demo">Позиціонування</a></li>
+                    </ul>
+                    <p>
+                        <small>Ця панель залишається на місці при прокрутці</small>
+                    </p>
+                </aside>
+
+                <div class="main-content">
+                    <h3>Основний контент</h3>
+
+                    <p>Це довгий текст, який демонструє роботу sticky позиціонування...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Z-index демонстрація -->
+        <section id="positioning-demo">
+            <h2>Демонстрація Z-Index та шарів</h2>
+
+            <div class="layered-card">
+                <div class="layer-1"></div>
+                <div class="layer-2"></div>
+
+                <div class="layer-content">
+                    <h3>Багатошаровий дизайн</h3>
+                    <p>
+                        Цей контент знаходиться на найвищому шарі (z-index: 3)
+                        і перекриває фонові елементи.
+                    </p>
+                    <p>Фонові шари створюють ефект глибини.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ім'я Прізвище. Усі права захищені.</p>
+    </footer>
+</body>
+</html>

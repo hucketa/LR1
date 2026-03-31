@@ -6,6 +6,7 @@
     <meta name="description" content="Мої контакти для зв'язку та співпраці. Зв'яжіться зі мною через email, телефон або соціальні мережі. Я відкритий до нових можливостей та співпраці в сфері веб-розробки.">
     <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -14,16 +15,20 @@
 <body>
     <header>
         <h1>Контакти</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><a href="portfolio.html">Портфоліо</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-            <li><a href="blog.html">Блог</a></li>
-        </ul>
-    </nav>
+       <nav>
+            <ul>
+                <li><a href="index.html" data-tooltip="Перейти на головну сторінку">Головна</a></li>
+                <li><a href="about.html" data-tooltip="Дізнатися більше про мене">Про мене</a></li>
+                <li><a href="portfolio.html" data-tooltip="Переглянути мої роботи">Портфоліо</a></li>
+                <li><a href="gallery.html" data-tooltip="Відкрити фотогалерею">Галерея</a></li>
+                <li><a href="contact.html" data-tooltip="Перейти до контактів і форми">Контакти</a></li>
+            </ul>
+        </nav>
 </header>
+  <aside class="sticky-note">
+    <h4>Навігація</h4>
+    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+    </aside>
 <main>
     <section id="contact-info">
         <h2>Як зі мною зв'язатися</h2>

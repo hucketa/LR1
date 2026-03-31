@@ -6,6 +6,7 @@
     <meta name="description" content="Портфоліо веб-розробника">
     <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -14,16 +15,20 @@
 <body>
     <header>
         <h1>Мої проекти</h1>
-        <nav>
+       <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="about.html">Про мене</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-                <li><a href="blog.html">Блог</a></li>
+                <li><a href="index.html" data-tooltip="Перейти на головну сторінку">Головна</a></li>
+                <li><a href="about.html" data-tooltip="Дізнатися більше про мене">Про мене</a></li>
+                <li><a href="portfolio.html" data-tooltip="Переглянути мої роботи">Портфоліо</a></li>
+                <li><a href="gallery.html" data-tooltip="Відкрити фотогалерею">Галерея</a></li>
+                <li><a href="contact.html" data-tooltip="Перейти до контактів і форми">Контакти</a></li>
             </ul>
         </nav>
     </header>
+      <aside class="sticky-note">
+    <h4>Навігація</h4>
+    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+    </aside>
     <main>
         <section id="projects">
             <h2>Мої роботи</h2>
@@ -63,6 +68,50 @@
             <li>Форма зворотного зв'язку з JavaScript</li>
         </ul>
     </section>
+    <section id="advanced-layout">
+    <h2>Складний макет</h2>
+
+    <div class="complex-grid">
+        
+        <header class="grid-header">
+            <h3>Заголовок проекту</h3>
+        </header>
+
+        <aside class="grid-sidebar">
+            <h4>Деталі</h4>
+            <ul>
+                <li>Дата: Березень 2024</li>
+                <li>Тип: Навчальний</li>
+                <li>Статус: Завершено</li>
+            </ul>
+        </aside>
+
+        <main class="grid-content">
+            <p>
+                Основний контент проекту з детальним описом...
+            </p>
+
+            <div class="feature-box">
+                <h4>Ключові особливості</h4>
+
+                <div class="feature-item">
+                    <div class="feature-icon"></div>
+
+                    <div class="feature-text">
+                        <h5>Адаптивний дизайн</h5>
+                        <p>Працює на всіх пристроях</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="grid-footer">
+            <button class="btn-primary">Переглянути проект</button>
+            <button class="btn-secondary">Вихідний код</button>
+        </footer>
+
+    </div>
+</section>
 </main>
     <footer>
         <p>&copy; 2026 Гуненко Ярослав. Усі права захищені.</p>

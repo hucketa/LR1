@@ -1,0 +1,1433 @@
+/* ======================
+   CSS BOX MODEL ДЕМОНСТРАЦІЯ
+====================== */
+
+/* Скидання box-sizing для всіх елементів */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Демонстрація різних box-sizing моделей */
+.box-demo {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.box-example {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid #2c5aa0;
+    margin: 20px;
+    background-color: #e3f2fd;
+    display: inline-block;
+    position: relative;
+}
+
+.box-content-box {
+    box-sizing: content-box;
+}
+
+.box-border-box {
+    box-sizing: border-box;
+}
+
+/* Візуалізація частин Box Model */
+.box-visual {
+    background-color: #ffecb3;
+    border: 10px solid #ff9800;
+    padding: 30px;
+    margin: 40px auto;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.box-visual::before {
+    content: "MARGIN";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.box-visual::after {
+    content: "BORDER";
+    position: absolute;
+    top: 5px;
+    right: -60px;
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ======================
+   ВДОСКОНАЛЕНІ КАРТКИ
+====================== */
+
+.card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2c5aa0, #1a3d73);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-footer {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+
+/* ======================
+   ПОЗИЦІОНУВАННЯ
+====================== */
+
+/* Фіксована навігація */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(44, 90, 160, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.fixed-nav.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(44, 90, 160,0.98); 
+}
+
+/* Відступ для контенту при фіксованій навігації */
+body.fixed-header {
+    padding-top: 120px;
+}
+
+/* Відносне позиціонування для контейнерів */
+.relative-container {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Абсолютне позиціонування для декоративних елементів */
+.decorative-element {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #2c5aa0,#1a3d73); 
+    border-radius: 50%;
+    top: -30px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+}
+
+/* Sticky елементи */
+/*.sticky-sidebar {
+    position: sticky;
+    top: 20px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}*/
+
+
+/* ======================
+   STICKY NOTE (ДЛЯ ВСІХ СТОРІНОК)
+====================== */
+
+.sticky-note {
+    position: sticky;
+    top: 20px;
+    float: right;
+    width: 220px;
+    margin: 0 0 1.5rem 1.5rem;
+    background-color: white;
+    padding: 1rem;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* 🔥 слой */
+}
+
+.sticky-note h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2c5aa0;
+}
+
+.sticky-note p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======================
+   Z-INDEX ДЕМОНСТРАЦІЯ
+====================== */
+
+.layer-1 { 
+    z-index: 1; 
+}
+
+.layer-2 { 
+    z-index: 2; 
+}
+
+.layer-content { 
+    z-index: 3; 
+}
+
+.layered-card {
+    position: relative;
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.layer-1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #e3f2fd; 
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.layer-2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #bbdefb; 
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.layer-content {
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0,0.1); 
+}
+
+
+/* ======================
+   FLOAT МАКЕТИ
+====================== */
+
+.float-container {
+    overflow: hidden; 
+    /* clearfix*/ 
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.float-left {
+    float: left;
+    width: 30%;
+    background-color: #e3f2fd; 
+    padding: 1rem;
+    margin-right: 2%;
+    border-radius: 6px;
+}
+
+.float-right {
+    float: right;
+    width: 30%;
+    background-color: #f3e5f5; 
+    padding: 1rem;
+    margin-left: 2%;
+    border-radius: 6px;
+}
+
+.float-center {
+    width: 36%;
+    margin: 0 auto;
+    background-color: #e8f5e8;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+/* Очищення float */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ======================
+   ГАЛЕРЕЯ ЗОБРАЖЕНЬ
+====================== */
+
+.gallery-grid {
+    display: block;
+    margin: 1rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.8)
+    );
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.gallery-overlay p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+/* ======================
+   КОНТЕНТ З БІЧНОЮ ПАНЕЛЛЮ
+====================== */
+
+.content-layout {
+    display: block;
+    margin: 2rem 0;
+}
+
+.sticky-sidebar {
+    width: 250px;
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-content {
+    margin-right: 270px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sticky-sidebar a {
+    display: block;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-sidebar a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+
+/* ======================
+   ІНТЕРАКТИВНІ ЕЛЕМЕНТИ
+====================== */
+
+/* Кнопка "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+    
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #1a3d73;
+    transform: translateY(-2px);
+}
+
+
+/* ======================
+   TOOLTIP
+====================== */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 94%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+    opacity: 1;
+}
+
+
+/* ======================
+   МОДАЛЬНЕ ВІКНО (СТАРИЙ ВАРІАНТ)
+====================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+
+/* ======================
+   ПРОГРЕС-БАР
+====================== */
+
+.progress-container {
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #2c5aa0, #1a3d73);
+    border-radius: 10px;
+    transition: width 0.8s ease;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+/* ======================
+   СКЛАДНИЙ МАКЕТ
+====================== */
+
+.complex-grid {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.grid-header {
+    background: linear-gradient(135deg, #2c5aa0, #1a3d73);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.grid-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1a3d73;
+}
+
+.grid-sidebar {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 200px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-left: 3px solid #2c5aa0;
+}
+
+.grid-content {
+    padding: 2rem;
+    margin-right: 220px;
+    min-height: 300px;
+}
+
+.grid-footer {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+    border-top: 1px solid #dee2e6;
+    text-align: right;
+}
+
+.feature-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-left: 4px solid #2c5aa0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    width: 50px;
+    text-align: center;
+}
+
+.feature-text h5 {
+    margin: 0 0 0.25rem 0;
+    color: #2c5aa0;
+}
+
+.feature-text p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2c5aa0;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1a3d73;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #2c5aa0;
+    border: 2px solid #2c5aa0;
+}
+
+.btn-secondary:hover {
+    background-color: #2c5aa0;
+    color: white;
+}
+
+
+/* ======================
+   АНІМАЦІЯ ЗАВАНТАЖЕННЯ
+====================== */
+
+/*.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}*/
+
+/*.loading-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}*/
+
+.loading-container {
+    animation: hideLoader 2s forwards;
+}
+
+@keyframes hideLoader {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2c5aa0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: relative;
+}
+
+.spinner::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid transparent;
+    border-top: 4px solid #1a3d73;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite reverse;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    margin-top: 1rem;
+    color: #2c5aa0;
+    font-weight: bold;
+}
+
+
+/* ======================
+   ІНТЕРАКТИВНА КАРТА НАВИЧОК
+====================== */
+
+.skills-map {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.skills-map::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(44, 90, 160, 0.05),
+        transparent
+    );
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+}
+
+.skills-map > * {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.skill-node {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, white 30%, #2c5aa0 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+}
+
+.skill-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(44, 90, 160, 0.4);
+}
+
+/* Розташування вузлів */
+.skill-node.html {
+    top: 20%;
+    left: 20%;
+}
+
+.skill-node.css {
+    top: 20%;
+    right: 20%;
+}
+
+.skill-node.js {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* З'єднання між навичками */
+.skill-connection {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, #2c5aa0, transparent, #2c5aa0);
+    transform-origin: left;
+}
+
+.connection-1 {
+    top: 25%;
+    left: 25%;
+    width: 50%;
+}
+
+.connection-2 {
+    top: 30%;
+    left: 22%;
+    width: 35%;
+    transform: rotate(45deg);
+}
+
+
+/* ======================
+   ГАЛЕРЕЯ (ДОДАТКОВИЙ ВАРІАНТ РОЗМІТКИ)
+====================== */
+
+.gallery-grid {
+    font-size: 0;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    border-radius: 8px;
+    overflow: hidden;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ======================
+   АНІМАЦІЯ ЗАВАНТАЖЕННЯ (ПОВНОЕКРАННИЙ ВАРІАНТ)
+====================== */
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loading-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2c5aa0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: relative;
+}
+
+.spinner::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid transparent;
+    border-top: 4px solid #1a3d73;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite reverse;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    margin-top: 1rem;
+    color: #2c5aa0;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ======================
+   АНІМАЦІЯ ЗАВАНТАЖЕННЯ (INLINE ВАРІАНТ)
+====================== */
+
+.loading-demo {
+    text-align: center;
+}
+
+.loading-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.loading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2c5aa0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: relative;
+}
+
+.spinner::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 4px solid transparent;
+    border-top: 4px solid #1a3d73;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite reverse;
+}
+
+.loading-text {
+    margin-top: 1rem;
+    color: #2c5aa0;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ======================
+   МОДАЛЬНЕ ВІКНО (НОВИЙ ВАРІАНТ ЧЕРЕЗ :target)
+====================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-window {
+    position: relative;
+    background-color: #fff;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-window img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal-window h3 {
+    margin-bottom: 10px;
+}
+
+.modal-window p {
+    margin: 0;
+    color: #555;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal-close:hover {
+    color: #2c5aa0;
+}
+
+.gallery-item a {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ======================
+   УНІВЕРСАЛЬНА TOOLTIP-СИСТЕМА
+====================== */
+
+/* Батьківські інтерактивні елементи */
+a[data-tooltip],
+button[data-tooltip],
+input[data-tooltip],
+textarea[data-tooltip],
+select[data-tooltip],
+summary[data-tooltip],
+label[data-tooltip],
+.gallery-item a[data-tooltip],
+.back-to-top[data-tooltip] {
+    position: relative;
+}
+
+/* Сам тултіп */
+a[data-tooltip]::after,
+button[data-tooltip]::after,
+input[data-tooltip]::after,
+textarea[data-tooltip]::after,
+select[data-tooltip]::after,
+summary[data-tooltip]::after,
+label[data-tooltip]::after,
+.gallery-item a[data-tooltip]::after,
+.back-to-top[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(6px);
+    background-color: rgba(33, 37, 41, 0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Стрілочка */
+a[data-tooltip]::before,
+button[data-tooltip]::before,
+input[data-tooltip]::before,
+textarea[data-tooltip]::before,
+select[data-tooltip]::before,
+summary[data-tooltip]::before,
+label[data-tooltip]::before,
+.gallery-item a[data-tooltip]::before,
+.back-to-top[data-tooltip]::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(6px);
+    border: 6px solid transparent;
+    border-top: none;
+    border-bottom-color: rgba(33, 37, 41, 0.95);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 2000;
+}
+
+/* Показ при наведенні і фокусі */
+a[data-tooltip]:hover::after,
+a[data-tooltip]:hover::before,
+a[data-tooltip]:focus::after,
+a[data-tooltip]:focus::before,
+
+button[data-tooltip]:hover::after,
+button[data-tooltip]:hover::before,
+button[data-tooltip]:focus::after,
+button[data-tooltip]:focus::before,
+
+input[data-tooltip]:hover::after,
+input[data-tooltip]:hover::before,
+input[data-tooltip]:focus::after,
+input[data-tooltip]:focus::before,
+
+textarea[data-tooltip]:hover::after,
+textarea[data-tooltip]:hover::before,
+textarea[data-tooltip]:focus::after,
+textarea[data-tooltip]:focus::before,
+
+select[data-tooltip]:hover::after,
+select[data-tooltip]:hover::before,
+select[data-tooltip]:focus::after,
+select[data-tooltip]:focus::before,
+
+summary[data-tooltip]:hover::after,
+summary[data-tooltip]:hover::before,
+summary[data-tooltip]:focus::after,
+summary[data-tooltip]:focus::before,
+
+label[data-tooltip]:hover::after,
+label[data-tooltip]:hover::before,
+label[data-tooltip]:focus::after,
+label[data-tooltip]:focus::before,
+
+.gallery-item a[data-tooltip]:hover::after,
+.gallery-item a[data-tooltip]:hover::before,
+.gallery-item a[data-tooltip]:focus::after,
+.gallery-item a[data-tooltip]:focus::before,
+
+.back-to-top[data-tooltip]:hover::after,
+.back-to-top[data-tooltip]:hover::before,
+.back-to-top[data-tooltip]:focus::after,
+.back-to-top[data-tooltip]:focus::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Для багаторядкового тексту */
+a[data-tooltip].tooltip-wide::after,
+button[data-tooltip].tooltip-wide::after,
+input[data-tooltip].tooltip-wide::after,
+textarea[data-tooltip].tooltip-wide::after,
+select[data-tooltip].tooltip-wide::after,
+summary[data-tooltip].tooltip-wide::after {
+    white-space: normal;
+    width: 220px;
+    text-align: center;
+}
+
+/* Щоб focus було видно з клавіатури */
+a[data-tooltip]:focus,
+button[data-tooltip]:focus,
+input[data-tooltip]:focus,
+textarea[data-tooltip]:focus,
+select[data-tooltip]:focus,
+summary[data-tooltip]:focus {
+    outline: 2px solid #2c5aa0;
+    outline-offset: 3px;
+}
+
+
+/* ======================
+   3D ЕФЕКТИ ЧЕРЕЗ CSS TRANSFORMS
+====================== */
+
+/* 1. 3D-картки на головній */
+#features {
+    perspective: 1200px;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: rotateX(8deg) rotateY(-8deg) translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.card-header,
+.card-body,
+.card-footer {
+    transform: translateZ(18px);
+}
+
+/* 2. 3D-ефект для проектів у портфоліо */
+.project {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.project:hover {
+    transform: rotateX(6deg) rotateY(6deg) translateY(-8px);
+    box-shadow: 0 20px 40px rgba(44, 90, 160, 0.22);
+}
+
+.project img,
+.project details,
+.project p,
+.project h3 {
+    transform: translateZ(14px);
+}
+
+/* 3. 3D-галерея */
+.gallery-grid {
+    perspective: 1200px;
+}
+
+.gallery-item {
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+}
+
+.gallery-item:hover {
+    transform: rotateY(10deg) rotateX(4deg) scale(1.03);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;
+}
+
+.gallery-item:hover img {
+    transform: translateZ(20px) scale(1.05);
+}
+
+.gallery-overlay {
+    transition: transform 0.4s ease;
+    transform: translateY(100%) translateZ(25px);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0) translateZ(25px);
+}
+
+/* 4. 3D-блок для layered-card */
+.layered-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.45s ease;
+}
+
+.layered-card:hover {
+    transform: rotateX(7deg) rotateY(-7deg);
+}
+
+.layer-1 {
+    transform: translateZ(10px);
+}
+
+.layer-2 {
+    transform: translateZ(20px);
+}
+
+.layer-content {
+    transform: translateZ(40px);
+}
+
+/* 5. 3D-кнопки */
+.btn-primary,
+.btn-secondary {
+    transform-style: preserve-3d;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px) rotateX(12deg);
+    box-shadow: 0 10px 18px rgba(44, 90, 160, 0.25);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(1px) rotateX(0deg) scale(0.98);
+}
+
+/* 6. Невеликий 3D-ефект для кнопки "наверх" */
+.back-to-top:hover {
+    transform: translateY(-4px) rotateX(18deg) scale(1.08);
+}
