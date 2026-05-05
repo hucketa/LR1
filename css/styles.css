@@ -500,8 +500,7 @@ footer {
 }
 
 footer p {
-    margin-bottom:
-    0.5rem; 
+    margin-bottom: 0.5rem; 
 }
 
 footer a {
@@ -540,7 +539,7 @@ blockquote {
 }
 
 blockquote::before {
-    content: "\"";;
+    content: "\"";
     font-size: 4rem;
     color: #2c5aa0;
     position: absolute;
