@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Портфоліо веб-розробника">
     <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
+
+    <title>Портфоліо - Мій особистий сайт</title>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/flexbox.css">
-    <script src="js/script.js"></script>
-    <title>Портфоліо - Мій особистий сайт</title>
+
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
+
 <header class="modern-header">
     <div class="container">
+
         <div class="header-content">
+
             <div class="logo">
                 <h1>Гуненко Ярослав</h1>
                 <span class="logo-subtitle">Веб-розробник</span>
             </div>
+
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html">Головна</a></li>
@@ -32,15 +42,19 @@
                     <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
+
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <div class="header-cta">
-                <button class="cta-button">Найняти
-                    мене</button>
+                <button class="cta-button">Найняти мене</button>
             </div>
+
         </div>
+
         <nav class="mobile-nav" id="mobileNav">
             <ul class="nav-list">
                 <li><a href="index.html">Головна</a></li>
@@ -51,98 +65,244 @@
                 <li><a href="contact.html">Контакти</a></li>
             </ul>
         </nav>
+
     </div>
 </header>
-      <aside class="sticky-note">
+
+<aside class="sticky-note">
     <h4>Навігація</h4>
-    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
-    </aside>
-    <main>
-        <section id="projects">
-            <h2>Мої роботи</h2>
-            <article class="project">
-            <h3>Перша HTML-сторінка</h3>
-            <img src="images/photo3.jpg" alt="Скріншот першого проекту" width="300" height="200">
-            <p><strong>Опис:</strong> Моя перша веб-сторінка, створена під час вивчення основ HTML.</p>
-            <p><strong>Технології:</strong> HTML5</p>
-            <p><strong>Дата створення:</strong> Березень 2024</p>
-            <details>
-                <summary>Детальніше про проект</summary>
-                <p>Цей проект допоміг мені освоїти базові HTML-теги, створити структуру сторінки та навчитися працювати з текстовим
-контентом. Я використав семантичні елементи та дотримувався стандартів доступності.</p>
-            </details>
-            </article>
-            <article class="project">
-                <h3>Структурований сайт</h3>
-                <img src="images/photo4.jpg" alt="Скріншот другого проекту" width="300" height="200">
-                <p><strong>Опис:</strong> Багатосторінковий сайт з навігацією та формами.</p>
-                <p><strong>Технології:</strong> HTML5, семантична розмітка</p>
-                <p><strong>Дата створення:</strong> Березень 2024</p>
-                <details>
-                    <summary>Детальніше про проект</summary>
-                    <p>У цьому проекті я створив повноцінний багатосторінковий сайт з навігаційним меню, формами зв'язку та структурованим
-контентом. Освоїв роботу з зображеннями та мультимедіа.</p>
-                </details>
-            </article>
-        </section>
 
-    <section id="future-plans">
-        <h2>Плани на майбутнє</h2>
-        <p>Найближчими проектами, які я планую реалізувати:</p>
-        <ul>
-            <li>Стилізований сайт з CSS</li>
-            <li>Інтерактивна галерея зображень</li>
-            <li>Адаптивний дизайн для мобільних пристроїв</li>
-            <li>Форма зворотного зв'язку з JavaScript</li>
-        </ul>
-    </section>
-    <section id="advanced-layout">
-    <h2>Складний макет</h2>
+    <p>
+        Цей блок використовує sticky-позиціонування
+        і залишається видимим під час прокрутки сторінки.
+    </p>
+</aside>
 
-    <div class="complex-grid">
-        
-        <header class="grid-header">
-            <h3>Заголовок проекту</h3>
-        </header>
+<main class="portfolio-main">
 
-        <aside class="grid-sidebar">
-            <h4>Деталі</h4>
-            <ul>
-                <li>Дата: Березень 2024</li>
-                <li>Тип: Навчальний</li>
-                <li>Статус: Завершено</li>
-            </ul>
-        </aside>
+    <section class="portfolio-hero">
+        <div class="container">
 
-        <main class="grid-content">
-            <p>
-                Основний контент проекту з детальним описом...
-            </p>
+            <div class="portfolio-hero-content">
+                <h1 class="portfolio-title">Мої роботи</h1>
 
-            <div class="feature-box">
-                <h4>Ключові особливості</h4>
-
-                <div class="feature-item">
-                    <div class="feature-icon"></div>
-
-                    <div class="feature-text">
-                        <h5>Адаптивний дизайн</h5>
-                        <p>Працює на всіх пристроях</p>
-                    </div>
-                </div>
+                <p class="portfolio-subtitle">
+                    Колекція проектів, створених під час
+                    навчання веб-розробці
+                </p>
             </div>
-        </main>
 
-        <footer class="grid-footer">
-            <button class="btn-primary">Переглянути проект</button>
-            <button class="btn-secondary">Вихідний код</button>
-        </footer>
+        </div>
+    </section>
+
+    <section class="portfolio-filter">
+        <div class="container">
+
+            <div class="filter-buttons">
+
+                <button class="filter-btn active" data-filter="all">
+                    Всі проекти
+                </button>
+
+                <button class="filter-btn" data-filter="html">
+                    HTML
+                </button>
+
+                <button class="filter-btn" data-filter="css">
+                    CSS
+                </button>
+
+                <button class="filter-btn" data-filter="js">
+                    JavaScript
+                </button>
+
+                <button class="filter-btn" data-filter="responsive">
+                    Responsive
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio-grid-section">
+        <div class="container">
+
+            <div class="portfolio-grid">
+
+                <article class="portfolio-item" data-category="html responsive">
+
+                    <div class="portfolio-image">
+
+                        <img src="images/photo1.jpg" alt="HTML Project">
+
+                        <div class="portfolio-overlay">
+
+                            <div class="overlay-content">
+
+                                <h3>HTML Основи</h3>
+
+                                <p>
+                                    Семантична HTML-структура
+                                    та базова верстка
+                                </p>
+
+                                <div class="portfolio-links">
+                                    <a href="about.html" class="portfolio-link">
+                                        Переглянути
+                                    </a>
+
+                                    <a href="https://github.com/hucketa/LR1" target="_blank" class="portfolio-link">
+                                        GitHub
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>HTML5 Project</h3>
+
+                        <div class="portfolio-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">Semantic</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="portfolio-item" data-category="css responsive">
+
+                    <div class="portfolio-image">
+
+                        <img src="images/photo2.jpg" alt="CSS Project">
+
+                        <div class="portfolio-overlay">
+
+                            <div class="overlay-content">
+
+                                <h3>Flexbox Layout</h3>
+
+                                <p>
+                                    Сучасний адаптивний
+                                    Flexbox макет
+                                </p>
+
+                                <div class="portfolio-links">
+                                    <a href="flexbox-demo.html" class="portfolio-link">
+                                        Переглянути
+                                    </a>
+
+                                    <a href="https://github.com/hucketa/LR1" target="_blank" class="portfolio-link">
+                                        GitHub
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>Flexbox Site</h3>
+
+                        <div class="portfolio-tags">
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="portfolio-item" data-category="js responsive">
+
+                    <div class="portfolio-image">
+
+                        <img src="images/photo3.jpg" alt="Gallery Project">
+
+                        <div class="portfolio-overlay">
+
+                            <div class="overlay-content">
+
+                                <h3>Інтерактивна галерея</h3>
+
+                                <p>
+                                    Hover ефекти,
+                                    overlay та анімації
+                                </p>
+
+                                <div class="portfolio-links">
+                                    <a href="gallery.html" class="portfolio-link">
+                                        Переглянути
+                                    </a>
+
+                                    <a href="https://github.com/hucketa/LR1" target="_blank" class="portfolio-link">
+                                        GitHub
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-info">
+
+                        <h3>Gallery Project</h3>
+
+                        <div class="portfolio-tags">
+                            <span class="tag">Animation</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="flex-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h4>Контакти</h4>
+            <p>Email: gunenkoym@gmail.com</p>
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Соціальні мережі</h4>
+
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Telegram</a>
+            </div>
+
+        </div>
+
+        <div class="footer-section">
+            <p>&copy; 2026 Гуненко Ярослав</p>
+        </div>
 
     </div>
-</section>
-</main>
-    <footer>
-        <p>&copy; 2026 Гуненко Ярослав. Усі права захищені.</p>
-    </footer>
+
+</footer>
+
 </body>
 </html>
