@@ -396,8 +396,7 @@ body.fixed-header {
 /* ======================
    КОНТЕНТ З БІЧНОЮ ПАНЕЛЛЮ
 ====================== */
-
-.content-layout {
+/*.content-layout {
     display: block;
     margin: 2rem 0;
 }
@@ -437,7 +436,7 @@ body.fixed-header {
 .sticky-sidebar a:hover {
     background-color: #e9ecef;
     text-decoration: none;
-}
+}*/
 
 
 /* ======================
@@ -1430,4 +1429,37 @@ summary[data-tooltip]:focus {
 /* 6. Невеликий 3D-ефект для кнопки "наверх" */
 .back-to-top:hover {
     transform: translateY(-4px) rotateX(18deg) scale(1.08);
+}
+
+
+/* ======================
+   STICKY NOTE
+====================== */
+
+.sticky-note,
+.sticky-sidebar {
+    position: sticky;
+    top: 240px;
+    z-index: 95;
+    width: 260px;
+    float: right;
+    margin: 20px 0 20px 20px;
+    background-color: white;
+    padding: 1.5rem;
+    border-left: 4px solid #2c5aa0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+main {
+    overflow: visible;
+}
+
+@media (max-width: 450px) {
+    .sticky-note,
+    .sticky-sidebar {
+        width: 100%;
+        margin: 1rem auto;
+        float: none;
+    }
 }

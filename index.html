@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/flexbox.css">
+    <script src="js/script.js"></script>
     <title>Головна - ЛР2</title>
 </head>
 <body>
@@ -31,10 +32,7 @@
                     <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
             <div class="header-cta">
                 <button class="cta-button">Найняти
                     мене</button>
@@ -52,32 +50,37 @@
         </nav>
     </div>
 </header>
-      <aside class="sticky-note">
-    <h4>Навігація</h4>
-    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
-    </aside>
-    <main>
-        <section id="welcome">
-            <h2>Ласкаво просимо на мій сайт!</h2>
-            <p>Я вивчаю веб-технології та створюю свої перші проекти. Цей сайт - мій навчальний проект, де я практикую HTML, CSS та
-JavaScript.</p>
-            <img src="images/photo1.jpg" alt="Моя фотографія" width="200" height="150">
-        </section>
-        <section id="news">
-            <h2>Останні досягнення</h2>
-            <article>
-                <h3>Завершив перший HTML-проект</h3>
-                <time datetime="2026-02-15">15 лютого 2026</time>
-                <p>Сьогодні я завершив своє перше практичне завдання з HTML. Створив базову структуру веб-сторінки та навчився
-працювати з основними тегами.</p>
-            </article>
-        <article>
-            <h3>Почав вивчати CSS</h3>
-            <time datetime="2026-03-01">1 березня 2026</time>
-            <p>Розпочав вивчення стилізації веб-сторінок. Дуже цікаво, як можна змінювати зовнішній вигляд елементів!</p>
-        </article>
-        </section>
-    </main>
+    <aside class="sticky-note">
+            <h4>Навігація</h4>
+            <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+        </aside>
+    <div class="page-wrapper">
+        <main>
+            <section id="welcome">
+                <h2>Ласкаво просимо на мій сайт!</h2>
+                <p>Я вивчаю веб-технології та створюю свої перші проекти. Цей сайт - мій навчальний проект, де я практикую
+                    HTML, CSS та
+                    JavaScript.</p>
+                <img src="images/photo1.jpg" alt="Моя фотографія" width="200" height="150">
+            </section>
+            <section id="news">
+                <h2>Останні досягнення</h2>
+                <article>
+                    <h3>Завершив перший HTML-проект</h3>
+                    <time datetime="2026-02-15">15 лютого 2026</time>
+                    <p>Сьогодні я завершив своє перше практичне завдання з HTML. Створив базову структуру веб-сторінки та
+                        навчився
+                        працювати з основними тегами.</p>
+                </article>
+                <article>
+                    <h3>Почав вивчати CSS</h3>
+                    <time datetime="2026-03-01">1 березня 2026</time>
+                    <p>Розпочав вивчення стилізації веб-сторінок. Дуже цікаво, як можна змінювати зовнішній вигляд
+                        елементів!</p>
+                </article>
+            </section>
+        </main>
+    </div>
     <section id="features">
     <h2>Що я вивчаю</h2>
 

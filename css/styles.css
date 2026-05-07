@@ -802,7 +802,7 @@ section:nth-child(even) {
     filter: saturate(1.08);
 }
 
-.sticky-note {
+/*.sticky-note {
     position: sticky;
     top: 20px;
     float: right;
@@ -824,7 +824,7 @@ section:nth-child(even) {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
-}
+}*/
 
 nav ul li {
     list-style: none;
