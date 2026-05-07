@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Демонстрація - Мій особистий сайт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+</head>
+
+<body>
+    <header class="flex-header">
+        <div class="logo">
+            <h1>FlexBox Demo</h1>
+        </div>
+        <nav class="flex-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="flexbox-demo.html">Flexbox</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="btn-primary">Зв'язатися</button>
+        </div>
+    </header>
+    <main class="demo-main">
+        <!-- Демонстрація justify-content -->
+        <section class="demo-section">
+            <h2>Горизонтальне вирівнювання
+                (justify-content)</h2>
+            <div class="demo-container">
+                <h3>flex-start (за замовчуванням)</h3>
+                <div class="flex-demo justify-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>center</h3>
+                <div class="flex-demo
+justify-center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>space-between</h3>
+                <div class="flex-demo
+justify-between">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>space-around</h3>
+                <div class="flex-demo
+justify-around">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>space-evenly</h3>
+                <div class="flex-demo
+justify-evenly">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+        </section>
+        <!-- Демонстрація align-items -->
+        <section class="demo-section">
+            <h2>Вертикальне вирівнювання (align-items)</h2>
+            <div class="demo-container">
+                <h3>stretch (за замовчуванням)</h3>
+                <div class="flex-demo align-stretch">
+                    <div class="flex-item">Короткий</div>
+                    <div class="flex-item">Середній контент тут</div>
+                    <div class="flex-item">Довгий контент з багатьма словами для
+                        демонстрації</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>center</h3>
+                <div class="flex-demo align-center">
+                    <div class="flex-item">Короткий</div>
+                    <div class="flex-item">Середній контент тут</div>
+                    <div class="flex-item">Довгий контент з багатьма словами для
+                        демонстрації</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>flex-start</h3>
+                <div class="flex-demo align-start">
+                    <div class="flex-item">Короткий</div>
+                    <div class="flex-item">Середній контент тут</div>
+                    <div class="flex-item">Довгий контент з багатьма словами для
+                        демонстрації</div>
+                </div>
+            </div>
+        </section>
+        <!-- Демонстрація flex-direction -->
+        <section class="demo-section">
+            <h2>Напрямок осі (flex-direction)</h2>
+            <div class="demo-row">
+                <div class="demo-container">
+                    <h3>row (горизонтально)</h3>
+                    <div class="flex-demo direction-row">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                    </div>
+                </div>
+                <div class="demo-container">
+                    <h3>column (вертикально)</h3>
+                    <div class="flex-demo
+direction-column">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Демонстрація flex-grow,
+flex-shrink -->
+        <section class="demo-section">
+            <h2>Гнучкість елементів (flex-grow,
+                flex-shrink)</h2>
+            <div class="demo-container">
+                <h3>flex-grow: різні значення</h3>
+                <div class="flex-demo">
+                    <div class="flex-item
+grow-1">flex-grow:
+                        1</div>
+                    <div class="flex-item
+grow-2">flex-grow:
+                        2</div>
+                    <div class="flex-item grow-1">flex-grow: 1</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>flex-basis: фіксована базова
+                    ширина</h3>
+                <div class="flex-demo">
+                    <div class="flex-item basis-200">flex-basis:
+                        200px</div>
+                    <div class="flex-item
+grow-1">flex-grow: 1</div>
+                    <div class="flex-item
+basis-150">flex-basis: 150px</div>
+                </div>
+            </div>
+        </section>
+        <!-- Практичний приклад: карткова
+раскладка -->
+        <section class="demo-section">
+            <h2>Практичний приклад: Карткова
+                раскладка</h2>
+            <div class="cards-container">
+                <div class="card flex-card">
+                    <div class="card-image">
+                        <img src="images/photo1.jpg" alt="Проект
+1">
+                    </div>
+                    <div class="card-content">
+                        <h3>HTML & CSS Основи</h3>
+                        <p>Перший проект з вивчення
+                            веб-технологій</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Переглянути</button>
+                        <button class="btn-primary">Код</button>
+                    </div>
+                </div>
+                <div class="card flex-card">
+                    <div class="card-image">
+                        <img src="images/photo2.jpg" alt="Проект
+2">
+                    </div>
+                    <div class="card-content">
+                        <h3>Flexbox Layout</h3>
+                        <p>Сучасна раскладка з використанням
+                            Flexbox</p>
+                        <div class="card-tags">
+                            <span class="tag">Flexbox</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Переглянути</button>
+                        <button class="btn-primary">Код</button>
+                    </div>
+                </div>
+                <div class="card flex-card">
+                    <div class="card-image">
+                        <img src="images/photo3.jpg" alt="Проект
+3">
+                    </div>
+                    <div class="card-content">
+                        <h3>Інтерактивна галерея</h3>
+                        <p>Галерея з анімаціями та
+                            hover-ефектами</p>
+                        <div class="card-tags">
+                            <span class="tag">Animation</span>
+                            <span class="tag">Gallery</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-outline">Переглянути</button>
+                        <button class="btn-primary">Код</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакти</h4>
+                <p>Email:
+                    example@email.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Соціальні
+                    мережі</h4>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Flexbox
+                    Demo</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
