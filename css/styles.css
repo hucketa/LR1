@@ -1214,11 +1214,6 @@ PROBLEM BLOCK FIXES
 ====================== */
 
 @media (prefers-color-scheme: dark) {
-
-    /* ======================
-    HERO SECTION
-    ====================== */
-
     .hero,
     .hero-section,
     .portfolio-hero {
@@ -1253,9 +1248,7 @@ PROBLEM BLOCK FIXES
         border: none !important;
     }
 
-    /* ======================
-    GALLERY BLOCKS
-    ====================== */
+
 
     .gallery-section,
     .gallery-category,
@@ -1288,9 +1281,7 @@ PROBLEM BLOCK FIXES
             ) !important;
     }
 
-    /* ======================
-    Z INDEX DEMO
-    ====================== */
+
 
     .z-index-demo,
     .layer-demo,
@@ -1316,9 +1307,6 @@ PROBLEM BLOCK FIXES
         backdrop-filter: blur(6px);
     }
 
-    /* ======================
-    FAQ
-    ====================== */
 
     .faq-section,
     .faq-item,
@@ -1345,9 +1333,6 @@ PROBLEM BLOCK FIXES
         border-radius: 8px;
     }
 
-    /* ======================
-    REMOVE BAD BLUE AREAS
-    ====================== */
 
     .container,
     .wrapper,
@@ -1362,3 +1347,4 @@ PROBLEM BLOCK FIXES
     }
 
 }
+
