@@ -14,17 +14,43 @@
     <title>Контакти - Мій особистий сайт</title>
 </head>
 <body>
-    <header>
-        <h1>Контакти</h1>
-       <nav>
-            <ul>
-                <li><a href="index.html" data-tooltip="Перейти на головну сторінку">Головна</a></li>
-                <li><a href="about.html" data-tooltip="Дізнатися більше про мене">Про мене</a></li>
-                <li><a href="portfolio.html" data-tooltip="Переглянути мої роботи">Портфоліо</a></li>
-                <li><a href="gallery.html" data-tooltip="Відкрити фотогалерею">Галерея</a></li>
-                <li><a href="contact.html" data-tooltip="Перейти до контактів і форми">Контакти</a></li>
+<header class="modern-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Гуненко Ярослав</h1>
+                <span class="logo-subtitle">Веб-розробник</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про мене</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header-cta">
+                <button class="cta-button">Найняти
+                    мене</button>
+            </div>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul class="nav-list">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="flexbox-demo.html">Flexbox</a></li>
+                <li><a href="contact.html">Контакти</a></li>
             </ul>
         </nav>
+    </div>
 </header>
   <aside class="sticky-note">
     <h4>Навігація</h4>
