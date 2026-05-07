@@ -14,16 +14,29 @@
     <title>Головна - ЛР2</title>
 </head>
 <body>
-    <header>
-       <nav>
-            <ul>
-                <li><a href="index.html" data-tooltip="Перейти на головну сторінку">Головна</a></li>
-                <li><a href="about.html" data-tooltip="Дізнатися більше про мене">Про мене</a></li>
-                <li><a href="portfolio.html" data-tooltip="Переглянути мої роботи">Портфоліо</a></li>
-                <li><a href="gallery.html" data-tooltip="Відкрити фотогалерею">Галерея</a></li>
-                <li><a href="contact.html" data-tooltip="Перейти до контактів і форми">Контакти</a></li>
-            </ul>
-        </nav>
+    <header class="modern-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Гуненко Ярослав</h1>
+                    <span class="logo-subtitle">Веб-розробник</span>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-active">Головна</a></li>
+                        <li><a href="about.html">Про мене</a></li>
+                        <li><a href="portfolio.html">Портфоліо</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="flexbox-demo.html">Flexbox</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <button class="cta-button">Найняти
+                        мене</button>
+                </div>
+            </div>
+        </div>
     </header>
       <aside class="sticky-note">
     <h4>Навігація</h4>
@@ -124,6 +137,162 @@ JavaScript.</p>
 
         <div class="card-footer">
             <small>Рівень: Планую</small>
+        </div>
+    </div>
+</section>
+<!-- Hero секція з Flexbox -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Привіт! Я вивчаю
+                    <span class="highlight">веб-розробку</span>
+                </h1>
+                <p class="hero-description">
+                    Створюю сучасні та адаптивні веб-сайти з використанням найновіших
+                    технологій. Зараз активно освоюю HTML, CSS та JavaScript.
+                </p>
+                <div class="hero-actions">
+                    <a href="portfolio.html" class="btn-primary">Мої роботи</a>
+                    <a href="contact.html" class="btn-outline">Зв'язатися</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <img src="images/hero-bg.jpeg" alt="Веб-розробка" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Секція навичок з Flexbox -->
+<section class="skills-section">
+    <div class="container">
+        <h2 class="section-title">Що я
+            вивчаю</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"> </div>
+                <div class="skill-content">
+                    <h3>HTML5</h3>
+                    <p>Семантична розмітка, доступність,
+                        форми</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="80%"></div>
+                    </div>
+                    <span class="skill-level">80% -
+                        Впевнений</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"> </div>
+                <div class="skill-content">
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, анімації, адаптивний
+                        дизайн</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="70%"></div>
+                    </div>
+                    <span class="skill-level">70% - Активно
+                        вивчаю</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"> </div>
+                <div class="skill-content">
+                    <h3>JavaScript</h3>
+                    <p>DOM, події, асинхронність</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="30%"></div>
+                    </div>
+                    <span class="skill-level">30% -
+                        Початковий</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"> </div>
+                <div class="skill-content">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first, медіа-запити, гнучкі
+                        макети</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="60%"></div>
+                    </div>
+                    <span class="skill-level">60% -
+                        Вивчаю</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Секція останніх робіт -->
+<section class="recent-works">
+    <div class="container">
+        <h2 class="section-title">Останні роботи</h2>
+        <div class="works-grid">
+            <article class="work-card">
+                <div class="work-image">
+                    <img src="images/photo1.jpg" alt="HTML
+проект">
+                    <div class="work-overlay">
+                        <div class="work-actions">
+                            <a href="#" class="work-btn">Переглянути</a> <a href="#" class="work-btn">Код</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-content">
+                    <h3>Перша HTML сторінка</h3>
+                    <p>Базова структура та семантичні
+                        елементи</p>
+                    <div class="work-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </article>
+            <article class="work-card">
+                <div class="work-image">
+                    <img src="images/photo2.jpg" alt="CSS
+проект">
+                    <div class="work-overlay">
+                        <div class="work-actions">
+                            <a href="#" class="work-btn">Переглянути</a> <a href="#" class="work-btn">Код</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-content">
+                    <h3>Стилізований сайт</h3>
+                    <p>Сучасний дизайн з CSS3</p>
+                    <div class="work-tech">
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Flexbox</span>
+                    </div>
+                </div>
+            </article>
+            <article class="work-card">
+                <div class="work-image">
+                    <img src="images/photo3.jpg" alt="Flexbox
+проект">
+                    <div class="work-overlay">
+                        <div class="work-actions">
+                            <a href="#" class="work-btn">Переглянути</a> <a href="#" class="work-btn">Код</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-content">
+                    <h3>Flexbox макети</h3>
+                    <p>Сучасна раскладка та
+                        адаптивність</p>
+                    <div class="work-tech">
+                        <span class="tech-tag">Flexbox</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="works-cta">
+            <a href="portfolio.html" class="btn-primary">Всі роботи</a>
         </div>
     </div>
 </section>
