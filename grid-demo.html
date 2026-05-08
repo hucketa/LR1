@@ -182,10 +182,121 @@
                 </div>
             </div>
         </section>
+            <!-- Додайте перед закриваючим </main> -->
+    <section class="demo-section exercises">
+        <h2> Практичні вправи з Grid</h2>
+        <div class="exercise-container">
+            <!-- Вправа 1: Holy Grail Layout -->
+            <div class="exercise">
+                <h3>Вправа 1: Holy Grail Layout</h3>
+                <p>Створіть класичний макет з header, footer, main, та двома sidebar</p>
+                <div class="holy-grail">
+                    <header class="hg-header">Header</header>
+                    <nav class="hg-nav">Left Sidebar</nav>
+                    <main class="hg-main">Main Content</main>
+                    <aside class="hg-aside">Right Sidebar</aside>
+                    <footer class="hg-footer">Footer</footer>
+                </div>
+                <details>
+                    <summary>Показати код</summary>
+                    <pre><code>.holy-grail {
+display: grid;
+grid-template-columns: 200px 1fr 200px;
+grid-template-rows: auto 1fr auto;
+grid-template-areas:
+"header header header"
+"nav main aside"
+"footer footer footer";
+min-height: 400px;
+gap: 1rem;
+}</code></pre>
+                </details>
+            </div>
+            <!-- Вправа 2: Responsive Cards -->
+            <div class="exercise">
+                <h3>Вправа 2: Адаптивні картки</h3>
+                <p>Створіть сітку карток, яка автоматично адаптується</p>
+                <div class="responsive-cards">
+                    <div class="card">Картка 1</div>
+                    <div class="card">Картка 2</div>
+                    <div class="card">Картка 3</div>
+                    <div class="card">Картка 4</div>
+                    <div class="card">Картка 5</div>
+                </div>
+                <details>
+                    <summary>Показати код</summary>
+                    <pre><code>.responsive-cards {
+            display: grid;
+            grid-template-columns:
+            repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            }</code></pre>
+                </details>
+            </div>
+            <!-- Вправа 3: Dashboard Layout -->
+            <div class="exercise">
+                <h3>Вправа 3: Dashboard Layout</h3>
+                <p>Створіть макет адміністративної панелі</p>
+                <div class="dashboard">
+                    <div class="dash-header">Dashboard Header</div>
+                    <div class="dash-sidebar">Menu</div>
+                    <div class="dash-widget widget-1">Widget 1</div>
+                    <div class="dash-widget widget-2">Widget 2</div>
+                    <div class="dash-widget widget-3">Widget 3</div>
+                    <div class="dash-widget widget-4">Chart</div>
+                </div>
+                <details>
+                    <summary>Показати код</summary>
+                    <pre><code>.dashboard {
+            display: grid;
+            grid-template-columns: 150px repeat(3, 1fr);
+            grid-template-rows: 60px repeat(2, 150px);
+            gap: 1rem;
+            }
+            .dash-header { grid-column: 1 / -1; }
+            .dash-sidebar { grid-row: 2 / -1; }
+            .widget-4 { grid-column: span 2; }</code></pre>
+                </details>
+            </div>
+            </div>
+            </section>
+            <!-- Секція порівняння продуктивності -->
+            <section class="demo-section performance">
+                <h2> Grid vs Flexbox: Продуктивність</h2>
+                <div class="performance-comparison">
+                    <div class="perf-metric">
+                        <h4>Швидкість рендерингу</h4>
+                        <div class="perf-bar">
+                            <div class="perf-fill grid-perf" style="width: 95%">Grid: 95%</div>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-fill flex-perf" style="width: 98%">Flexbox: 98%</div>
+                        </div>
+                    </div>
+                    <div class="perf-metric">
+                        <h4>Складність макетів</h4>
+                        <div class="perf-bar">
+                            <div class="perf-fill grid-perf" style="width: 100%">Grid: 100%</div>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-fill flex-perf" style="width: 60%">Flexbox: 60%</div>
+                        </div>
+                    </div>
+                    <div class="perf-metric">
+                        <h4>Підтримка браузерів</h4>
+                        <div class="perf-bar">
+                            <div class="perf-fill grid-perf" style="width: 93%">Grid: 93%</div>
+                        </div>
+                        <div class="perf-bar">
+                            <div class="perf-fill flex-perf" style="width: 99%">Flexbox: 99%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </main>
-    <footer class="grid-footer">
-        <p>&copy; 2024 CSS Grid Demo. Створено для навчання.</p>
-    </footer>
+            <footer class="grid-footer">
+                <p>&copy; 2024 CSS Grid Demo. Створено для навчання.</p>
+            </footer>
 </body>
 
 </html>

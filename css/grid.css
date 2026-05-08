@@ -1168,3 +1168,389 @@ MASONRY GRID GALLERY
         grid-column: span 1;
     }
 }
+
+/* ======================
+ПРАКТИЧНІ ВПРАВИ
+====================== */
+.exercises {
+    background: white;
+}
+
+.exercise-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exercise {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #e9ecef;
+}
+
+.exercise h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+/* Holy Grail Layout */
+.holy-grail {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    min-height: 400px;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.hg-header {
+    grid-area: header;
+    background: #ff6b6b;
+}
+
+.hg-nav {
+    grid-area: nav;
+    background: #4ecdc4;
+}
+
+.hg-main {
+    grid-area: main;
+    background: #45b7d1;
+}
+
+.hg-aside {
+    grid-area: aside;
+    background: #96ceb4;
+}
+
+.hg-footer {
+    grid-area: footer;
+    background: #feca57;
+}
+
+.holy-grail>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Responsive Cards */
+.responsive-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.responsive-cards .card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 150px repeat(3, 1fr);
+    grid-template-rows: 60px repeat(2, 150px);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.dash-header {
+    grid-column: 1 / -1;
+    background: #2c3e50;
+}
+
+.dash-sidebar {
+    grid-row: 2 / -1;
+    background: #34495e;
+}
+
+.dash-widget {
+    background: #3498db;
+}
+
+.widget-1 {
+    background: #e74c3c;
+}
+
+.widget-2 {
+    background: #f39c12;
+}
+
+.widget-3 {
+    background: #27ae60;
+}
+
+.widget-4 {
+    grid-column: span 2;
+    background: #9b59b6;
+}
+
+.dashboard>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Performance Comparison */
+.performance-comparison {
+    display: grid;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.perf-metric h4 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.perf-bar {
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.perf-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: white;
+    font-weight: bold;
+    transition: width 1s ease;
+}
+
+.grid-perf {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.flex-perf {
+    background: linear-gradient(135deg, #45b7d1 0%, #2196F3 100%);
+}
+
+/* Стилі для блоків коду */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    background: #667eea;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+summary:hover {
+    background: #764ba2;
+}
+
+pre {
+    background: #1a1a1a;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0 0 0;
+}
+
+code {
+    font-family: 'Fira Code', 'Monaco', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ======================
+АНІМАЦІЇ ТА ПЕРЕХОДИ
+====================== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анімація появи Grid елементів */
+.grid-item,
+.masonry-item,
+.feature-card,
+.portfolio-item {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.grid-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.grid-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.grid-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.grid-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.grid-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* ======================
+UTILITY CLASSES
+====================== */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.shadow {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================
+ТЕМНА ТЕМА (БОНУС)
+====================== */
+@media (prefers-color-scheme: dark) {
+    .landing-body {
+        background: #1a1a1a;
+        color: #f0f0f0;
+    }
+
+    .section-title {
+        color: #f0f0f0;
+    }
+
+    .feature-card,
+    .price-card,
+    .blog-card {
+        background: #2a2a2a;
+        color: #f0f0f0;
+    }
+
+    .feature-card h3,
+    .price-title,
+    .blog-content h3,
+    .blog-content h4 {
+        color: #f0f0f0;
+    }
+
+    pre {
+        background: #0a0a0a;
+    }
+}
