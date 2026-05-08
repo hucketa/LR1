@@ -1659,3 +1659,156 @@ LIGHTBOX
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ======================
+   CUSTOM MAGAZINE GRID
+====================== */
+
+.custom-magazine {
+    padding: 4rem 2rem;
+}
+
+.magazine-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 180px;
+
+    gap: 20px;
+
+    margin-top: 2rem;
+}
+
+
+/* Базова картка */
+
+.mag-item {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    transition:
+        transform 0.3s ease,
+        grid-template-columns 0.4s ease;
+}
+
+
+/* Hover animation */
+
+.mag-item:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+
+/* Фото */
+
+.mag-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Текст */
+
+.mag-item h3 {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    color: white;
+
+    z-index: 2;
+
+    font-size: 1.2rem;
+}
+
+
+/* Overlay */
+
+.mag-item::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.7),
+            transparent
+        );
+
+    z-index: 1;
+}
+
+
+/* ======================
+   DIFFERENT SIZES
+====================== */
+
+.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.small {
+    background:
+        linear-gradient(135deg,#667eea,#764ba2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 768px) {
+
+    .magazine-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured,
+    .horizontal,
+    .big {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .magazine-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured,
+    .horizontal,
+    .big {
+        grid-column: span 1;
+    }
+}
