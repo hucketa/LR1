@@ -1812,3 +1812,281 @@ LIGHTBOX
         grid-column: span 1;
     }
 }
+
+/* ======================
+   DASHBOARD
+====================== */
+
+:root {
+
+    --dashboard-gap: 20px;
+
+    --dashboard-radius: 16px;
+
+    --dashboard-bg: #f4f7fb;
+
+    --dashboard-card: #ffffff;
+
+    --dashboard-primary: #667eea;
+}
+
+
+/* Section */
+
+.dashboard-section {
+    padding: 4rem 2rem;
+    background: var(--dashboard-bg);
+}
+
+
+/* ======================
+   GRID LAYOUT
+====================== */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: 260px repeat(3, 1fr);
+
+    grid-template-rows:
+        80px
+        180px
+        350px;
+
+    gap: var(--dashboard-gap);
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* ======================
+   HEADER
+====================== */
+
+.dashboard-header {
+
+    grid-column: 1 / -1;
+
+    background: var(--dashboard-card);
+
+    border-radius: var(--dashboard-radius);
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* Flexbox inside Grid */
+
+.dashboard-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.dashboard-user img {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+/* ======================
+   SIDEBAR
+====================== */
+
+.dashboard-sidebar {
+
+    grid-row: 2 / 4;
+
+    background: #2d3436;
+
+    border-radius: var(--dashboard-radius);
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.dashboard-sidebar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    transition: background 0.3s ease;
+}
+
+.dashboard-sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
+/* ======================
+   CARDS
+====================== */
+
+.dashboard-card {
+
+    background: var(--dashboard-card);
+
+    border-radius: var(--dashboard-radius);
+
+    padding: 25px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Performance optimization */
+
+.dashboard-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+    will-change: transform;
+}
+
+
+/* Different cards */
+
+.stats {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+}
+
+.revenue {
+    background: linear-gradient(135deg,#00b894,#00cec9);
+    color: white;
+}
+
+.orders {
+    background: linear-gradient(135deg,#fdcb6e,#e17055);
+    color: white;
+}
+
+
+/* ======================
+   CHART
+====================== */
+
+.chart {
+
+    grid-column: span 2;
+}
+
+.fake-chart {
+
+    height: 220px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 15px;
+}
+
+.bar {
+
+    flex: 1;
+
+    background: linear-gradient(180deg,#667eea,#764ba2);
+
+    border-radius: 10px 10px 0 0;
+
+    animation: growBar 1s ease forwards;
+}
+
+.bar-1 { height: 40%; }
+.bar-2 { height: 75%; }
+.bar-3 { height: 55%; }
+.bar-4 { height: 90%; }
+.bar-5 { height: 65%; }
+
+
+@keyframes growBar {
+
+    from {
+        height: 0;
+    }
+}
+
+
+/* ======================
+   ACTIVITY
+====================== */
+
+.activity ul {
+
+    padding-left: 20px;
+
+    margin-top: 20px;
+}
+
+.activity li {
+
+    margin-bottom: 12px;
+
+    color: #555;
+}
+
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 992px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+    }
+
+    .dashboard-sidebar {
+
+        grid-row: auto;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .chart {
+        grid-column: auto;
+    }
+}
