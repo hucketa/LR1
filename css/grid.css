@@ -1069,3 +1069,102 @@ LANDING PAGE СТИЛІ
         grid-template-columns: 1fr;
     }
 }
+
+/* ======================
+MASONRY GRID GALLERY
+====================== */
+#masonry-grid {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+}
+
+.masonry-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.masonry-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.masonry-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.masonry-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.masonry-item.small {
+    grid-row: span 1;
+}
+
+.masonry-item.tall {
+    grid-row: span 2;
+}
+
+.masonry-item.wide {
+    grid-column: span 2;
+}
+
+.masonry-item.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.masonry-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.masonry-item:hover .masonry-overlay {
+    transform: translateY(0);
+}
+
+/* Адаптивність Masonry */
+@media (max-width: 768px) {
+    .masonry-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .masonry-item.wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-container {
+        grid-template-columns: 1fr;
+    }
+
+    .masonry-item.wide,
+    .masonry-item.big {
+        grid-column: span 1;
+    }
+}
