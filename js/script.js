@@ -63,6 +63,17 @@ if (gridDemo) {
     gridDemo.parentNode.insertBefore(controls, gridDemo);
 }
 
+function changeGridCols(cols) {
+
+    const grid =
+        document.querySelector('.basic-grid');
+
+    if (grid) {
+
+        grid.style.gridTemplateColumns =
+            `repeat(${cols}, 1fr)`;
+    }
+}
 
 // ===============================
 // Інтерактивна зміна Grid Gap

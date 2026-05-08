@@ -2701,3 +2701,33 @@ LIGHTBOX
         grid-template-columns: 1fr;
     }
 }
+
+.grid-controls {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.grid-controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.grid-controls button:hover {
+
+    transform: translateY(-3px);
+}

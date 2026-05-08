@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,17 @@
     </header>
     <main class="grid-demo-main">
         <!-- Демонстрація базового Grid -->
+        <div class="grid-controls">
+            <button onclick="changeGridCols(2)">
+                2 колонки
+            </button>
+            <button onclick="changeGridCols(3)">
+                3 колонки
+            </button>
+            <button onclick="changeGridCols(4)">
+                4 колонки
+            </button>
+        </div>
         <section class="demo-section">
             <h2>Базова Grid сітка</h2>
             <div class="demo-container">
@@ -182,24 +194,24 @@
                 </div>
             </div>
         </section>
-            <!-- Додайте перед закриваючим </main> -->
-    <section class="demo-section exercises">
-        <h2> Практичні вправи з Grid</h2>
-        <div class="exercise-container">
-            <!-- Вправа 1: Holy Grail Layout -->
-            <div class="exercise">
-                <h3>Вправа 1: Holy Grail Layout</h3>
-                <p>Створіть класичний макет з header, footer, main, та двома sidebar</p>
-                <div class="holy-grail">
-                    <header class="hg-header">Header</header>
-                    <nav class="hg-nav">Left Sidebar</nav>
-                    <main class="hg-main">Main Content</main>
-                    <aside class="hg-aside">Right Sidebar</aside>
-                    <footer class="hg-footer">Footer</footer>
-                </div>
-                <details>
-                    <summary>Показати код</summary>
-                    <pre><code>.holy-grail {
+        <!-- Додайте перед закриваючим </main> -->
+        <section class="demo-section exercises">
+            <h2> Практичні вправи з Grid</h2>
+            <div class="exercise-container">
+                <!-- Вправа 1: Holy Grail Layout -->
+                <div class="exercise">
+                    <h3>Вправа 1: Holy Grail Layout</h3>
+                    <p>Створіть класичний макет з header, footer, main, та двома sidebar</p>
+                    <div class="holy-grail">
+                        <header class="hg-header">Header</header>
+                        <nav class="hg-nav">Left Sidebar</nav>
+                        <main class="hg-main">Main Content</main>
+                        <aside class="hg-aside">Right Sidebar</aside>
+                        <footer class="hg-footer">Footer</footer>
+                    </div>
+                    <details>
+                        <summary>Показати код</summary>
+                        <pre><code>.holy-grail {
 display: grid;
 grid-template-columns: 200px 1fr 200px;
 grid-template-rows: auto 1fr auto;
@@ -210,44 +222,44 @@ grid-template-areas:
 min-height: 400px;
 gap: 1rem;
 }</code></pre>
-                </details>
-            </div>
-            <!-- Вправа 2: Responsive Cards -->
-            <div class="exercise">
-                <h3>Вправа 2: Адаптивні картки</h3>
-                <p>Створіть сітку карток, яка автоматично адаптується</p>
-                <div class="responsive-cards">
-                    <div class="card">Картка 1</div>
-                    <div class="card">Картка 2</div>
-                    <div class="card">Картка 3</div>
-                    <div class="card">Картка 4</div>
-                    <div class="card">Картка 5</div>
+                    </details>
                 </div>
-                <details>
-                    <summary>Показати код</summary>
-                    <pre><code>.responsive-cards {
+                <!-- Вправа 2: Responsive Cards -->
+                <div class="exercise">
+                    <h3>Вправа 2: Адаптивні картки</h3>
+                    <p>Створіть сітку карток, яка автоматично адаптується</p>
+                    <div class="responsive-cards">
+                        <div class="card">Картка 1</div>
+                        <div class="card">Картка 2</div>
+                        <div class="card">Картка 3</div>
+                        <div class="card">Картка 4</div>
+                        <div class="card">Картка 5</div>
+                    </div>
+                    <details>
+                        <summary>Показати код</summary>
+                        <pre><code>.responsive-cards {
             display: grid;
             grid-template-columns:
             repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             }</code></pre>
-                </details>
-            </div>
-            <!-- Вправа 3: Dashboard Layout -->
-            <div class="exercise">
-                <h3>Вправа 3: Dashboard Layout</h3>
-                <p>Створіть макет адміністративної панелі</p>
-                <div class="dashboard">
-                    <div class="dash-header">Dashboard Header</div>
-                    <div class="dash-sidebar">Menu</div>
-                    <div class="dash-widget widget-1">Widget 1</div>
-                    <div class="dash-widget widget-2">Widget 2</div>
-                    <div class="dash-widget widget-3">Widget 3</div>
-                    <div class="dash-widget widget-4">Chart</div>
+                    </details>
                 </div>
-                <details>
-                    <summary>Показати код</summary>
-                    <pre><code>.dashboard {
+                <!-- Вправа 3: Dashboard Layout -->
+                <div class="exercise">
+                    <h3>Вправа 3: Dashboard Layout</h3>
+                    <p>Створіть макет адміністративної панелі</p>
+                    <div class="dashboard">
+                        <div class="dash-header">Dashboard Header</div>
+                        <div class="dash-sidebar">Menu</div>
+                        <div class="dash-widget widget-1">Widget 1</div>
+                        <div class="dash-widget widget-2">Widget 2</div>
+                        <div class="dash-widget widget-3">Widget 3</div>
+                        <div class="dash-widget widget-4">Chart</div>
+                    </div>
+                    <details>
+                        <summary>Показати код</summary>
+                        <pre><code>.dashboard {
             display: grid;
             grid-template-columns: 150px repeat(3, 1fr);
             grid-template-rows: 60px repeat(2, 150px);
@@ -256,172 +268,172 @@ gap: 1rem;
             .dash-header { grid-column: 1 / -1; }
             .dash-sidebar { grid-row: 2 / -1; }
             .widget-4 { grid-column: span 2; }</code></pre>
-                </details>
+                    </details>
+                </div>
             </div>
-            </div>
-            </section>
-            <!-- Секція порівняння продуктивності -->
-            <section class="demo-section performance">
-                <h2> Grid vs Flexbox: Продуктивність</h2>
-                <div class="performance-comparison">
-                    <div class="perf-metric">
-                        <h4>Швидкість рендерингу</h4>
-                        <div class="perf-bar">
-                            <div class="perf-fill grid-perf" style="width: 95%">Grid: 95%</div>
-                        </div>
-                        <div class="perf-bar">
-                            <div class="perf-fill flex-perf" style="width: 98%">Flexbox: 98%</div>
-                        </div>
+        </section>
+        <!-- Секція порівняння продуктивності -->
+        <section class="demo-section performance">
+            <h2> Grid vs Flexbox: Продуктивність</h2>
+            <div class="performance-comparison">
+                <div class="perf-metric">
+                    <h4>Швидкість рендерингу</h4>
+                    <div class="perf-bar">
+                        <div class="perf-fill grid-perf" style="width: 95%">Grid: 95%</div>
                     </div>
-                    <div class="perf-metric">
-                        <h4>Складність макетів</h4>
-                        <div class="perf-bar">
-                            <div class="perf-fill grid-perf" style="width: 100%">Grid: 100%</div>
-                        </div>
-                        <div class="perf-bar">
-                            <div class="perf-fill flex-perf" style="width: 60%">Flexbox: 60%</div>
-                        </div>
-                    </div>
-                    <div class="perf-metric">
-                        <h4>Підтримка браузерів</h4>
-                        <div class="perf-bar">
-                            <div class="perf-fill grid-perf" style="width: 93%">Grid: 93%</div>
-                        </div>
-                        <div class="perf-bar">
-                            <div class="perf-fill flex-perf" style="width: 99%">Flexbox: 99%</div>
-                        </div>
+                    <div class="perf-bar">
+                        <div class="perf-fill flex-perf" style="width: 98%">Flexbox: 98%</div>
                     </div>
                 </div>
-            </section>
-            <section class="custom-magazine">
-
-    <h2>Мій журнальний Grid Layout</h2>
-
-    <div class="magazine-grid">
-
-        <article class="mag-item featured">
-            <img src="images/grid-1.jpg" alt="">
-            <h3>Головна стаття</h3>
-        </article>
-
-        <article class="mag-item vertical">
-            <img src="images/grid-2.jpg" alt="">
-            <h3>Vertical Block</h3>
-        </article>
-
-        <article class="mag-item horizontal">
-            <img src="images/grid-3.jpg" alt="">
-            <h3>Horizontal Block</h3>
-        </article>
-
-        <article class="mag-item">
-            <img src="images/grid-4.jpg" alt="">
-            <h3>Article 4</h3>
-        </article>
-
-        <article class="mag-item">
-            <img src="images/grid-5.jpg" alt="">
-            <h3>Article 5</h3>
-        </article>
-
-        <article class="mag-item big">
-            <img src="images/grid-6.jpg" alt="">
-            <h3>Big Article</h3>
-        </article>
-
-        <article class="mag-item">
-            <img src="images/grid-1.jpg" alt="">
-            <h3>Article 7</h3>
-        </article>
-
-        <article class="mag-item small">
-            <h3>Mini 8</h3>
-        </article>
-
-        <article class="mag-item small">
-            <h3>Mini 9</h3>
-        </article>
-
-        <article class="mag-item">
-            <img src="images/grid-2.jpg" alt="">
-            <h3>Article 10</h3>
-        </article>
-
-    </div>
-
-</section>
-<section class="dashboard-section">
-
-    <h2>Dashboard Layout</h2>
-
-    <div class="dashboard-grid">
-
-        <header class="dashboard-header">
-            <h3>My Dashboard</h3>
-
-            <div class="dashboard-user">
-                <span>Admin</span>
-                <img src="images/grid-1.jpg" alt="">
+                <div class="perf-metric">
+                    <h4>Складність макетів</h4>
+                    <div class="perf-bar">
+                        <div class="perf-fill grid-perf" style="width: 100%">Grid: 100%</div>
+                    </div>
+                    <div class="perf-bar">
+                        <div class="perf-fill flex-perf" style="width: 60%">Flexbox: 60%</div>
+                    </div>
+                </div>
+                <div class="perf-metric">
+                    <h4>Підтримка браузерів</h4>
+                    <div class="perf-bar">
+                        <div class="perf-fill grid-perf" style="width: 93%">Grid: 93%</div>
+                    </div>
+                    <div class="perf-bar">
+                        <div class="perf-fill flex-perf" style="width: 99%">Flexbox: 99%</div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
+        <section class="custom-magazine">
 
-        <aside class="dashboard-sidebar">
+            <h2>Мій журнальний Grid Layout</h2>
 
-            <a href="#">Dashboard</a>
-            <a href="#">Analytics</a>
-            <a href="#">Projects</a>
-            <a href="#">Messages</a>
-            <a href="#">Settings</a>
+            <div class="magazine-grid">
 
-        </aside>
+                <article class="mag-item featured">
+                    <img src="images/grid-1.jpg" alt="">
+                    <h3>Головна стаття</h3>
+                </article>
 
-        <div class="dashboard-card stats">
-            <h4>Visitors</h4>
-            <p>24 521</p>
-        </div>
+                <article class="mag-item vertical">
+                    <img src="images/grid-2.jpg" alt="">
+                    <h3>Vertical Block</h3>
+                </article>
 
-        <div class="dashboard-card revenue">
-            <h4>Revenue</h4>
-            <p>$8 240</p>
-        </div>
+                <article class="mag-item horizontal">
+                    <img src="images/grid-3.jpg" alt="">
+                    <h3>Horizontal Block</h3>
+                </article>
 
-        <div class="dashboard-card orders">
-            <h4>Orders</h4>
-            <p>431</p>
-        </div>
+                <article class="mag-item">
+                    <img src="images/grid-4.jpg" alt="">
+                    <h3>Article 4</h3>
+                </article>
 
-        <div class="dashboard-card chart">
-            <h4>Analytics Chart</h4>
+                <article class="mag-item">
+                    <img src="images/grid-5.jpg" alt="">
+                    <h3>Article 5</h3>
+                </article>
 
-            <div class="fake-chart">
+                <article class="mag-item big">
+                    <img src="images/grid-6.jpg" alt="">
+                    <h3>Big Article</h3>
+                </article>
 
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-                <div class="bar bar-4"></div>
-                <div class="bar bar-5"></div>
+                <article class="mag-item">
+                    <img src="images/grid-1.jpg" alt="">
+                    <h3>Article 7</h3>
+                </article>
+
+                <article class="mag-item small">
+                    <h3>Mini 8</h3>
+                </article>
+
+                <article class="mag-item small">
+                    <h3>Mini 9</h3>
+                </article>
+
+                <article class="mag-item">
+                    <img src="images/grid-2.jpg" alt="">
+                    <h3>Article 10</h3>
+                </article>
 
             </div>
-        </div>
 
-        <div class="dashboard-card activity">
-            <h4>Recent Activity</h4>
+        </section>
+        <section class="dashboard-section">
 
-            <ul>
-                <li>New order received</li>
-                <li>User registered</li>
-                <li>Payment completed</li>
-                <li>Project updated</li>
-            </ul>
-        </div>
+            <h2>Dashboard Layout</h2>
 
-    </div>
+            <div class="dashboard-grid">
 
-</section>
+                <header class="dashboard-header">
+                    <h3>My Dashboard</h3>
+
+                    <div class="dashboard-user">
+                        <span>Admin</span>
+                        <img src="images/grid-1.jpg" alt="">
+                    </div>
+                </header>
+
+                <aside class="dashboard-sidebar">
+
+                    <a href="#">Dashboard</a>
+                    <a href="#">Analytics</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Messages</a>
+                    <a href="#">Settings</a>
+
+                </aside>
+
+                <div class="dashboard-card stats">
+                    <h4>Visitors</h4>
+                    <p>24 521</p>
+                </div>
+
+                <div class="dashboard-card revenue">
+                    <h4>Revenue</h4>
+                    <p>$8 240</p>
+                </div>
+
+                <div class="dashboard-card orders">
+                    <h4>Orders</h4>
+                    <p>431</p>
+                </div>
+
+                <div class="dashboard-card chart">
+                    <h4>Analytics Chart</h4>
+
+                    <div class="fake-chart">
+
+                        <div class="bar bar-1"></div>
+                        <div class="bar bar-2"></div>
+                        <div class="bar bar-3"></div>
+                        <div class="bar bar-4"></div>
+                        <div class="bar bar-5"></div>
+
+                    </div>
+                </div>
+
+                <div class="dashboard-card activity">
+                    <h4>Recent Activity</h4>
+
+                    <ul>
+                        <li>New order received</li>
+                        <li>User registered</li>
+                        <li>Payment completed</li>
+                        <li>Project updated</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
     </main>
-            <footer class="grid-footer">
-                <p>&copy; 2024 CSS Grid Demo. Створено для навчання.</p>
-            </footer>
+    <footer class="grid-footer">
+        <p>&copy; 2024 CSS Grid Demo. Створено для навчання.</p>
+    </footer>
 </body>
 
 </html>
