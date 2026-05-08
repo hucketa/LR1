@@ -1,0 +1,365 @@
+/* ======================
+CSS GRID СТИЛІ
+====================== */
+/* Базові стилі для Grid демо */
+.grid-demo-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.grid-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.grid-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.grid-nav a {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+
+.grid-nav a:hover,
+.grid-nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* ======================
+БАЗОВА GRID ДЕМОНСТРАЦІЯ
+====================== */
+.basic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.mixed-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 2fr 25%;
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================
+GRID TEMPLATE AREAS
+====================== */
+.area-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header header"
+        "nav main sidebar"
+        "footer footer footer";
+    gap: 20px;
+    height: 400px;
+    margin: 1rem 0;
+}
+
+.area-header {
+    grid-area: header;
+    background: #ff6b6b;
+}
+
+.area-nav {
+    grid-area: nav;
+    background: #4ecdc4;
+}
+
+.area-main {
+    grid-area: main;
+    background: #45b7d1;
+}
+
+.area-sidebar {
+    grid-area: sidebar;
+    background: #96ceb4;
+}
+
+.area-footer {
+    grid-area: footer;
+    background: #feca57;
+}
+
+.area-grid>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* ======================
+GAP ТА ALIGNMENT
+====================== */
+.gap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 1rem 0;
+}
+
+.alignment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px;
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.align-start {
+    align-self: start;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.align-end {
+    align-self: end;
+}
+
+.align-stretch {
+    align-self: stretch;
+}
+
+/* ======================
+SPANNING (РОЗТЯГУВАННЯ)
+====================== */
+.span-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 80px);
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.span-2-cols {
+    grid-column: span 2;
+    background: #ff6b6b !important;
+}
+
+.span-2-rows {
+    grid-row: span 2;
+    background: #4ecdc4 !important;
+}
+
+.span-full {
+    grid-column: 1 / -1;
+    background: #feca57 !important;
+}
+
+/* ======================
+AUTO-FIT & AUTO-FILL
+====================== */
+.auto-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 1rem 0;
+}
+
+.auto-fill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 1rem 0;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* ======================
+ЖУРНАЛЬНИЙ МАКЕТ
+====================== */
+.magazine-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 120px);
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+.magazine-layout article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.magazine-layout img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.magazine-layout h3,
+.magazine-layout h4 {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.magazine-layout p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.featured {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.featured h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.vertical {
+    grid-row: span 2;
+    background: #ffeaa7;
+}
+
+.horizontal {
+    grid-column: span 2;
+    background: #dfe6e9;
+}
+
+.small {
+    background: #a29bfe;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======================
+ПОРІВНЯННЯ GRID VS FLEXBOX
+====================== */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 2rem 0;
+}
+
+.comparison-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-card {
+    border-left: 4px solid #667eea;
+}
+
+.flex-card {
+    border-left: 4px solid #45b7d1;
+}
+
+.comparison-card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.comparison-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comparison-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comparison-card li:before {
+    content: "→ ";
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* ======================
+АДАПТИВНІСТЬ
+====================== */
+@media (max-width: 768px) {
+    .area-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+        height: auto;
+    }
+
+    .magazine-layout {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .featured {
+        grid-column: 1 / -1;
+    }
+
+    .horizontal {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .basic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mixed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .magazine-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}

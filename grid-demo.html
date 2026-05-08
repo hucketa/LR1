@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Демонстрація - Мій особистий сайт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+
+<body>
+    <header class="grid-header">
+        <h1>CSS Grid Layout Демонстрація</h1>
+        <nav class="grid-nav">
+            <a href="index.html">Головна</a>
+            <a href="flexbox-demo.html">Flexbox</a>
+            <a href="grid-demo.html" class="active">Grid</a>
+            <a href="grid-landing.html">Grid Landing</a>
+        </nav>
+    </header>
+    <main class="grid-demo-main">
+        <!-- Демонстрація базового Grid -->
+        <section class="demo-section">
+            <h2>Базова Grid сітка</h2>
+            <div class="demo-container">
+                <h3>3 колонки x 2 рядки</h3>
+                <div class="basic-grid">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>Різні розміри колонок (fr, px, %)</h3>
+                <div class="mixed-grid">
+                    <div class="grid-item">200px</div>
+                    <div class="grid-item">1fr</div>
+                    <div class="grid-item">2fr</div>
+                    <div class="grid-item">25%</div>
+                </div>
+            </div>
+        </section>
+        <!-- Grid Areas -->
+        <section class="demo-section">
+            <h2>Grid Template Areas</h2>
+            <div class="demo-container">
+                <h3>Макет з іменованими областями</h3>
+                <div class="area-grid">
+                    <header class="area-header">Header</header>
+                    <nav class="area-nav">Navigation</nav>
+                    <main class="area-main">Main Content</main>
+                    <aside class="area-sidebar">Sidebar</aside>
+                    <footer class="area-footer">Footer</footer>
+                </div>
+            </div>
+        </section>
+        <!-- Grid Gap та Alignment -->
+        <section class="demo-section">
+            <h2>Gap та вирівнювання</h2>
+            <div class="demo-container">
+                <h3>Grid Gap (відступи між елементами)</h3>
+                <div class="gap-grid">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>Вирівнювання елементів</h3>
+                <div class="alignment-grid">
+                    <div class="grid-item align-start">Start</div>
+                    <div class="grid-item align-center">Center</div>
+                    <div class="grid-item align-end">End</div>
+                    <div class="grid-item align-stretch">Stretch</div>
+                </div>
+            </div>
+        </section>
+        <!-- Spanning (розтягування) -->
+        <section class="demo-section">
+            <h2>Розтягування елементів</h2>
+            <div class="demo-container">
+                <h3>Grid-column-span та Grid-row-span</h3>
+                <div class="span-grid">
+                    <div class="grid-item span-2-cols">Займає 2 колонки</div>
+                    <div class="grid-item">1</div>
+                    <div class="grid-item span-2-rows">Займає 2 рядки</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item span-full">Займає весь рядок</div>
+                </div>
+            </div>
+        </section>
+        <!-- Автоматичне розміщення -->
+        <section class="demo-section">
+            <h2>Автоматичне розміщення (Auto-fit & Auto-fill)</h2>
+            <div class="demo-container">
+                <h3>repeat(auto-fit, minmax(200px, 1fr))</h3>
+                <div class="auto-fit-grid">
+                    <div class="grid-item">Auto 1</div>
+                    <div class="grid-item">Auto 2</div>
+                    <div class="grid-item">Auto 3</div>
+                    <div class="grid-item">Auto 4</div>
+                    <div class="grid-item">Auto 5</div>
+                </div>
+            </div>
+            <div class="demo-container">
+                <h3>repeat(auto-fill, minmax(150px, 1fr))</h3>
+                <div class="auto-fill-grid">
+                    <div class="grid-item">Fill 1</div>
+                    <div class="grid-item">Fill 2</div>
+                    <div class="grid-item">Fill 3</div>
+                </div>
+            </div>
+        </section>
+        <!-- Практичний приклад: Журнальний макет -->
+        <section class="demo-section">
+            <h2>Журнальний макет</h2>
+            <div class="magazine-layout">
+                <article class="featured">
+                    <img src="images/grid-1.jpg" alt="Featured">
+                    <h3>Головна стаття</h3>
+                    <p>Великий блок для найважливішого контенту</p>
+                </article>
+                <article class="regular">
+                    <img src="images/grid-2.jpg" alt="Article 1">
+                    <h4>Стаття 1</h4>
+                    <p>Звичайна стаття</p>
+                </article>
+                <article class="regular">
+                    <img src="images/grid-3.jpg" alt="Article 2">
+                    <h4>Стаття 2</h4>
+                    <p>Звичайна стаття</p>
+                </article>
+                <article class="vertical">
+                    <img src="images/grid-4.jpg" alt="Vertical">
+                    <h4>Вертикальна</h4>
+                    <p>Високий блок</p>
+                </article>
+                <article class="horizontal">
+                    <img src="images/grid-5.jpg" alt="Horizontal">
+                    <h4>Горизонтальна</h4>
+                    <p>Широкий блок</p>
+                </article>
+                <article class="small">
+                    <h4>Мала 1</h4>
+                </article>
+                <article class="small">
+                    <h4>Мала 2</h4>
+                </article>
+            </div>
+        </section>
+        <!-- Порівняння Grid vs Flexbox -->
+        <section class="demo-section comparison">
+            <h2>Grid vs Flexbox: коли що використовувати</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card grid-card">
+                    <h3>CSS Grid </h3>
+                    <ul>
+                        <li>Двовимірні макети (рядки І колонки)</li>
+                        <li>Складні журнальні макети</li>
+                        <li>Фіксована сітка з чітким позиціонуванням</li>
+                        <li>Оверлеї та накладання елементів</li>
+                        <li>Макети з прогалинами та пропусками</li>
+                    </ul>
+                </div>
+                <div class="comparison-card flex-card">
+                    <h3>Flexbox </h3>
+                    <ul>
+                        <li>Одновимірні макети (рядок АБО колонка)</li>
+                        <li>Компоненти UI (навігація, картки)</li>
+                        <li>Вирівнювання контенту</li>
+                        <li>Розподіл простору між елементами</li>
+                        <li>Гнучкі розміри елементів</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="grid-footer">
+        <p>&copy; 2024 CSS Grid Demo. Створено для навчання.</p>
+    </footer>
+</body>
+
+</html>
