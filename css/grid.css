@@ -2512,3 +2512,192 @@ LIGHTBOX
         gap: 20px;
     }
 }
+
+/* ======================
+   CSS VARIABLES GRID
+====================== */
+
+:root {
+    --dynamic-columns:
+        repeat(3, 1fr);
+    --dynamic-gap: 20px;
+    --dynamic-radius: 16px;
+}
+
+
+/* Controls */
+
+.variable-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.variable-controls button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.variable-controls button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+
+/* Dynamic Grid */
+
+.variable-grid-demo {
+    display: grid;
+    grid-template-columns:
+        var(--dynamic-columns);
+    gap: var(--dynamic-gap);
+    transition:
+        grid-template-columns 0.5s ease,
+        gap 0.3s ease;
+}
+
+
+/* Animation */
+
+.variable-grid-demo:hover {
+    gap: 30px;
+}
+
+
+/* Cards */
+
+.variable-card {
+    min-height: 220px;
+    border-radius:
+        var(--dynamic-radius);
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+
+/* Hover */
+
+.variable-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.03);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .variable-grid-demo {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .variable-grid-demo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================
+   SUBGRID
+====================== */
+
+.subgrid-container {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+
+/* Parent Grid */
+
+.subgrid-card {
+    display: grid;
+    grid-template-rows:
+        auto
+        1fr
+        auto;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 16px;
+    background: white;
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* Subgrid support */
+
+@supports (grid-template-columns: subgrid) {
+    .subgrid-card {
+        grid-template-columns: subgrid;
+    }
+}
+
+
+/* Elements */
+
+.subgrid-header,
+.subgrid-content,
+.subgrid-footer {
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subgrid-header {
+    background: #667eea;
+}
+
+.subgrid-content {
+    background: #764ba2;
+}
+
+.subgrid-footer {
+    background: #2d3436;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .subgrid-container {
+        grid-template-columns: 1fr;
+    }
+}

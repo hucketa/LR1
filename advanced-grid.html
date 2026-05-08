@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced CSS Grid</title>
-
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/grid.css">
 </head>
 
 <body class="advanced-page">
-
     <header class="advanced-header">
         <h1>Advanced CSS Grid Features</h1>
-
         <p>
             Grid + Flexbox + Performance Optimization
         </p>
     </header>
-
     <section class="advanced-section">
-
         <h2>Grid + Flexbox Layout</h2>
-
         <div class="advanced-layout">
-
             <aside class="advanced-sidebar">
-
                 <div class="logo">
                     GRID UI
                 </div>
-
                 <nav class="sidebar-menu">
                     <a href="#">Dashboard</a>
                     <a href="#">Analytics</a>
@@ -38,85 +30,52 @@
                     <a href="#">Messages</a>
                     <a href="#">Settings</a>
                 </nav>
-
             </aside>
-
             <main class="advanced-content">
-
                 <div class="top-bar">
-
                     <h3>Admin Panel</h3>
-
                     <div class="user-box">
-
                         <span>Admin</span>
-
-                        <img
-                            src="images/grid-1.jpg"
-                            alt="User"
-                        >
-
+                        <img src="images/grid-1.jpg" alt="User">
                     </div>
-
                 </div>
-
                 <div class="cards-grid">
-
                     <div class="card card-large">
-
                         <div class="card-header">
-
                             <h3>Statistics</h3>
-
                             <span>2025</span>
-
                         </div>
-
                         <div class="card-body">
-
                             <div class="mini-stat">
                                 <strong>24K</strong>
                                 <span>Users</span>
                             </div>
-
                             <div class="mini-stat">
                                 <strong>18K</strong>
                                 <span>Sales</span>
                             </div>
-
                             <div class="mini-stat">
                                 <strong>92%</strong>
                                 <span>Growth</span>
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="card">
                         <h3>Users</h3>
                     </div>
-
                     <div class="card">
                         <h3>Orders</h3>
                     </div>
-
                     <div class="card">
                         <h3>Revenue</h3>
                     </div>
-
                     <div class="card card-wide">
-
                         <div class="card-header">
-
                             <h3>Analytics</h3>
-
                             <button class="export-btn">
                                 Export
                             </button>
-
                         </div>
-
                         <div class="analytics-bars">
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -124,16 +83,79 @@
                             <div class="bar"></div>
                             <div class="bar"></div>
                         </div>
-
                     </div>
-
                 </div>
-
             </main>
+        </div>
+    </section>
+    <section class="advanced-section">
+
+        <h2>Animated Grid with CSS Variables</h2>
+
+        <div class="variable-controls">
+
+            <button onclick="changeColumns(2)">
+                2 Columns
+            </button>
+
+            <button onclick="changeColumns(3)">
+                3 Columns
+            </button>
+
+            <button onclick="changeColumns(4)">
+                4 Columns
+            </button>
 
         </div>
-
+        <div class="variable-grid-demo">
+            <div class="variable-card">
+                Card 1
+            </div>
+            <div class="variable-card">
+                Card 2
+            </div>
+            <div class="variable-card">
+                Card 3
+            </div>
+            <div class="variable-card">
+                Card 4
+            </div>
+            <div class="variable-card">
+                Card 5
+            </div>
+            <div class="variable-card">
+                Card 6
+            </div>
+        </div>
     </section>
 
+    <section class="advanced-section">
+        <h2>Subgrid Experiment</h2>
+        <div class="subgrid-container">
+            <div class="subgrid-card">
+                <div class="subgrid-header">
+                    Header
+                </div>
+                <div class="subgrid-content">
+                    Content
+                </div>
+                <div class="subgrid-footer">
+                    Footer
+                </div>
+            </div>
+            <div class="subgrid-card">
+                <div class="subgrid-header">
+                    Header
+                </div>
+                <div class="subgrid-content">
+                    Another Content
+                </div>
+                <div class="subgrid-footer">
+                    Footer
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
