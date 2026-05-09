@@ -257,6 +257,7 @@ function toggleMenu() {
     mobileMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
 }
+
 // Відображення поточного breakpoint
 function updateBreakpointInfo() {
     const width = window.innerWidth;
@@ -279,20 +280,23 @@ function updateBreakpointInfo() {
         }
     }
 }
+
 // Виклик при завантаженні та зміні розміру вікна
 window.addEventListener('load', updateBreakpointInfo);
 window.addEventListener('resize', updateBreakpointInfo);
 // Функція для DevTools
+
 function openDevTools() {
     alert('Натисніть F12 або:\n\n' +
         'Windows/Linux: Ctrl + Shift + I\n' +
         'Mac: Cmd + Option + I\n\n' +
         'Потім оберіть Device Toolbar (Ctrl+Shift+M або Cmd+Shift+M)');
 }
+
 // Виявлення типу пристрою
 function detectDevice() {
-    const isTablet = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent);
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isTablet = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent);
     if (isTablet) {
         return 'Tablet';
     } else if (isMobile) {
@@ -372,6 +376,7 @@ function handleSwipe() {
         }
     }
 }
+
 document.addEventListener('touchstart', e => {
     touchStartX = e.changedTouches[0].screenX;
 });
@@ -381,3 +386,22 @@ document.addEventListener('touchend', e => {
     handleSwipe();
 });
 
+// Progress tracking for checklist
+document.addEventListener('DOMContentLoaded', function () {
+    const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+    const progressBar = document.getElementById('progressBar');
+    const progressPercent = document.getElementById('progressPercent');
+    function updateProgress() {
+        const total = checkboxes.length;
+        const checked = document.querySelectorAll('.checklist input[type="checkbox"]:checked').length;
+        const percentage = Math.round((checked / total) * 100);
+        if (progressBar && progressPercent) {
+            progressBar.style.width = percentage + '%';
+            progressPercent.textContent = percentage + '%';
+        }
+    }
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProgress);
+    });
+    updateProgress();
+});

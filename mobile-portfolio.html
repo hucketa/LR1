@@ -331,7 +331,7 @@ xtarea>
 <span class="fab-icon">↑</span>
 </button>
 <footer class="mobile-footer">
-<div class="container">
+ <div class="container">
 <div class="social-links">
 <a href="#" class="social-link" aria-label="Facebook">F</a>
 <a href="#" class="social-link" aria-label="Twitter">T</a>
@@ -365,7 +365,7 @@ xtarea>
             this.classList.add('active');
             const filter = this.dataset.filter;
             const projects = document.querySelectorAll('.project-mobile-card');
-projects.forEach(project => {
+            projects.forEach(project => {
                 if (filter === 'all' || project.dataset.category.includes(filter)) {
                     project.style.display = 'block';
                     project.style.animation = 'fadeInUp 0.5s ease';
@@ -389,5 +389,4 @@ projects.forEach(project => {
     });
 </script>
 </body>
-
 </html>
