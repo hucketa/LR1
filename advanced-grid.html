@@ -7,6 +7,14 @@
     <title>Advanced CSS Grid</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/grid.css">
+    <script src="js/scripts.js" ></script>
+    <script>
+    function changeVariableGrid(cols) {
+    document.documentElement.style.setProperty(
+        '--dynamic-columns',
+        `repeat(${cols}, 1fr)`
+    );}
+    </script>>
 </head>
 
 <body class="advanced-page">
@@ -94,17 +102,17 @@
 
         <div class="variable-controls">
 
-            <button onclick="changeColumns(2)">
-                2 Columns
-            </button>
-
-            <button onclick="changeColumns(3)">
-                3 Columns
-            </button>
-
-            <button onclick="changeColumns(4)">
-                4 Columns
-            </button>
+        <button onclick="changeVariableGrid(2)">
+            2 Columns
+        </button>
+        
+        <button onclick="changeVariableGrid(3)">
+            3 Columns
+        </button>
+        
+        <button onclick="changeVariableGrid(4)">
+            4 Columns
+        </button>
 
         </div>
         <div class="variable-grid-demo">

@@ -115,12 +115,22 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
+
 }, observerOptions);
+
+// Спостерігаємо за елементами
+document
+    .querySelectorAll(
+        '.feature-card, .portfolio-item, .price-card'
+    )
+    .forEach(el => {
+        observer.observe(el);
+    });
 
 
 // ===============================
@@ -157,7 +167,6 @@ function changeGridGap(value) {
         valueDisplay.textContent = `${value}px`;
     }
 }
-
 
 // ===============================
 // Masonry Layout (CSS Grid)
@@ -241,3 +250,4 @@ document
 // ===============================
 
 initMasonry();
+
