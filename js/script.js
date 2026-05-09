@@ -405,3 +405,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     updateProgress();
 });
+
+window.addEventListener('load', () => {
+    const loader =
+        document.querySelector('.loading-demo');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+
+        }, 800);
+    }
+});
