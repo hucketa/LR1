@@ -1,0 +1,387 @@
+</div>
+<div class="device-mockup desktop-mockup">
+    <div class="mockup-screen">
+        <span class="mockup-icon"> </span>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Breakpoints Visualization -->
+<section id="breakpoints" class="breakpoints-section">
+    <div class="container">
+        <h2 class="section-title">Breakpoints та медіа-запити</h2>
+        <p class="section-subtitle">
+            Ось як ваш контент адаптується під різні розміри екранів
+        </p>
+        <div class="breakpoint-demo">
+            <div class="demo-indicator">
+                <div class="current-breakpoint">
+                    <span class="breakpoint-name">Поточний розмір:</span>
+                    <span class="breakpoint-value" id="currentBreakpoint">De
+                        sktop</span>
+                </div>
+                <div class="screen-width">
+                    <span>Ширина екрану:</span>
+                    <span id="screenWidth">0px</span>
+                </div>
+            </div>
+            <div class="breakpoint-cards">
+                <div class="bp-card mobile-bp">
+                    <div class="bp-icon"> </div>
+                    <h3>Mobile</h3>
+                    <p class="bp-range">0 - 480px</p>
+                    <div class="bp-features">
+                        <span class="feature-tag">Вертикальна навігація</spa n>
+                            <span class="feature-tag">1 колонка</span>
+                            <span class="feature-tag">Великі кнопки</span>
+                    </div>
+                </div>
+                <div class="bp-card tablet-bp">
+                    <div class="bp-icon"> </div>
+                    <h3>Tablet</h3>
+                    <p class="bp-range">481 - 768px</p>
+                    <div class="bp-features">
+                        <span class="feature-tag">2 колонки</span>
+                        <span class="feature-tag">Більше контенту</span>
+                        <span class="feature-tag">Гібридна навігація</span>
+                    </div>
+                </div>
+                <div class="bp-card desktop-bp">
+                    <div class="bp-icon"> </div>
+                    <h3>Desktop</h3>
+                    <p class="bp-range">769 - 1024px</p>
+                    <div class="bp-features">
+                        <span class="feature-tag">3+ колонки</span>
+                        <span class="feature-tag">Горизонтальна навігація</s pan>
+                            <span class="feature-tag">Sidebar</span>
+                    </div>
+                </div>
+                <div class="bp-card large-bp">
+                    <div class="bp-icon"> </div>
+                    <h3>Large Desktop</h3>
+                    <p class="bp-range">1025px+</p>
+                    <div class="bp-features">
+                        <span class="feature-tag">Максимальна ширина</span>
+                        <span class="feature-tag">Розширений контент</span>
+                        <span class="feature-tag">Додаткові елементи</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media Queries Examples -->
+<section class="media-queries-section">
+    <div class="container">
+        <h2 class="section-title">Приклади медіа-запитів</h2>
+        <div class="code-examples">
+            <div class="code-card">
+                <h3>Mobile First підхід</h3>
+                <pre><code>/* Базові стилі для mobile */
+.container {
+width: 100%;
+padding: 1rem;
+}
+/* Tablet та більше */
+@media (min-width: 481px) {
+.container {
+padding: 2rem;
+}
+}
+/* Desktop та більше */
+@media (min-width: 769px) {
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+}</code></pre>
+            </div>
+            <div class="code-card">
+                <h3>Адаптивна сітка</h3>
+                <pre><code>/* Mobile: 1 колонка */
+.grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+/* Tablet: 2 колонки */
+@media (min-width: 481px) {
+.grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+/* Desktop: 3 колонки */
+@media (min-width: 769px) {
+.grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+}</code></pre>
+            </div>
+            <div class="code-card">
+                <h3>Адаптивна типографіка</h3>
+                <pre><code>/* Mobile */
+h1 {
+font-size: 2rem;
+line-height: 1.2;
+}
+/* Tablet */
+@media (min-width: 481px) {
+h1 {
+font-size: 2.5rem;
+}
+}
+/* Desktop */
+@media (min-width: 769px) {
+h1 {
+font-size: 3rem;
+line-height: 1.3;
+}
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Responsive Grid Examples -->
+<section id="examples" class="examples-section">
+    <div class="container">
+        <h2 class="section-title">Інтерактивні приклади</h2>
+        <!-- Приклад 1: Адаптивна навігація -->
+        <div class="example-block">
+            <h3 class="example-title">Приклад 1: Адаптивна навігація</h3>
+            <p class="example-desc">
+                Зменшіть ширину вікна браузера, щоб побачити трансформацію
+            </p>
+            <div class="nav-example">
+                <nav class="example-nav">
+                    <span class="nav-brand">Logo</span>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Приклад 2: Адаптивна карткова сітка -->
+        <div class="example-block">
+            <h3 class="example-title">Приклад 2: Адаптивна карткова сітка</h 3>
+                <p class="example-desc">
+                    Кількість колонок автоматично змінюється залежно від ширини
+                    екрану
+                </p>
+                <div class="responsive-grid">
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>Дизайн</h4>
+                        <p>Сучасний UI/UX дизайн</p>
+                    </div>
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>Розробка</h4>
+                        <p>Чистий та оптимізований код</p>
+                    </div>
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>Mobile First</h4>
+                        <p>Пріоритет мобільних пристроїв</p>
+                    </div>
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>Продуктивність</h4>
+                        <p>Швидкий та оптимізований</p>
+                    </div>
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>Доступність</h4>
+                        <p>Доступний для всіх</p>
+                    </div>
+                    <div class="grid-card">
+                        <div class="card-icon"> </div>
+                        <h4>SEO</h4>
+                        <p>Оптимізація для пошукових систем</p>
+                    </div>
+                </div>
+        </div>
+        <!-- Приклад 3: Responsive Images -->
+        <div class="example-block">
+            <h3 class="example-title">Приклад 3: Адаптивні зображення</h3>
+            <p class="example-desc">
+                Використання різних розмірів зображень для різних пристроїв
+            </p>
+            <div class="image-responsive-demo">
+                <picture class="responsive-picture">
+                    <source media="(max-width: 480px)" srcset="images/mobile
+-hero.jpg">
+                    <source media="(max-width: 768px)" srcset="images/tablet
+-view.jpg">
+                    <img src="images/desktop-view.jpg" alt="Responsive image
+" class="resp-img">
+                </picture>
+                <div class="image-info">
+                    <p> Різні версії зображення завантажуються залежно ві
+                        д розміру екрану</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Mobile First vs Desktop First -->
+<section class="approach-comparison">
+    <div class="container">
+        <h2 class="section-title">Mobile First vs Desktop First</h2>
+        <div class="comparison-grid">
+            <div class="approach-card mobile-first">
+                <div class="approach-header">
+                    <h3>Mobile First ✅</h3>
+                    <span class="badge recommended">Рекомендовано</span>
+                </div>
+                <div class="approach-content">
+                    <h4>Переваги:</h4>
+                    <ul>
+                        <li>✓ Пріоритет мобільним користувачам</li>
+                        <li>✓ Краща продуктивність</li>
+                        <li>✓ Прогресивне покращення</li>
+                        <li>✓ Фокус на контенті</li>
+                        <li>✓ Легше масштабувати</li>
+                    </ul>
+                    <div class="code-preview">
+                        <code>min-width</code> медіа-запити
+                    </div>
+                </div>
+            </div>
+            <div class="approach-card desktop-first">
+                <div class="approach-header">
+                    <h3>Desktop First</h3>
+                    <span class="badge legacy">Застарілий підхід</span>
+                </div>
+                <div class="approach-content">
+                    <h4>Недоліки:</h4>
+                    <ul>
+                        <li> Більше коду</li>
+                        <li> Гірша продуктивність на mobile</li>
+                        <li> Складніше підтримувати</li>
+                        <li> Застарілий підхід</li>
+                        <li> Ігнорує mobile трафік</li>
+                    </ul>
+                    <div class="code-preview">
+                        <code>max-width</code> медіа-запити
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testing Section -->
+<section class="testing-section">
+    <div class="container">
+        <h2 class="section-title">Тестування відзивчивості</h2>
+        <div class="testing-tools">
+            <div class="tool-card">
+                <h3> Інструменти розробника</h3>
+                <p>Chrome DevTools, Firefox Developer Tools</p>
+                <button class="tool-btn" onclick="openDevTools()">
+                    Відкрити DevTools (F12)
+                </button>
+            </div>
+            <div class="tool-card">
+                <h3> Фізичні пристрої</h3>
+                <p>Тестування на реальних телефонах та планшетах</p>
+                <div class="device-list">
+                    <span class="device-tag">iPhone</span>
+                    <span class="device-tag">Android</span>
+                    <span class="device-tag">iPad</span>
+                </div>
+            </div>
+            <div class="tool-card">
+                <h3> Онлайн сервіси</h3>
+                <p>BrowserStack, Responsinator, Am I Responsive</p>
+                <a href="https://responsivedesignchecker.com/" target="_blank" class="tool-btn">
+                    Перевірити сайт
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Best Practices -->
+<section class="best-practices">
+    <div class="container">
+        <h2 class="section-title">Найкращі практики</h2>
+        <div class="practices-grid">
+            <div class="practice-card">
+                <div class="practice-number">1</div>
+                <h3>Viewport Meta Tag</h3>
+                <p>Завжди додавайте viewport meta-тег для коректного масштаб
+                    ування</p>
+                <code>&lt;meta name="viewport" content="width=device-width,
+initial-scale=1.0"&gt;</code>
+            </div>
+            <div class="practice-card">
+                <div class="practice-number">2</div>
+                <h3>Гнучкі одиниці</h3>
+                <p>Використовуйте відносні одиниці (%, em, rem, vw, vh) замі
+                    сть px</p>
+                <code>width: 90%; padding: 2rem;</code>
+            </div>
+            <div class="practice-card">
+                <div class="practice-number">3</div>
+                <h3>Breakpoints на контенті</h3>
+                <p>Визначайте breakpoints на основі контенту, а не популярни
+                    х пристроїв</p>
+                <code>@media (min-width: 45em) { ... }</code>
+            </div>
+            <div class="practice-card">
+                <div class="practice-number">4</div>
+                <h3>Оптимізація зображень</h3>
+                <p>Використовуйте srcset та picture для різних розмірів</p>
+                <code>&lt;img srcset="..." sizes="..."&gt;</code>
+            </div>
+            <div class="practice-card">
+                <div class="practice-number">5</div>
+                <h3>Touch-friendly</h3>
+                <p>Робіть інтерактивні елементи достатньо великими для дотик
+                    у (мінімум 44x44px)</p>
+                <code>min-height: 44px; min-width: 44px;</code>
+            </div>
+            <div class="practice-card">
+                <div class="practice-number">6</div>
+                <h3>Тестування</h3>
+                <p>Регулярно тестуйте на реальних пристроях та різних браузе
+                    рах</p>
+                <code>DevTools → Device Toolbar</code>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="responsive-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Про проект</h4>
+                <p>Навчальний проект з Responsive Web Design</p>
+            </div>
+            <div class="footer-col">
+                <h4>Ресурси</h4>
+                <ul>
+                    <li><a href="#">MDN Web Docs</a></li>
+                    <li><a href="#">CSS-Tricks</a></li>
+                    <li><a href="#">Can I Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <p>Email: info@responsive.dev</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Responsive Design Demo. Всі права захищені.</p>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
