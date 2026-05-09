@@ -251,3 +251,133 @@ document
 
 initMasonry();
 
+function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburger = document.querySelector('.hamburger');
+    mobileMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+// Відображення поточного breakpoint
+function updateBreakpointInfo() {
+    const width = window.innerWidth;
+    const breakpointValue = document.getElementById('currentBreakpoint');
+    const screenWidth = document.getElementById('screenWidth');
+    if (breakpointValue && screenWidth) {
+        screenWidth.textContent = width + 'px';
+        if (width <= 480) {
+            breakpointValue.textContent = 'Mobile';
+            breakpointValue.style.color = '#e74c3c';
+        } else if (width <= 768) {
+            breakpointValue.textContent = 'Tablet';
+            breakpointValue.style.color = '#f39c12';
+        } else if (width <= 1024) {
+            breakpointValue.textContent = 'Desktop';
+            breakpointValue.style.color = '#3498db';
+        } else {
+            breakpointValue.textContent = 'Large Desktop';
+            breakpointValue.style.color = '#9b59b6';
+        }
+    }
+}
+// Виклик при завантаженні та зміні розміру вікна
+window.addEventListener('load', updateBreakpointInfo);
+window.addEventListener('resize', updateBreakpointInfo);
+// Функція для DevTools
+function openDevTools() {
+    alert('Натисніть F12 або:\n\n' +
+        'Windows/Linux: Ctrl + Shift + I\n' +
+        'Mac: Cmd + Option + I\n\n' +
+        'Потім оберіть Device Toolbar (Ctrl+Shift+M або Cmd+Shift+M)');
+}
+// Виявлення типу пристрою
+function detectDevice() {
+    const isTablet = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isTablet) {
+        return 'Tablet';
+    } else if (isMobile) {
+        return 'Mobile';
+    } else {
+        return 'Desktop';
+    }
+}
+
+// Додавання класу до body на основі пристрою
+document.addEventListener('DOMContentLoaded', function () {
+    const device = detectDevice();
+    document.body.classList.add('device-' + device.toLowerCase());
+    // Виведення інформації про пристрій (для демонстрації)
+    console.log('Device Type:', device);
+    console.log('Screen Width:', window.innerWidth);
+    console.log('Screen Height:', window.innerHeight);
+    console.log('User Agent:', navigator.userAgent);
+});
+
+// Responsive Navigation - закриття меню при кліку на посилання
+document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// Lazy Loading для зображень
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Orientation Change Handler
+window.addEventListener('orientationchange', function () {
+    setTimeout(updateBreakpointInfo, 100);
+    console.log('Orientation changed to:', screen.orientation ? screen.orientation.type : 'unknown');
+});
+
+// Touch Events для мобільних пристроїв
+let touchStartX = 0;
+let touchEndX = 0;
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Свайп вправо - відкрити меню
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (mobileMenu && !mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.add('active');
+                hamburger.classList.add('active');
+            }
+        } else {
+            // Свайп вліво - закрити меню
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        }
+    }
+}
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
