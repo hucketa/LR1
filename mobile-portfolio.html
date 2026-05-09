@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body class="portfolio-mobile-body">
@@ -20,8 +21,7 @@
         <div class="container">
             <div class="profile-intro">
                 <div class="profile-avatar">
-                    <img src="images/photo1.jpg" alt="Profile" class="avatar-img
-">
+                    <img src="images/photo1.jpg" alt="Profile" class="avatar-img">
                     <span class="status-indicator"></span>
                 </div>
                 <div class="profile-info">
@@ -94,14 +94,12 @@
             <div class="projects-mobile-grid">
                 <article class="project-mobile-card" data-category="web">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-1.jpg" alt="Project 1" class="proj
-ect-img">
+                        <img src="images/grid-1.jpg" alt="Project 1" class="project-img">
                         <div class="project-badge">Новий</div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-name">E-commerce Website</h3>
-                        <p class="project-desc">Сучасний інтернет-магазин з адап
-                            тивним дизайном</p>
+                        <p class="project-desc">Сучасний інтернет-магазин з адаптивним дизайном</p>
                         <div class="project-tech">
                             <span class="tech-badge">HTML</span>
                             <span class="tech-badge">CSS</span>
@@ -117,11 +115,9 @@ ect-img">
                         </div>
                     </div>
                 </article>
-                <article class="project-mobile-card" data-category="mobile desig
-n">
+                <article class="project-mobile-card" data-category="mobile design">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-2.jpg" alt="Project 2" class="proj
-ect-img">
+                        <img src="images/grid-2.jpg" alt="Project 2" class="project-img">
                     </div>
                     <div class="project-content">
                         <h3 class="project-name">Mobile App UI</h3>
@@ -143,8 +139,7 @@ ect-img">
                 </article>
                 <article class="project-mobile-card" data-category="web">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-3.jpg" alt="Project 3" class="proj
-ect-img">
+                        <img src="images/grid-3.jpg" alt="Project 3" class="project-img">
                         <div class="project-badge featured">Featured</div>
                     </div>
                     <div class="project-content">
@@ -167,12 +162,11 @@ ect-img">
                 </article>
                 <article class="project-mobile-card" data-category="web mobile">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-4.jpg" alt="Project 4" class="proj
-ect-img">
+                        <img src="images/grid-4.jpg" alt="Project 4" class="project-img">
                     </div>
                     <div class="project-content">
                         <h3 class="project-name">Responsive Blog</h3>
-                        <p class="project-desc">Адаптивний блог з системою CMS</ p>
+                        <p class="project-desc">Адаптивний блог з системою CMS</p>
                         <div class="project-tech">
                             <span class="tech-badge">HTML5</span>
                             <span class="tech-badge">Flexbox</span>
@@ -317,76 +311,75 @@ ect-img">
                 </div>
                 <div class="form-group">
                     <label for="message">Повідомлення</label>
-                    <textarea id="message" name="message" rows="5" required></te
-xtarea>
-</div>
-<button type="submit" class="submit-btn">
-Надіслати повідомлення
-</button>
-</form>
-</div>
-</section>
-<!-- Floating Action Button -->
-<button class="fab" onclick="scrollToTop()">
-<span class="fab-icon">↑</span>
-</button>
-<footer class="mobile-footer">
- <div class="container">
-<div class="social-links">
-<a href="#" class="social-link" aria-label="Facebook">F</a>
-<a href="#" class="social-link" aria-label="Twitter">T</a>
-<a href="#" class="social-link" aria-label="LinkedIn">L</a>
-<a href="#" class="social-link" aria-label="Instagram">I</a>
-</div>
-<p class="footer-text">© 2024 Mobile Portfolio. Всі права захищені.<
-/p>
-</div>
-</footer>
-<script src="js/script.js"></script>
-<script>
-    // Scroll to top
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    // Show/hide FAB on scroll
-    window.addEventListener('scroll', function () {
-        const fab = document.querySelector('.fab');
-        if (window.scrollY > 300) {
-            fab.classList.add('visible');
-        } else {
-            fab.classList.remove('visible');
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Надіслати повідомлення
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="scrollToTop()">
+        <span class="fab-icon">↑</span>
+    </button>
+    <footer class="mobile-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">F</a>
+                <a href="#" class="social-link" aria-label="Twitter">T</a>
+                <a href="#" class="social-link" aria-label="LinkedIn">L</a>
+                <a href="#" class="social-link" aria-label="Instagram">I</a>
+            </div>
+            <p class="footer-text">© 2024 Mobile Portfolio. Всі права захищені.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    });
-    // Project filtering
-    document.querySelectorAll('.filter-chip').forEach(chip => {
-        chip.addEventListener('click', function () {
-            // Remove active class from all chips
-            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            const filter = this.dataset.filter;
-            const projects = document.querySelectorAll('.project-mobile-card');
-            projects.forEach(project => {
-                if (filter === 'all' || project.dataset.category.includes(filter)) {
-                    project.style.display = 'block';
-                    project.style.animation = 'fadeInUp 0.5s ease';
-                } else {
-                    project.style.display = 'none';
+        // Show/hide FAB on scroll
+        window.addEventListener('scroll', function () {
+            const fab = document.querySelector('.fab');
+            if (window.scrollY > 300) {
+                fab.classList.add('visible');
+            } else {
+                fab.classList.remove('visible');
+            }
+        });
+        // Project filtering
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', function () {
+                // Remove active class from all chips
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                const projects = document.querySelectorAll('.project-mobile-card');
+                projects.forEach(project => {
+                    if (filter === 'all' || project.dataset.category.includes(filter)) {
+                        project.style.display = 'block';
+                        project.style.animation = 'fadeInUp 0.5s ease';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'))
+                    ;
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' }
+                    );
                 }
             });
         });
-    });
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'))
-                ;
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' }
-                );
-            }
-        });
-    });
-</script>
+    </script>
 </body>
+
 </html>

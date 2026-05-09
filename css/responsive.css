@@ -1387,10 +1387,35 @@ DESKTOP OPTIMIZATIONS (769px+)
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
+    /*.project-image-wrapper {
+            height: 250px;
+        }*/
+        .project-image-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
 
-    .project-image-wrapper {
-        height: 250px;
-    }
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-mobile-card {
+            background: #111827;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content {
+        padding: 1.2rem;
+        }
+
 
     .contact-methods {
         grid-template-columns: repeat(2, 1fr);

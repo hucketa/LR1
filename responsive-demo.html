@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body class="responsive-body">
@@ -64,7 +65,7 @@ u">
                     <div class="cta-buttons">
                         <a href="#breakpoints" class="btn btn-primary">Дізнатися
                             більше</a>
-                        <a href="#examples" class="btn btn-secondary">Приклади</ a>
+                        <a href="#examples" class="btn btn-secondary">Приклади</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -112,9 +113,9 @@ u">
                         <h3>Mobile</h3>
                         <p class="bp-range">0 - 480px</p>
                         <div class="bp-features">
-                            <span class="feature-tag">Вертикальна навігація</spa n>
-                                <span class="feature-tag">1 колонка</span>
-                                <span class="feature-tag">Великі кнопки</span>
+                            <span class="feature-tag">Вертикальна навігація</span>
+                            <span class="feature-tag">1 колонка</span>
+                            <span class="feature-tag">Великі кнопки</span>
                         </div>
                     </div>
                     <div class="bp-card tablet-bp">
@@ -437,114 +438,111 @@ initial-scale=1.0"&gt;</code>
         </div>
     </section>
     <section class="testing-checklist">
-<div class="container">
-    <h2 class="section-title">Чеклист тестування</h2>
-    <div class="checklist-categories">
-        <div class="checklist-category">
-            <h3> Мобільні пристрої</h3>
-            <ul class="checklist">
-                <li>
-                    <input type="checkbox" id="check1">
-                    <label for="check1">Навігація зручна для використання па
-                        льцем</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check2">
-                    <label for="check2">Кнопки мінімум 44x44px</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check3">
-                    <label for="check3">Текст читабельний без зуму (мінімум
-                        16px)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check4">
-                    <label for="check4">Горизонтальний скрол відсутній</labe l>
-                </li>
-                <li>
-                    <input type="checkbox" id="check5">
-                    <label for="check5">Зображення адаптуються</label>
-                </li>
-            </ul>
+        <div class="container">
+            <h2 class="section-title">Чеклист тестування</h2>
+            <div class="checklist-categories">
+                <div class="checklist-category">
+                    <h3> Мобільні пристрої</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Навігація зручна для використання па
+                                льцем</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check2">
+                            <label for="check2">Кнопки мінімум 44x44px</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check3">
+                            <label for="check3">Текст читабельний без зуму (мінімум 16px)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check4">
+                            <label for="check4">Горизонтальний скрол відсутній</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check5">
+                            <label for="check5">Зображення адаптуються</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checklist-category">
+                    <h3> Десктоп</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="check6">
+                            <label for="check6">Контент не занадто розтягнутий</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check7">
+                            <label for="check7">Максимальна ширина контейнера встановлена</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check8">
+                            <label for="check8">Hover ефекти працюють</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check9">
+                            <label for="check9">Навігація горизонтальна</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checklist-category">
+                    <h3> Технічне</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="check10">
+                            <label for="check10">Viewport meta-тег присутній</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check11">
+                            <label for="check11">Медіа-запити правильно працюють</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check12">
+                            <label for="check12">Зображення оптимізовані</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check13">
+                            <label for="check13">CSS валідний</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check14">
+                            <label for="check14">Швидкість завантаження прийнятна</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="checklist-category">
+                    <h3> Доступність</h3>
+                    <ul class="checklist">
+                        <li>
+                            <input type="checkbox" id="check15">
+                            <label for="check15">Alt текст для зображень</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check16">
+                            <label for="check16">Контрастність тексту достатня</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check17">
+                            <label for="check17">Клавіатурна навігація працює</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check18">
+                            <label for="check18">ARIA атрибути де потрібно</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress-text">Прогрес тестування: <span id="progressPercent">0%</span></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
         </div>
-        <div class="checklist-category">
-            <h3> Десктоп</h3>
-            <ul class="checklist">
-                <li>
-                    <input type="checkbox" id="check6">
-                    <label for="check6">Контент не занадто розтягнутий</labe l>
-                </li>
-                <li>
-                    <input type="checkbox" id="check7">
-                    <label for="check7">Максимальна ширина контейнера встано
-                        влена</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check8">
-                    <label for="check8">Hover ефекти працюють</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check9">
-                    <label for="check9">Навігація горизонтальна</label>
-                </li>
-            </ul>
-        </div>
-        <div class="checklist-category">
-            <h3> Технічне</h3>
-            <ul class="checklist">
-                <li>
-                    <input type="checkbox" id="check10">
-                    <label for="check10">Viewport meta-тег присутній</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check11">
-                    <label for="check11">Медіа-запити правильно працюють</la bel>
-                </li>
-                <li>
-                    <input type="checkbox" id="check12">
-                    <label for="check12">Зображення оптимізовані</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check13">
-                    <label for="check13">CSS валідний</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check14">
-                    <label for="check14">Швидкість завантаження прийнятна</l abel>
-                </li>
-            </ul>
-        </div>
-        <div class="checklist-category">
-            <h3> Доступність</h3>
-            <ul class="checklist">
-                <li>
-                    <input type="checkbox" id="check15">
-                    <label for="check15">Alt текст для зображень</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check16">
-                    <label for="check16">Контрастність тексту достатня</labe l>
-                </li>
-                <li>
-                    <input type="checkbox" id="check17">
-                    <label for="check17">Клавіатурна навігація працює</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="check18">
-                    <label for="check18">ARIA атрибути де потрібно</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="progress-indicator">
-        <div class="progress-text">Прогрес тестування: <span id="progressPer
-cent">0%</span></div>
-        <div class="progress-bar-container">
-            <div class="progress-bar-fill" id="progressBar"></div>
-        </div>
-    </div>
-</div>
-</section>
+    </section>
     <footer class="responsive-footer">
         <div class="container">
             <div class="footer-grid">
