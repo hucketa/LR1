@@ -322,7 +322,12 @@ BREAKPOINTS SECTION
 }
 
 .demo-indicator {
-    background: #f8f9fa;
+  background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 2rem;
@@ -454,7 +459,12 @@ EXAMPLES SECTION
 }
 
 .example-block {
-    background: #f8f9fa;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -472,7 +482,12 @@ EXAMPLES SECTION
 
 /* Адаптивна навігація - приклад */
 .nav-example {
-    background: white;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     border-radius: 8px;
     padding: 1rem;
 }
@@ -499,11 +514,11 @@ EXAMPLES SECTION
 }
 
 .nav-links a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 5px;
-    background: #f8f9fa;
+    background: #404447;
     transition: background 0.3s;
 }
 
@@ -548,7 +563,12 @@ EXAMPLES SECTION
 
 /* Адаптивні зображення */
 .image-responsive-demo {
-    background: white;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     border-radius: 8px;
     padding: 1rem;
 }
@@ -634,7 +654,12 @@ APPROACH COMPARISON
 }
 
 .code-preview {
-    background: #f8f9fa;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
@@ -664,7 +689,11 @@ TESTING SECTION
 
 .tool-card h3 {
     margin: 0 0 1rem 0;
-    color: #333;
+    color: #ffffff;
+}
+
+.tool-card a {
+    color: #ffffff;
 }
 
 .tool-card p {
@@ -697,7 +726,12 @@ TESTING SECTION
 }
 
 .device-tag {
-    background: white;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -708,7 +742,12 @@ BEST PRACTICES
 ====================== */
 .best-practices {
     padding: 3rem 0;
-    background: #f8f9fa;
+    background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
 }
 
 .practices-grid {
@@ -718,7 +757,12 @@ BEST PRACTICES
 }
 
 .practice-card {
-    background: white;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -744,7 +788,7 @@ BEST PRACTICES
 
 .practice-card h3 {
     margin: 0 0 1rem 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .practice-card p {
@@ -754,7 +798,12 @@ BEST PRACTICES
 
 .practice-card code {
     display: block;
-    background: #f8f9fa;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 0.75rem;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1460,7 +1509,12 @@ TESTING CHECKLIST
 }
 
 .checklist-category {
-    background: #f8f9fa;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 1.5rem;
     border-radius: 12px;
     border-left: 4px solid #667eea;
@@ -1468,7 +1522,7 @@ TESTING CHECKLIST
 
 .checklist-category h3 {
     margin: 0 0 1rem 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .checklist {
@@ -1507,7 +1561,12 @@ TESTING CHECKLIST
 }
 
 .progress-indicator {
-    background: white;
+      background: linear-gradient(
+    135deg,
+    #182744 0%,
+    #13203a 50%,
+    #0d172d 100%
+  );
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1518,7 +1577,7 @@ TESTING CHECKLIST
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #333;
+    color: #ffffff;
 }
 
 #progressPercent {
@@ -2181,4 +2240,412 @@ TABLET
     .project-image-wrapper {
         aspect-ratio: 16 / 8;
     }
+}
+
+/*
+========================
+RESPONSIVE DEMO REDESIGN
+========================
+*/
+
+body.responsive-body {
+    background:
+        linear-gradient(
+            180deg,
+            #020617 0%,
+            #081226 100%
+        );
+
+    color: #e2e8f0;
+}
+
+/*
+========================
+HEADER
+========================
+*/
+
+.responsive-header {
+    background:
+        rgba(2,6,23,0.82);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
+    box-shadow: none;
+}
+
+.site-logo,
+.logo-text,
+.nav-menu a,
+.mobile-nav-list a {
+    color: #f8fafc;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active,
+.mobile-nav-list a:hover {
+    background:
+        rgba(59,130,246,0.16);
+}
+
+/*
+========================
+CONTAINERS
+========================
+*/
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*
+========================
+HERO
+========================
+*/
+
+.hero-responsive {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(59,130,246,0.18),
+            transparent 50%
+        );
+
+    min-height: 85vh;
+
+    padding:
+        5rem 0;
+}
+
+.hero-content-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    align-items: center;
+
+    gap: 4rem;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-heading {
+    font-size:
+        clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1.1;
+
+    color: #f8fafc;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+
+    color: #cbd5e1;
+
+    max-width: 700px;
+}
+
+.cta-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    border: none;
+}
+
+.btn-secondary {
+    border:
+        1px solid rgba(96,165,250,0.35);
+
+    color: #dbeafe;
+
+    background:
+        rgba(255,255,255,0.04);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/*
+========================
+MOCKUPS
+========================
+*/
+
+.device-mockup {
+    background:
+        rgba(15,23,42,0.88);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.4);
+}
+
+/*
+========================
+SECTIONS
+========================
+*/
+
+.breakpoints-section,
+.media-queries-section,
+.examples-section {
+    background: transparent;
+
+    padding:
+        5rem 0;
+}
+
+.section-title {
+    color: #f8fafc;
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+}
+
+.section-subtitle {
+    color: #cbd5e1;
+}
+
+/*
+========================
+BREAKPOINT CARDS
+========================
+*/
+
+.breakpoint-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 2rem;
+}
+
+.bp-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,0.95),
+            rgba(30,41,59,0.95)
+        );
+
+    border:
+        1px solid rgba(96,165,250,0.14);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35);
+
+    color: #e2e8f0;
+}
+
+.bp-card h3 {
+    color: #f8fafc;
+}
+
+.bp-range {
+    color: #60a5fa;
+}
+
+.feature-tag {
+    background:
+        rgba(59,130,246,0.12);
+
+    color: #dbeafe;
+
+    border:
+        1px solid rgba(96,165,250,0.2);
+}
+
+/*
+========================
+CODE BLOCKS
+========================
+*/
+
+.code-examples {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 2rem;
+}
+
+.code-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,0.95),
+            rgba(30,41,59,0.95)
+        );
+
+    border-radius: 24px;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    overflow: hidden;
+}
+
+.code-card h3 {
+    color: #f8fafc;
+}
+
+pre {
+    background:
+        #020617;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+
+    font-size: 0.9rem;
+}
+
+/*
+========================
+EXAMPLES
+========================
+*/
+
+.example-block {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,0.96),
+            rgba(30,41,59,0.96)
+        );
+
+    border-radius: 28px;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    padding:
+        2.5rem;
+}
+
+.example-title {
+    color: #f8fafc;
+}
+
+.example-desc {
+    color: #cbd5e1;
+}
+
+/*
+========================
+GRID CARDS
+========================
+*/
+
+.grid-card {
+    background:
+        rgba(255,255,255,0.04);
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    border-radius: 20px;
+
+    color: #e2e8f0;
+}
+
+.grid-card h3 {
+    color: #f8fafc;
+}
+
+/*
+========================
+TABLET
+========================
+*/
+
+@media (max-width: 1024px) {
+
+    .hero-content-wrapper {
+        gap: 3rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+/*
+========================
+MOBILE
+========================
+*/
+
+@media (max-width: 767px) {
+
+    .hero-responsive {
+        min-height: auto;
+
+        padding:
+            4rem 0;
+    }
+
+    .hero-heading {
+        font-size: 2.4rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .code-examples,
+    .breakpoint-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .example-block,
+    .bp-card,
+    .code-card {
+        padding: 1.5rem;
+    }
+
+    pre {
+        font-size: 0.75rem;
+    }
+}
+
+.approach-header h3{
+    color: white;
 }
