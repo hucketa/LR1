@@ -5,74 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Особистий блог Гуненко Ярослава - портфоліо веб-розробника">
     <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
+    <title>Блог - Мій особистий сайт</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
-    <title>Блог - Мій особистий сайт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    </head>
     <script src="js/script.js"></script>
-</head>
 <body>
-<header class="modern-header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo">
-                <h1>Гуненко Ярослав</h1>
-                <span class="logo-subtitle">Веб-розробник</span>
+    <header class="modern-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Гуненко Ярослав</h1>
+                    <span class="logo-subtitle">Веб-розробник</span>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="about.html">Про мене</a></li>
+                        <li><a href="portfolio.html">Портфоліо</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+
+                        <li><a href="flexbox-demo.html">Flexbox</a></li>
+                        <li><a href="grid-demo.html">Grid</a></li>
+                        <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                        <li><a href="responsive-demo.html">Responsive</a></li>
+                        <li><a href="mobile-portfolio.html">Mobile</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-nav-toggle"
+                    onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+                <div class="header-cta">
+                    <button class="cta-button">Найняти
+                        мене</button>
+                </div>
             </div>
-            <nav class="main-nav">
+            <nav class="mobile-nav" id="mobileNav">
                 <ul class="nav-list">
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про мене</a></li>
                     <li><a href="portfolio.html">Портфоліо</a></li>
                     <li><a href="gallery.html">Галерея</a></li>
                     <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="grid-demo.html">Grid</a></li>
+                    <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                    <li><a href="responsive-demo.html">Responsive</a></li>
+                    <li><a href="mobile-portfolio.html">Mobile</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="header-cta">
-                <button class="cta-button">Найняти
-                    мене</button>
-            </div>
         </div>
-        <nav class="mobile-nav" id="mobileNav">
-            <ul class="nav-list">
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="about.html">Про мене</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="flexbox-demo.html">Flexbox</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-      <aside class="sticky-note">
-    <h4>Навігація</h4>
-    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
-    </aside>
-    <main>
-        <article id="first-post">
-            <h2>Мій перший блог-пост</h2>
-            <p>Це мій перший блог-пост на моєму особистому сайті. Я дуже радий поділитися своїми думками та ідеями з вами. У цьому блозі я планую писати про різні теми, які мене цікавлять, такі як технології, подорожі, кулінарія та багато іншого. Сподіваюся, вам сподобається читати мої пости так само, як мені подобається їх писати!</p>
-        </article>
-        <article id="audio-article">
-            <audio controls src="sound/track1.mp3"></audio>
-        </article>
-        <article id="video-article">
-            <h2>Приклад додавання відео</h2>
-            <p>Ось відео, яке я хочу поділитися з вами:</p>
-            <video width="320" height="240" controls alt="Відео">
-                <source src="https://www.pexels.com/ru-ru/download/video/29706156/" type="video/mp4">
-            </video> 
-        </article>
+    </header>
+    <main class="blog-main">
+        <div class="blog-content">
+            <article class="blog-card" id="first-post">
+                <h2>Мій перший блог-пост</h2>
+                <p>
+                    Це мій перший блог-пост на моєму
+                    особистому сайті. Я дуже радий
+                    поділитися своїми думками та
+                    ідеями з вами.
+                </p>
+                <p>
+                    У цьому блозі я планую писати
+                    про веб-розробку, технології,
+                    дизайн інтерфейсів та сучасний
+                    frontend.
+                </p>
+            </article>
+            <article class="blog-card" id="audio-article">
+                <h2>Музичний супровід</h2>
+                <p>
+                    Приклад інтеграції аудіо-контенту
+                    у блог.
+                </p>
+                <div class="blog-media">
+                    <audio controls>
+                        <source src="sound/track1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </article>
+            <article class="blog-card" id="video-article">
+                <h2>Приклад додавання відео</h2>
+                <p>
+                    Демонстрація responsive video
+                    контейнера.
+                </p>
+                <div class="blog-media">
+                    <video controls>
+                        <source src="video/demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </article>
+            <article class="blog-card">
+                <h2>Чому я обрав Frontend</h2>
+                <p>
+                    Frontend-розробка дозволяє
+                    створювати сучасні інтерфейси,
+                    працювати з анімаціями,
+                    responsive layout та UX.
+                </p>
+                <p>
+                    Найбільше мене цікавить
+                    сучасний CSS, Grid, Flexbox,
+                    а також інтерактивні UI системи.
+                </p>
+            </article>
+        </div>
+        <aside class="blog-sidebar">
+            <div class="sidebar-card">
+                <h3>Категорії</h3>
+                <ul>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Responsive Design</a></li>
+                    <li><a href="#">UI / UX</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <h3>Про блог</h3>
+                <p>
+                    Особистий блог про
+                    веб-розробку, сучасний
+                    frontend та дизайн.
+                </p>
+            </div>
+            <div class="sidebar-card">
+                <h3>Останні теми</h3>
+                <ul>
+                    <li><a href="#">CSS Grid Layout</a></li>
+                    <li><a href="#">Flexbox практики</a></li>
+                    <li><a href="#">Mobile First</a></li>
+                    <li><a href="#">Sticky Elements</a></li>
+                </ul>
+            </div>
+        </aside>
     </main>
+    <footer class="flex-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Гуненко Ярослав</h4>
+                <p>
+                    Frontend Developer
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Соціальні мережі</h4>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Telegram</a>
+                </div>
+            </div>
+       </div>
+    </footer>
 </body>
 </html>
