@@ -195,7 +195,7 @@ AUTO-FIT & AUTO-FILL
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
     margin: 1rem 0;
-    background: #f0f0f0;
+    background: #302e2e;
     padding: 15px;
     border-radius: 8px;
 }
@@ -264,7 +264,7 @@ AUTO-FIT & AUTO-FILL
 
 .horizontal {
     grid-column: span 2;
-    background: #dfe6e9;
+    background: #202021;
 }
 
 .small {
@@ -1250,7 +1250,7 @@ MASONRY GRID GALLERY
 ПРАКТИЧНІ ВПРАВИ
 ====================== */
 .exercises {
-    background: white;
+    background: rgb(33, 31, 31);
 }
 
 .exercise-container {
@@ -1259,7 +1259,7 @@ MASONRY GRID GALLERY
 }
 
 .exercise {
-    background: #f8f9fa;
+    background: #212223;
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -1903,9 +1903,9 @@ LIGHTBOX
 
     --dashboard-radius: 16px;
 
-    --dashboard-bg: #f4f7fb;
+    --dashboard-bg: #202123;
 
-    --dashboard-card: #ffffff;
+    --dashboard-card: #222121;
 
     --dashboard-primary: #667eea;
 }
@@ -2858,5 +2858,201 @@ LIGHTBOX
 
     .hero-grid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*
+========================
+GRID DEMO RESPONSIVE
+========================
+*/
+
+/* GLOBAL */
+
+.grid-demo-main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.demo-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.demo-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.grid-item,
+.mag-item,
+.dashboard-card,
+.exercise {
+    min-width: 0;
+}
+
+/* IMAGES */
+
+.magazine-layout img,
+.magazine-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dashboard-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/*
+========================
+TABLET
+========================
+*/
+
+@media (max-width: 1199px) {
+
+    .area-grid,
+    .holy-grail,
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .area-header,
+    .area-nav,
+    .area-main,
+    .area-sidebar,
+    .area-footer,
+    .hg-header,
+    .hg-nav,
+    .hg-main,
+    .hg-aside,
+    .hg-footer,
+    .dashboard-header,
+    .dashboard-sidebar,
+    .dashboard-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .magazine-layout,
+    .magazine-grid {
+        grid-template-columns:
+            repeat(2, 1fr) !important;
+    }
+
+    .featured,
+    .big,
+    .horizontal,
+    .vertical {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+/*
+========================
+MOBILE
+========================
+*/
+
+@media (max-width: 767px) {
+
+    .grid-header {
+        padding: 1rem;
+    }
+
+    .grid-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .basic-grid,
+    .mixed-grid,
+    .gap-grid,
+    .alignment-grid,
+    .span-grid,
+    .auto-fit-grid,
+    .auto-fill-grid,
+    .comparison-grid,
+    .responsive-cards,
+    .magazine-layout,
+    .magazine-grid,
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .span-2-cols,
+    .span-2-rows,
+    .span-full,
+    .featured,
+    .horizontal,
+    .vertical,
+    .big {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .dashboard-sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .dashboard-sidebar a {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+
+    .fake-chart {
+        height: 180px;
+    }
+
+    pre {
+        font-size: 0.75rem;
+        overflow-x: auto;
+    }
+}
+
+.dashboard-card li{
+    color: white;
+}
+
+
+@media (max-width: 767px) {
+
+    .dashboard-exercise-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .dashboard-exercise-grid>* {
+        min-width: 0;
+    }
+
+    .dashboard-exercise-grid .menu {
+        min-height: 180px;
+    }
+
+    .dashboard-exercise-grid .widget {
+        min-height: 100px;
+    }
+
+    .dashboard-exercise-grid .chart {
+        min-height: 180px;
+    }
+
+    .dashboard-exercise-grid .header {
+        min-height: 70px;
     }
 }
