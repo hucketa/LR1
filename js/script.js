@@ -416,3 +416,9 @@ window.addEventListener('load', () => {
         }, 800);
     }
 });
+
+   function changeVariableGrid(cols) {
+    document.documentElement.style.setProperty(
+        '--dynamic-columns',
+        `repeat(${cols}, 1fr)`
+    );}

@@ -7,22 +7,62 @@
     <title>Advanced CSS Grid</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/grid.css">
-    <script src="js/scripts.js" ></script>
-    <script>
-    function changeVariableGrid(cols) {
-    document.documentElement.style.setProperty(
-        '--dynamic-columns',
-        `repeat(${cols}, 1fr)`
-    );}
-    </script>>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <script src="js/scripts.js"></script>
 </head>
+<script src="js/script.js"></script>
 
 <body class="advanced-page">
-    <header class="advanced-header">
-        <h1>Advanced CSS Grid Features</h1>
-        <p>
-            Grid + Flexbox + Performance Optimization
-        </p>
+   <header class="modern-header">
+        <div class="container">
+            <div class="header-content">
+            <div class="header-text">
+                <h1>Advanced CSS Grid Features</h1>
+                <p>
+                    Grid + Flexbox + Performance Optimization
+                </p>
+            </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="about.html">Про мене</a></li>
+                        <li><a href="portfolio.html">Портфоліо</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+
+                        <li><a href="flexbox-demo.html">Flexbox</a></li>
+                        <li><a href="grid-demo.html">Grid</a></li>
+                        <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                        <li><a href="responsive-demo.html">Responsive</a></li>
+                        <li><a href="mobile-portfolio.html">Mobile</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-nav-toggle"
+                    onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+                <div class="header-cta">
+                    <button class="cta-button">Найняти
+                        мене</button>
+                </div>
+            </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про мене</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="grid-demo.html">Grid</a></li>
+                    <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                    <li><a href="responsive-demo.html">Responsive</a></li>
+                    <li><a href="mobile-portfolio.html">Mobile</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section class="advanced-section">
         <h2>Grid + Flexbox Layout</h2>
@@ -102,17 +142,17 @@
 
         <div class="variable-controls">
 
-        <button onclick="changeVariableGrid(2)">
-            2 Columns
-        </button>
-        
-        <button onclick="changeVariableGrid(3)">
-            3 Columns
-        </button>
-        
-        <button onclick="changeVariableGrid(4)">
-            4 Columns
-        </button>
+            <button onclick="changeVariableGrid(2)">
+                2 Columns
+            </button>
+
+            <button onclick="changeVariableGrid(3)">
+                3 Columns
+            </button>
+
+            <button onclick="changeVariableGrid(4)">
+                4 Columns
+            </button>
 
         </div>
         <div class="variable-grid-demo">

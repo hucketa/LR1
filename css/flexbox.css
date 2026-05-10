@@ -1676,3 +1676,43 @@ MINI GALLERY FLEXBOX
         min-width: 380px;
     }
 }
+
+/* ===== REAL MOBILE FIX ===== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header,
+section,
+.container,
+.header-content,
+.advanced-layout,
+.advanced-content,
+.cards-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.header-content {
+    gap: 1rem;
+}
+
+.mobile-nav-toggle,
+.header-cta {
+    flex-shrink: 1;
+}
