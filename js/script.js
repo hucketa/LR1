@@ -34,7 +34,7 @@ filterButtons.forEach(button => {
                 filter === "all" ||
                 item.dataset.category.includes(filter)
             ) {
-                item.style.display = "flex";
+                item.style.display = "block";
             } else {
                 item.style.display = "none";
             }

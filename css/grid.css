@@ -294,21 +294,19 @@ AUTO-FIT & AUTO-FILL
 
 .comparison-card {
     background:
-        linear-gradient(
-            145deg,
-            rgba(17,24,39,0.96) 0%,
-            rgba(30,41,59,0.97) 55%,
-            rgba(15,23,42,0.98) 100%
-        );
+        linear-gradient(145deg,
+            rgba(17, 24, 39, 0.96) 0%,
+            rgba(30, 41, 59, 0.97) 55%,
+            rgba(15, 23, 42, 0.98) 100%);
 
-    border: 1px solid rgba(96,165,250,0.14);
+    border: 1px solid rgba(96, 165, 250, 0.14);
 
     border-radius: 12px;
 
     padding: 2rem;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
+        0 10px 30px rgba(0, 0, 0, 0.35);
 
     color: #dbe4ee;
 }
@@ -320,7 +318,7 @@ AUTO-FIT & AUTO-FILL
 }
 
 .comparison-card li {
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .comparison-card li::before {
@@ -612,32 +610,72 @@ LANDING PAGE СТИЛІ
     background: white;
 }
 
-.portfolio-grid {
+/*.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 200px);
     gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}*/
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
+
+/*.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}*/
 
 .portfolio-item {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     cursor: pointer;
+    min-height: 280px;
+    background: #111;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .portfolio-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover img {
-    transform: scale(1.1);
+/*.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}*/
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+
+/*.portfolio-item:hover img {
+    transform: scale(1.1);
+}*/
 
 .portfolio-item.large {
     grid-column: span 2;
@@ -1598,36 +1636,41 @@ UTILITY CLASSES
 GRID CONTROLS
 ====================== */
 .grid-controls {
-display: flex;
-gap: 1rem;
-margin-bottom: 1rem;
-justify-content: center;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
 }
+
 .grid-controls button {
-padding: 0.5rem 1rem;
-background: #667eea;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background 0.3s ease;
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
 .grid-controls button:hover {
-background: #764ba2;
+    background: #764ba2;
 }
+
 .gap-control {
-margin-bottom: 1rem;
-text-align: center;
+    margin-bottom: 1rem;
+    text-align: center;
 }
+
 .gap-control label {
-display: block;
-margin-bottom: 0.5rem;
-color: #333;
-font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
 }
+
 .gap-control input[type="range"] {
-width: 100%;
-max-width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
 /* ======================
@@ -1687,7 +1730,7 @@ LIGHTBOX
 .feature-card,
 .portfolio-item,
 .price-card {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease;
 }
@@ -1695,7 +1738,7 @@ LIGHTBOX
 .feature-card.visible,
 .portfolio-item.visible,
 .price-card.visible {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -1731,7 +1774,7 @@ LIGHTBOX
 
     background: white;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 
     transition:
         transform 0.3s ease,
@@ -1780,11 +1823,9 @@ LIGHTBOX
     inset: 0;
 
     background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.7),
-            transparent
-        );
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.7),
+            transparent);
 
     z-index: 1;
 }
@@ -1814,7 +1855,7 @@ LIGHTBOX
 
 .small {
     background:
-        linear-gradient(135deg,#667eea,#764ba2);
+        linear-gradient(135deg, #667eea, #764ba2);
 
     display: flex;
     align-items: center;
@@ -1826,7 +1867,7 @@ LIGHTBOX
    RESPONSIVE
 ====================== */
 
-@media (max-width: 768px) {
+@media (mim-width: 768px) {
 
     .magazine-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1889,9 +1930,7 @@ LIGHTBOX
     grid-template-columns: 260px repeat(3, 1fr);
 
     grid-template-rows:
-        80px
-        180px
-        350px;
+        80px 180px 350px;
 
     gap: var(--dashboard-gap);
 
@@ -1921,7 +1960,7 @@ LIGHTBOX
 
     justify-content: space-between;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1982,7 +2021,7 @@ LIGHTBOX
 }
 
 .dashboard-sidebar a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -1998,7 +2037,7 @@ LIGHTBOX
 
     padding: 25px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
     transition:
         transform 0.3s ease,
@@ -2012,7 +2051,7 @@ LIGHTBOX
 
     transform: translateY(-5px);
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 
     will-change: transform;
 }
@@ -2021,17 +2060,17 @@ LIGHTBOX
 /* Different cards */
 
 .stats {
-    background: linear-gradient(135deg,#667eea,#764ba2);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
 }
 
 .revenue {
-    background: linear-gradient(135deg,#00b894,#00cec9);
+    background: linear-gradient(135deg, #00b894, #00cec9);
     color: white;
 }
 
 .orders {
-    background: linear-gradient(135deg,#fdcb6e,#e17055);
+    background: linear-gradient(135deg, #fdcb6e, #e17055);
     color: white;
 }
 
@@ -2062,18 +2101,32 @@ LIGHTBOX
 
     flex: 1;
 
-    background: linear-gradient(180deg,#667eea,#764ba2);
+    background: linear-gradient(180deg, #667eea, #764ba2);
 
     border-radius: 10px 10px 0 0;
 
     animation: growBar 1s ease forwards;
 }
 
-.bar-1 { height: 40%; }
-.bar-2 { height: 75%; }
-.bar-3 { height: 55%; }
-.bar-4 { height: 90%; }
-.bar-5 { height: 65%; }
+.bar-1 {
+    height: 40%;
+}
+
+.bar-2 {
+    height: 75%;
+}
+
+.bar-3 {
+    height: 55%;
+}
+
+.bar-4 {
+    height: 90%;
+}
+
+.bar-5 {
+    height: 65%;
+}
 
 
 @keyframes growBar {
@@ -2163,11 +2216,9 @@ LIGHTBOX
     color: white;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #667eea,
-            #764ba2
-        );
+            #764ba2);
 }
 
 .advanced-header h1 {
@@ -2234,7 +2285,7 @@ LIGHTBOX
 }
 
 .sidebar-menu a:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
 }
 
@@ -2262,7 +2313,7 @@ LIGHTBOX
     justify-content: space-between;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .user-box {
@@ -2316,7 +2367,7 @@ LIGHTBOX
     justify-content: space-between;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 5px 20px rgba(0, 0, 0, 0.08);
 
     transition:
         transform 0.3s ease,
@@ -2334,7 +2385,7 @@ LIGHTBOX
         translateY(-8px);
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .card-large {
@@ -2373,7 +2424,7 @@ LIGHTBOX
     border-radius: 12px;
 
     background:
-        rgba(102,126,234,0.08);
+        rgba(102, 126, 234, 0.08);
 
     display: flex;
     flex-direction: column;
@@ -2409,11 +2460,9 @@ LIGHTBOX
     border-radius: 14px 14px 0 0;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #667eea,
-            #764ba2
-        );
+            #764ba2);
 
     animation:
         growBar 1s ease forwards;
@@ -2498,7 +2547,7 @@ LIGHTBOX
     border-radius: var(--main-radius);
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* ======================
@@ -2578,11 +2627,9 @@ LIGHTBOX
     padding: 12px 20px;
     border-radius: 10px;
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #667eea,
-            #764ba2
-        );
+            #764ba2);
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -2624,11 +2671,9 @@ LIGHTBOX
     border-radius:
         var(--dynamic-radius);
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #667eea,
-            #764ba2
-        );
+            #764ba2);
     color: white;
     display: flex;
     align-items: center;
@@ -2647,10 +2692,9 @@ LIGHTBOX
 
 .variable-card:hover {
     transform:
-        translateY(-10px)
-        scale(1.03);
+        translateY(-10px) scale(1.03);
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.2);
+        0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -2687,15 +2731,13 @@ LIGHTBOX
 .subgrid-card {
     display: grid;
     grid-template-rows:
-        auto
-        1fr
-        auto;
+        auto 1fr auto;
     gap: 15px;
     padding: 20px;
     border-radius: 16px;
     background: white;
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -2755,11 +2797,9 @@ LIGHTBOX
     border: none;
     border-radius: 10px;
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #667eea,
-            #764ba2
-        );
+            #764ba2);
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -2767,6 +2807,56 @@ LIGHTBOX
 }
 
 .grid-controls button:hover {
-
     transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .portfolio-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
