@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,48 +11,60 @@
     <link rel="stylesheet" href="css/grid.css">
     <script src="js/script.js"></script>
 </head>
+
 <body>
-<header class="modern-header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo">
-                <h1>Гуненко Ярослав</h1>
-                <span class="logo-subtitle">Веб-розробник</span>
+    <header class="modern-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Гуненко Ярослав</h1>
+                    <span class="logo-subtitle">Веб-розробник</span>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="about.html">Про мене</a></li>
+                        <li><a href="portfolio.html">Портфоліо</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+
+                        <li><a href="flexbox-demo.html">Flexbox</a></li>
+                        <li><a href="grid-demo.html">Grid</a></li>
+                        <li><a href="advanced-grid.html">Advanced Grid</a></li>
+
+                        <li><a href="responsive-demo.html">Responsive</a></li>
+                        <li><a href="mobile-portfolio.html">Mobile</a></li>
+
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-nav-toggle"
+                    onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+                <div class="header-cta">
+                    <button class="cta-button">Найняти
+                        мене</button>
+                </div>
             </div>
-            <nav class="main-nav">
+            <nav class="mobile-nav" id="mobileNav">
                 <ul class="nav-list">
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про мене</a></li>
                     <li><a href="portfolio.html">Портфоліо</a></li>
                     <li><a href="gallery.html">Галерея</a></li>
                     <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="grid-demo.html">Grid</a></li>
+                    <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                    <li><a href="responsive-demo.html">Responsive</a></li>
+                    <li><a href="mobile-portfolio.html">Mobile</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="header-cta">
-                <button class="cta-button">Найняти
-                    мене</button>
-            </div>
         </div>
-        <nav class="mobile-nav" id="mobileNav">
-            <ul class="nav-list">
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="about.html">Про мене</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="flexbox-demo.html">Flexbox</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-  <aside class="sticky-note">
-    <h4>Навігація</h4>
-    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+    </header>
+    <aside class="sticky-note">
+        <h4>Навігація</h4>
+        <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
     </aside>
     <main>
         <!-- Демонстрація Box Model -->
@@ -139,56 +152,72 @@
                     <div class="gallery-item">
                         <a href="#modal1">
                             <img src="images/mygallery/gallery1.jpg" alt="Фото 1">
-                            <div class="gallery-overlay"><h4>Фото 1</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 1</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal2">
                             <img src="images/mygallery/gallery2.jpg" alt="Фото 2">
-                            <div class="gallery-overlay"><h4>Фото 2</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 2</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal3">
                             <img src="images/mygallery/gallery3.jpg" alt="Фото 3">
-                            <div class="gallery-overlay"><h4>Фото 3</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 3</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal4">
                             <img src="images/mygallery/gallery4.jpg" alt="Фото 4">
-                            <div class="gallery-overlay"><h4>Фото 4</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 4</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal5">
                             <img src="images/mygallery/gallery5.jpg" alt="Фото 5">
-                            <div class="gallery-overlay"><h4>Фото 5</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 5</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal6">
                             <img src="images/mygallery/gallery6.jpg" alt="Фото 6">
-                            <div class="gallery-overlay"><h4>Фото 6</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 6</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal7">
                             <img src="images/mygallery/gallery7.jpg" alt="Фото 7">
-                            <div class="gallery-overlay"><h4>Фото 7</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 7</h4>
+                            </div>
                         </a>
                     </div>
 
                     <div class="gallery-item">
                         <a href="#modal8">
                             <img src="images/mygallery/gallery8.jpg" alt="Фото 8">
-                            <div class="gallery-overlay"><h4>Фото 8</h4></div>
+                            <div class="gallery-overlay">
+                                <h4>Фото 8</h4>
+                            </div>
                         </a>
                     </div>
 
@@ -196,70 +225,70 @@
             </div>
         </section>
         <!-- Модальні вікна -->
-            <div id="modal1" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery1.jpg" alt="Фото 1">
-                    <h3>Фото 1</h3>
-                    <p>Описание для первого изображения.</p>
-                </div>
+        <div id="modal1" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery1.jpg" alt="Фото 1">
+                <h3>Фото 1</h3>
+                <p>Описание для первого изображения.</p>
             </div>
-            <div id="modal2" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery2.jpg" alt="Фото 2">
-                    <h3>Фото 2</h3>
-                    <p>Описание для второго изображения.</p>
-                </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery2.jpg" alt="Фото 2">
+                <h3>Фото 2</h3>
+                <p>Описание для второго изображения.</p>
             </div>
-            <div id="modal3" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery3.jpg" alt="Фото 3">
-                    <h3>Фото 3</h3>
-                    <p>Описание для третьего изображения.</p>
-                </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery3.jpg" alt="Фото 3">
+                <h3>Фото 3</h3>
+                <p>Описание для третьего изображения.</p>
             </div>
-            <div id="modal4" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery4.jpg" alt="Фото 4">
-                    <h3>Фото 4</h3>
-                    <p>Описание для четвертого изображения.</p>
-                </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery4.jpg" alt="Фото 4">
+                <h3>Фото 4</h3>
+                <p>Описание для четвертого изображения.</p>
             </div>
-            <div id="modal5" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery5.jpg" alt="Фото 5">
-                    <h3>Фото 5</h3>
-                    <p>Описание для пятого изображения.</p>
-                </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery5.jpg" alt="Фото 5">
+                <h3>Фото 5</h3>
+                <p>Описание для пятого изображения.</p>
             </div>
-            <div id="modal6" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery6.jpg" alt="Фото 6">
-                    <h3>Фото 6</h3>
-                    <p>Описание для шестого изображения.</p>
-                </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery6.jpg" alt="Фото 6">
+                <h3>Фото 6</h3>
+                <p>Описание для шестого изображения.</p>
             </div>
-            <div id="modal7" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery7.jpg" alt="Фото 7">
-                    <h3>Фото 7</h3>
-                    <p>Описание для седьмого изображения.</p>
-                </div>
+        </div>
+        <div id="modal7" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery7.jpg" alt="Фото 7">
+                <h3>Фото 7</h3>
+                <p>Описание для седьмого изображения.</p>
             </div>
-            <div id="modal8" class="modal">
-                <div class="modal-window">
-                    <a href="#image-gallery" class="modal-close">×</a>
-                    <img src="images/mygallery/gallery8.jpg" alt="Фото 8">
-                    <h3>Фото 8</h3>
-                    <p>Описание для восьмого изображения.</p>
-                </div>
+        </div>
+        <div id="modal8" class="modal">
+            <div class="modal-window">
+                <a href="#image-gallery" class="modal-close">×</a>
+                <img src="images/mygallery/gallery8.jpg" alt="Фото 8">
+                <h3>Фото 8</h3>
+                <p>Описание для восьмого изображения.</p>
             </div>
+        </div>
         <!-- Демонстрація float -->
         <section id="layout-demo">
             <h2>Демонстрація Float Layout</h2>
@@ -284,7 +313,7 @@
                     <p>
                         Центральний блок займає 36% ширини і центрується за допомогою margin: auto.
                     </p>
-                    
+
                 </div>
             </div>
         </section>
@@ -394,4 +423,5 @@
         <p>&copy; 2024 Ім'я Прізвище. Усі права захищені.</p>
     </footer>
 </body>
+
 </html>
