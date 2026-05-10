@@ -2,132 +2,490 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Мої контакти для зв'язку та співпраці. Зв'яжіться зі мною через email, телефон або соціальні мережі. Я відкритий до нових можливостей та співпраці в сфері веб-розробки.">
-    <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Мої контакти для зв'язку та співпраці. Зв'яжіться зі мною через email, телефон або соціальні мережі. Я відкритий до нових можливостей та співпраці в сфері веб-розробки.">
+    <meta name="keywords"
+          content="веб-розробка, HTML, CSS, JavaScript">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
-    <title>Контакти - Мій особистий сайт</title>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <title>
+        Контакти - Мій особистий сайт
+    </title>
+
+    <script src="js/script.js"
+            defer></script>
 </head>
+
 <body>
+
 <header class="modern-header">
+
     <div class="container">
+
         <div class="header-content">
+
             <div class="logo">
-                <h1>Гуненко Ярослав</h1>
-                <span class="logo-subtitle">Веб-розробник</span>
+
+                <h1>
+                    Гуненко Ярослав
+                </h1>
+
+                <span class="logo-subtitle">
+                    Веб-розробник
+                </span>
+
             </div>
+
             <nav class="main-nav">
+
                 <ul class="nav-list">
+
                     <li><a href="index.html">Головна</a></li>
                     <li><a href="about.html">Про мене</a></li>
                     <li><a href="portfolio.html">Портфоліо</a></li>
                     <li><a href="gallery.html">Галерея</a></li>
                     <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="grid-demo.html">Grid</a></li>
+                    <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                    <li><a href="responsive-demo.html">Responsive</a></li>
+                    <li><a href="mobile-portfolio.html">Mobile</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Контакти</a></li>
+
                 </ul>
+
             </nav>
-            <button class="mobile-nav-toggle" onclick="toggleMobileNav()"> <span></span>
+
+            <button class="mobile-nav-toggle"
+                    onclick="toggleMobileNav()">
+
                 <span></span>
                 <span></span>
+                <span></span>
+
             </button>
+
             <div class="header-cta">
-                <button class="cta-button">Найняти
-                    мене</button>
+
+                <button class="cta-button">
+                    Найняти мене
+                </button>
+
             </div>
+
         </div>
-        <nav class="mobile-nav" id="mobileNav">
+
+        <nav class="mobile-nav"
+             id="mobileNav">
+
             <ul class="nav-list">
+
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="about.html">Про мене</a></li>
                 <li><a href="portfolio.html">Портфоліо</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="flexbox-demo.html">Flexbox</a></li>
+                <li><a href="grid-demo.html">Grid</a></li>
+                <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                <li><a href="responsive-demo.html">Responsive</a></li>
+                <li><a href="mobile-portfolio.html">Mobile</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-  <aside class="sticky-note">
-    <h4>Навігація</h4>
-    <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
-    </aside>
-<main>
-    <section id="contact-info">
-        <h2>Як зі мною зв'язатися</h2>
-        <address>
-            <p><strong>Email:</strong> <a href="mailto:gunenkoym@gmail.com">gunenkoym@gmail.com</a></p>
-            <p><strong>Телефон:</strong> <a href="tel:+380967825712">+38 (096) 782-57-12</a></p>
-            <p><strong>Telegram:</strong> <a href="https://t.me/HucketaMeowUA" target="_blank">Мій телеграм</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hunenko-yaroslav-0339951b2/" target="_blank">Мій профіль</a></p>
-        </address>
-    </section>
 
-    <section id="contact-form">
-        <h2>Напишіть мені</h2>
-        <form action="#" method="get">
-        <fieldset>
-            <legend>Особиста інформація</legend>
-            <label for="name">Ім'я *:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email *:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="phone">Телефон:</label>
-            <!-- <input type="tel" id="phone" name="phone"> -->
-            <input type="tel" id="phone" name="phone" required pattern="[0-9+\-\s]{10,}" placeholder="+380XXXXXXXXX">
-        </fieldset>
-        <fieldset>
-            <legend>Повідомлення</legend>
-            <label for="subject">Тема:</label>
-            <select id="subject" name="subject">
-                <option value="">Оберіть тему</option>
-                <option value="collaboration">Співпраця</option>
-                <option value="feedback">Відгук</option>
-                <option value="question">Питання</option>
-                <option value="other">Інше</option>
-            </select>
-            <label for="priority">Пріоритет:</label>
-            <input type="radio" id="low" name="priority" value="low">
-            <label for="low">Низький</label>
-            <input type="radio" id="medium" name="priority" value="medium" checked>
-            <label for="medium">Середній</label>
-            <input type="radio" id="high" name="priority" value="high">
-            <label for="high">Високий</label>
-            <label for="message">Текст повідомлення *:</label>
-            <textarea id="message" name="message" rows="5" cols="40" required
-placeholder="Введіть ваше повідомлення тут..."></textarea>
-        </fieldset>
-        <fieldset>
-            <legend>Додаткові опції</legend>
-            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-            <label for="newsletter">Підписатися на новини</label>
-            <input type="checkbox" id="copy" name="copy" value="yes">
-            <label for="copy">Отримати копію листа</label>
-        </fieldset>
-            <button type="submit">Надіслати повідомлення</button>
-            <button type="reset">Очистити форму</button>
-        </form>
-    </section>
-    <section id="faq">
-        <h2>Часті питання</h2>
-        <dl>
-            <dd>Зазвичай я відповідаю протягом 24 годин у робочі дні.</dd>
-            <dt>Чи можна замовити у вас сайт?</dt>
-            <dd>Поки що я тільки вивчаю веб-розробку, але буду радий обговорити прості проекти для практики.</dd>
-            <dt>Які технології ви використовуєте?</dt>
-            <dd>Зараз я вивчаю HTML, CSS та готуюся до JavaScript. Планую освоїти React та Node.js.</dd>
-        </dl>
-    </section>
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="contact-main">
+
+    <div class="contact-content">
+
+        <section class="contact-card"
+                 id="contact-info">
+
+            <h2>
+                Як зі мною зв'язатися
+            </h2>
+
+            <address class="contact-links">
+
+                <p>
+                    <strong>Email:</strong>
+
+                    <a href="mailto:gunenkoym@gmail.com">
+                        gunenkoym@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Телефон:</strong>
+
+                    <a href="tel:+380967825712">
+                        +38 (096) 782-57-12
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Telegram:</strong>
+
+                    <a href="https://t.me/HucketaMeowUA"
+                       target="_blank">
+
+                        Мій телеграм
+
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn:</strong>
+
+                    <a href="https://www.linkedin.com/in/hunenko-yaroslav-0339951b2/"
+                       target="_blank">
+
+                        Мій профіль
+
+                    </a>
+                </p>
+
+            </address>
+
+        </section>
+
+        <section class="contact-card"
+                 id="contact-form">
+
+            <h2>
+                Напишіть мені
+            </h2>
+
+            <form class="contact-form"
+                  action="#"
+                  method="get">
+
+                <fieldset>
+
+                    <legend>
+                        Особиста інформація
+                    </legend>
+
+                    <label for="name">
+                        Ім'я *
+                    </label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required>
+
+                    <label for="email">
+                        Email *
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required>
+
+                    <label for="phone">
+                        Телефон
+                    </label>
+
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           required
+                           pattern="[0-9+\-\s]{10,}"
+                           placeholder="+380XXXXXXXXX">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Повідомлення
+                    </legend>
+
+                    <label for="subject">
+                        Тема:
+                    </label>
+
+                    <select id="subject"
+                            name="subject">
+
+                        <option value="">
+                            Оберіть тему
+                        </option>
+
+                        <option value="collaboration">
+                            Співпраця
+                        </option>
+
+                        <option value="feedback">
+                            Відгук
+                        </option>
+
+                        <option value="question">
+                            Питання
+                        </option>
+
+                        <option value="other">
+                            Інше
+                        </option>
+
+                    </select>
+
+                    <div class="radio-group">
+
+                        <div class="radio-item">
+
+                            <input type="radio"
+                                   id="low"
+                                   name="priority"
+                                   value="low">
+
+                            <label for="low">
+                                Низький
+                            </label>
+
+                        </div>
+
+                        <div class="radio-item">
+
+                            <input type="radio"
+                                   id="medium"
+                                   name="priority"
+                                   value="medium"
+                                   checked>
+
+                            <label for="medium">
+                                Середній
+                            </label>
+
+                        </div>
+
+                        <div class="radio-item">
+
+                            <input type="radio"
+                                   id="high"
+                                   name="priority"
+                                   value="high">
+
+                            <label for="high">
+                                Високий
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <label for="message">
+                        Текст повідомлення *
+                    </label>
+
+                    <textarea id="message"
+                              name="message"
+                              required
+                              placeholder="Введіть ваше повідомлення тут..."></textarea>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Додаткові опції
+                    </legend>
+
+                    <div class="checkbox-group">
+
+                        <div class="checkbox-item">
+
+                            <input type="checkbox"
+                                   id="newsletter"
+                                   name="newsletter"
+                                   value="yes">
+
+                            <label for="newsletter">
+                                Підписатися на новини
+                            </label>
+
+                        </div>
+
+                        <div class="checkbox-item">
+
+                            <input type="checkbox"
+                                   id="copy"
+                                   name="copy"
+                                   value="yes">
+
+                            <label for="copy">
+                                Отримати копію листа
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <div class="form-actions">
+
+                    <button type="submit"
+                            class="btn-primary">
+
+                        Надіслати повідомлення
+
+                    </button>
+
+                    <button type="reset"
+                            class="btn-outline">
+
+                        Очистити форму
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="contact-card"
+                 id="faq">
+
+            <h2>
+                Часті питання
+            </h2>
+
+            <dl class="faq-list">
+
+                <dt>
+                    Як швидко ви відповідаєте?
+                </dt>
+
+                <dd>
+                    Зазвичай я відповідаю
+                    протягом 24 годин
+                    у робочі дні.
+                </dd>
+
+                <dt>
+                    Чи можна замовити у вас сайт?
+                </dt>
+
+                <dd>
+                    Поки що я тільки
+                    вивчаю веб-розробку,
+                    але буду радий
+                    обговорити прості
+                    проекти для практики.
+                </dd>
+
+                <dt>
+                    Які технології
+                    ви використовуєте?
+                </dt>
+
+                <dd>
+                    Зараз я вивчаю HTML,
+                    CSS та готуюся
+                    до JavaScript.
+                    Планую освоїти
+                    React та Node.js.
+                </dd>
+
+            </dl>
+
+        </section>
+
+    </div>
+
+    <aside class="contact-sidebar">
+
+        <div class="sidebar-card">
+
+            <h3>
+                Навігація
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="#contact-info">
+                        Контакти
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact-form">
+                        Форма
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq">
+                        FAQ
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="sidebar-card">
+
+            <h3>
+                Графік роботи
+            </h3>
+
+            <p>
+                Пн - Пт<br>
+                09:00 — 18:00
+            </p>
+
+        </div>
+
+    </aside>
+
 </main>
+
 <footer>
-    <p>&copy; 2026 Гуненко Ярослав. Усі права захищені.</p>
-    <p><small>Форма поки не працює - це навчальний проект</small></p>
+
+    <p>
+        &copy; 2026 Гуненко Ярослав.
+        Усі права захищені.
+    </p>
+
+    <p>
+
+        <small>
+            Форма поки не працює -
+            це навчальний проект
+        </small>
+
+    </p>
+
 </footer>
+
 </body>
+
 </html>
