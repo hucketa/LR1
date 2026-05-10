@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="css/flexbox.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/script.js"></script>
 </head>
-
+    <script src="js/script.js"></script>
 <body class="portfolio-mobile-body">
     <!-- Mobile-First Header -->
     <header class="portfolio-mobile-header">
@@ -25,7 +24,7 @@
                     <span class="status-indicator"></span>
                 </div>
                 <div class="profile-info">
-                    <h1 class="profile-name">ІГуненко Ярослав ПЗ01-24т</h1>
+                    <h1 class="profile-name">Гуненко Ярослав ПЗ01-24т</h1>
                     <p class="profile-title">Frontend Developer</p>
                     <div class="profile-tags">
                         <span class="tag">HTML</span>
@@ -34,23 +33,45 @@
                     </div>
                 </div>
             </div>
-            <nav class="quick-nav">
-                <a href="#about" class="nav-icon">
-                    <span class="icon"> </span>
-                    <span class="label">Про мене</span>
-                </a>
-                <a href="#projects" class="nav-icon">
-                    <span class="icon"> </span>
-                    <span class="label">Проекти</span>
-                </a>
-                <a href="#skills" class="nav-icon">
-                    <span class="icon"> </span>
-                    <span class="label">Навички</span>
-                </a>
-                <a href="#contact" class="nav-icon">
-                    <span class="icon"> </span>
-                    <span class="label">Контакт</span>
-                </a>
+            <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html">Головна</a></li>
+                            <li><a href="about.html">Про мене</a></li>
+                            <li><a href="portfolio.html">Портфоліо</a></li>
+                            <li><a href="gallery.html">Галерея</a></li>
+
+                            <li><a href="flexbox-demo.html">Flexbox</a></li>
+                            <li><a href="grid-demo.html">Grid</a></li>
+                            <li><a href="advanced-grid.html">Advanced Grid</a></li>
+
+                            <li><a href="responsive-demo.html">Responsive</a></li>
+                            <li><a href="mobile-portfolio.html">Mobile</a></li>
+
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Контакти</a></li>
+                        </ul>
+                </nav>
+                <button class="mobile-nav-toggle"
+                    onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+                <div class="header-cta">
+                    <button class="cta-button">Найняти
+                        мене</button>
+                </div>
+            </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про мене</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="flexbox-demo.html">Flexbox</a></li>
+                    <li><a href="grid-demo.html">Grid</a></li>
+                    <li><a href="advanced-grid.html">Advanced Grid</a></li>
+                    <li><a href="responsive-demo.html">Responsive</a></li>
+                    <li><a href="mobile-portfolio.html">Mobile</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -94,7 +115,7 @@
             <div class="projects-mobile-grid">
                 <article class="project-mobile-card" data-category="web">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-1.jpg" alt="Project 1" class="project-img">
+                        <img src="images/grid-1.jpg" alt="Project 1" class="project-img" loading="lazy">
                         <div class="project-badge">Новий</div>
                     </div>
                     <div class="project-content">
@@ -117,7 +138,7 @@
                 </article>
                 <article class="project-mobile-card" data-category="mobile design">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-2.jpg" alt="Project 2" class="project-img">
+                        <img src="images/grid-2.jpg" alt="Project 2" class="project-img" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-name">Mobile App UI</h3>
@@ -139,7 +160,7 @@
                 </article>
                 <article class="project-mobile-card" data-category="web">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-3.jpg" alt="Project 3" class="project-img">
+                        <img src="images/grid-3.jpg" alt="Project 3" class="project-img" loading="lazy">
                         <div class="project-badge featured">Featured</div>
                     </div>
                     <div class="project-content">
@@ -162,7 +183,7 @@
                 </article>
                 <article class="project-mobile-card" data-category="web mobile">
                     <div class="project-image-wrapper">
-                        <img src="images/grid-4.jpg" alt="Project 4" class="project-img">
+                        <img src="images/grid-4.jpg" alt="Project 4" class="project-img" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 class="project-name">Responsive Blog</h3>
@@ -334,7 +355,6 @@
             <p class="footer-text">© 2024 Mobile Portfolio. Всі права захищені.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
     <script>
         // Scroll to top
         function scrollToTop() {

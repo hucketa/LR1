@@ -2366,3 +2366,16 @@ fieldset {
         width: 100%;
     }
 }
+
+@media (min-width: 768px) {
+
+    .projects-mobile-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contact-methods {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
