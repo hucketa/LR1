@@ -285,13 +285,6 @@ AUTO-FIT & AUTO-FILL
     margin: 2rem 0;
 }
 
-/*.comparison-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}*/
-
 .comparison-card {
     background:
         linear-gradient(145deg,
@@ -610,15 +603,6 @@ LANDING PAGE СТИЛІ
     background: white;
 }
 
-/*.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}*/
-
 .portfolio-grid {
     display: grid;
     grid-template-columns:
@@ -628,13 +612,6 @@ LANDING PAGE СТИЛІ
     margin: 0 auto;
     padding: 1rem;
 }
-
-/*.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-}*/
 
 .portfolio-item {
     position: relative;
@@ -655,13 +632,6 @@ LANDING PAGE СТИЛІ
     display: block;
     transition: transform 0.3s ease;
 }
-
-/*.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}*/
 
 .portfolio-item:hover {
     transform: translateY(-5px);
@@ -2192,10 +2162,10 @@ LIGHTBOX
     --main-radius: 16px;
     --main-color: #667eea;
     --main-bg: linear-gradient(135deg,
-                #0b1020 0%,
-                #132347 35%,
-                #1d4b8f 70%,
-                #2563eb 100%);
+            #0b1020 0%,
+            #132347 35%,
+            #1d4b8f 70%,
+            #2563eb 100%);
     --card-bg: white;
     --grid-columns: repeat(3, 1fr);
 }
@@ -2309,10 +2279,10 @@ LIGHTBOX
 
 .top-bar {
     background: (135deg,
-                #0b1020 0%,
-                #132347 35%,
-                #1d4b8f 70%,
-                #2563eb 100%);
+            #0b1020 0%,
+            #132347 35%,
+            #1d4b8f 70%,
+            #2563eb 100%);
     border-radius: var(--main-radius);
     padding: 20px 30px;
 
@@ -3030,7 +3000,7 @@ MOBILE
     }
 }
 
-.dashboard-card li{
+.dashboard-card li {
     color: white;
 }
 
@@ -3213,3 +3183,35 @@ DESKTOP
     }
 
 }
+
+/*Unused code(old or not correct)*/
+
+/*.comparison-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}*/
+
+/*.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}*/
+
+/*.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}*/
+
+/*.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}*/

@@ -3,7 +3,9 @@
 ====================== */
 
 /* Скидання box-sizing для всіх елементів */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -75,30 +77,16 @@
    ВДОСКОНАЛЕНІ КАРТКИ
 ====================== */
 
-/*.card {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}*/
-
 .card {
     background:
-        linear-gradient(
-            145deg,
-            rgba(15,23,42,0.96) 0%,
-            rgba(30,41,59,0.96) 100%
-        );
-    border: 1px solid rgba(96,165,250,0.15);
+        linear-gradient(145deg,
+            rgba(15, 23, 42, 0.96) 0%,
+            rgba(30, 41, 59, 0.96) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.15);
     border-radius: 20px;
     padding: 2rem;
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
+        0 10px 30px rgba(0, 0, 0, 0.35);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -116,15 +104,10 @@
     transition: transform 0.3s ease;
 }
 
-/*.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}*/
-
 .card:hover {
     transform: translateY(-8px);
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.45);
+        0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 .card:hover::before {
@@ -167,7 +150,7 @@
 
 .fixed-nav.scrolled {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    background-color: rgba(44, 90, 160,0.98); 
+    background-color: rgba(44, 90, 160, 0.98);
 }
 
 /* Відступ для контенту при фіксованій навігації */
@@ -189,7 +172,7 @@ body.fixed-header {
     position: absolute;
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, #2c5aa0,#1a3d73); 
+    background: linear-gradient(45deg, #2c5aa0, #1a3d73);
     border-radius: 50%;
     top: -30px;
     right: 20px;
@@ -200,18 +183,6 @@ body.fixed-header {
     font-weight: bold;
     box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
 }
-
-/* Sticky елементи */
-/*.sticky-sidebar {
-    position: sticky;
-    top: 20px;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}*/
-
 
 /* ======================
    STICKY NOTE (ДЛЯ ВСІХ СТОРІНОК)
@@ -256,16 +227,16 @@ body.fixed-header {
    Z-INDEX ДЕМОНСТРАЦІЯ
 ====================== */
 
-.layer-1 { 
-    z-index: 1; 
+.layer-1 {
+    z-index: 1;
 }
 
-.layer-2 { 
-    z-index: 2; 
+.layer-2 {
+    z-index: 2;
 }
 
-.layer-content { 
-    z-index: 3; 
+.layer-content {
+    z-index: 3;
 }
 
 .layered-card {
@@ -282,7 +253,7 @@ body.fixed-header {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background-color: #202122; 
+    background-color: #202122;
     border-radius: 8px;
     z-index: 1;
 }
@@ -293,7 +264,7 @@ body.fixed-header {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    background-color: #141516; 
+    background-color: #141516;
     border-radius: 8px;
     z-index: 2;
 }
@@ -304,7 +275,7 @@ body.fixed-header {
     background-color: rgb(42, 39, 39);
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0,0.1); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -313,8 +284,8 @@ body.fixed-header {
 ====================== */
 
 .float-container {
-    overflow: hidden; 
-    /* clearfix*/ 
+    overflow: hidden;
+    /* clearfix*/
     background-color: #22262b;
     padding: 1rem;
     border-radius: 8px;
@@ -324,7 +295,7 @@ body.fixed-header {
 .float-left {
     float: left;
     width: 30%;
-    background-color: #e3f2fd; 
+    background-color: #e3f2fd;
     padding: 1rem;
     margin-right: 2%;
     border-radius: 6px;
@@ -333,7 +304,7 @@ body.fixed-header {
 .float-right {
     float: right;
     width: 30%;
-    background-color: #f3e5f5; 
+    background-color: #f3e5f5;
     padding: 1rem;
     margin-left: 2%;
     border-radius: 6px;
@@ -390,10 +361,8 @@ body.fixed-header {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.8)
-    );
+    background: linear-gradient(transparent,
+            rgba(0, 0, 0, 0.8));
     color: white;
     padding: 1rem;
     transform: translateY(100%);
@@ -415,53 +384,6 @@ body.fixed-header {
     opacity: 0.9;
 }
 
-
-/* ======================
-   КОНТЕНТ З БІЧНОЮ ПАНЕЛЛЮ
-====================== */
-/*.content-layout {
-    display: block;
-    margin: 2rem 0;
-}
-
-.sticky-sidebar {
-    width: 250px;
-    float: right;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-}
-
-.main-content {
-    margin-right: 270px;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.sticky-sidebar ul {
-    margin: 0;
-    padding: 0;
-}
-
-.sticky-sidebar li {
-    margin-bottom: 0.5rem;
-}
-
-.sticky-sidebar a {
-    display: block;
-    padding: 0.5rem;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.sticky-sidebar a:hover {
-    background-color: #e9ecef;
-    text-decoration: none;
-}*/
-
-
 /* ======================
    ІНТЕРАКТИВНІ ЕЛЕМЕНТИ
 ====================== */
@@ -479,11 +401,11 @@ body.fixed-header {
     border-radius: 50%;
     font-size: 1.2rem;
     cursor: pointer;
-    
+
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.3s ease;
-    
+
     z-index: 999;
 }
 
@@ -629,12 +551,10 @@ body.fixed-header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
     animation: shine 2s infinite;
 }
 
@@ -642,6 +562,7 @@ body.fixed-header {
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(100%);
     }
@@ -763,12 +684,6 @@ body.fixed-header {
     transform: translateY(-1px);
 }
 
-/*.btn-secondary {
-    background-color: transparent;
-    color: #2c5aa0;
-    border: 2px solid #2c5aa0;
-}*/
-
 .btn-secondary {
     border: 1px solid #3b82f6;
     color: #dbeafe;
@@ -779,40 +694,19 @@ body.fixed-header {
     color: white;
 }
 
-
-/* ======================
-   АНІМАЦІЯ ЗАВАНТАЖЕННЯ
-====================== */
-
-/*.loading-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}*/
-
-/*.loading-container.hidden {
-    opacity: 0;
-    pointer-events: none;
-}*/
-
 .loading-container {
     animation: hideLoader 2s forwards;
 }
 
 @keyframes hideLoader {
-    0% { opacity: 1; }
-    90% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -846,6 +740,7 @@ body.fixed-header {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -878,17 +773,15 @@ body.fixed-header {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(
-        from 0deg,
-        transparent,
-        rgba(44, 90, 160, 0.05),
-        transparent
-    );
+    background: conic-gradient(from 0deg,
+            transparent,
+            rgba(44, 90, 160, 0.05),
+            transparent);
     animation: rotate 20s linear infinite;
     z-index: 1;
 }
 
-.skills-map > * {
+.skills-map>* {
     position: relative;
     z-index: 2;
 }
@@ -897,6 +790,7 @@ body.fixed-header {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1045,6 +939,7 @@ body.fixed-header {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1062,10 +957,6 @@ body.fixed-header {
    АНІМАЦІЯ ЗАВАНТАЖЕННЯ (INLINE ВАРІАНТ)
 ====================== */
 
-/*.loading-demo {
-    text-align: center;
-}*/
-
 .loading-demo.hidden {
     opacity: 0;
     visibility: hidden;
@@ -1080,7 +971,7 @@ body.fixed-header {
     align-items: center;
     justify-content: center;
     background:
-        rgba(15,23,42,0.96);
+        rgba(15, 23, 42, 0.96);
     backdrop-filter: blur(8px);
     transition:
         opacity 0.5s ease,
@@ -1089,7 +980,7 @@ body.fixed-header {
 
 .loading-container {
     background:
-        rgba(255,255,255,0.06);
+        rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 3rem 1rem;
     margin: 1rem 0;
@@ -1137,6 +1028,7 @@ body.fixed-header {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1512,6 +1404,7 @@ main {
 }
 
 @media (max-width: 450px) {
+
     .sticky-note,
     .sticky-sidebar {
         width: 100%;
@@ -1520,22 +1413,12 @@ main {
     }
 }
 
-/*Fixes for index.html with mobile-first style */
-/*@media (max-width: 768px) {
-    .sticky-note {
-        float: none;
-        width: 100%;
-        margin: 0 0 1rem 0;
-        position: relative;
-        top: 0;
-    }
-}*/
-
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
         line-height: 1.2;
     }
+
     .hero-description {
         font-size: 1rem;
     }
@@ -1567,7 +1450,7 @@ main {
     align-items: stretch;
 }
 
-#features > h2 {
+#features>h2 {
     grid-column: 1 / -1;
 }
 
@@ -1618,10 +1501,12 @@ main {
     #features {
         grid-template-columns: 1fr;
     }
+
     .card {
         padding: 1.5rem;
         margin: 0;
     }
+
     section {
         padding: 1rem;
     }
@@ -1641,8 +1526,7 @@ main {
 .about-bio-layout {
     display: grid;
     grid-template-columns:
-        minmax(220px, 280px)
-        1fr;
+        minmax(220px, 280px) 1fr;
     gap: 2.5rem;
     align-items: start;
 }
@@ -1659,9 +1543,9 @@ main {
     border-radius: 24px;
     object-fit: cover;
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.35);
+        0 20px 40px rgba(0, 0, 0, 0.35);
     border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255, 255, 255, 0.08);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -1670,7 +1554,7 @@ main {
 .about-photo img:hover {
     transform: translateY(-6px);
     box-shadow:
-        0 25px 50px rgba(0,0,0,0.45);
+        0 25px 50px rgba(0, 0, 0, 0.45);
 }
 
 .about-photo {
@@ -1697,7 +1581,7 @@ main {
     width: 100%;
     height: 14px;
     background:
-        rgba(255,255,255,0.08);
+        rgba(255, 255, 255, 0.08);
     border-radius: 999px;
     overflow: hidden;
     margin-top: 0.75rem;
@@ -1707,11 +1591,9 @@ main {
     height: 100%;
     border-radius: inherit;
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             #2563eb,
-            #60a5fa
-        );
+            #60a5fa);
     transition: width 0.5s ease;
 }
 
@@ -1719,12 +1601,15 @@ main {
     h1 {
         font-size: 2rem;
     }
+
     h2 {
         font-size: 1.7rem;
     }
+
     h3 {
         font-size: 1.3rem;
     }
+
     section {
         padding: 1.25rem;
     }
@@ -1803,23 +1688,16 @@ h3 {
 }
 
 #image-gallery {
-    background-color:#101828;
+    background-color: #101828;
 }
 
 .relative-container {
-    background-color:#101828;
+    background-color: #101828;
 }
 
 /* ======================
    FINAL GALLERY FIX
 ====================== */
-
-/*.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    width: 100%;
-}*/
 
 .gallery-item {
     position: relative;
@@ -1947,17 +1825,15 @@ BLOG CARD
 
 .blog-card {
     background:
-        linear-gradient(
-            145deg,
-            rgba(15,23,42,0.96) 0%,
-            rgba(30,41,59,0.96) 100%
-        );
+        linear-gradient(145deg,
+            rgba(15, 23, 42, 0.96) 0%,
+            rgba(30, 41, 59, 0.96) 100%);
     border:
-        1px solid rgba(96,165,250,0.15);
+        1px solid rgba(96, 165, 250, 0.15);
     border-radius: 20px;
     padding: 2rem;
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.35);
+        0 10px 30px rgba(0, 0, 0, 0.35);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -1966,7 +1842,7 @@ BLOG CARD
 .blog-card:hover {
     transform: translateY(-5px);
     box-shadow:
-        0 20px 40px rgba(0,0,0,0.45);
+        0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 .blog-card h2 {
@@ -2007,10 +1883,10 @@ SIDEBAR
 
 .sidebar-card {
     background:
-        rgba(255,255,255,0.04);
+        rgba(255, 255, 255, 0.04);
 
     border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 16px;
 
@@ -2092,15 +1968,13 @@ CONTACT CARD
 */
 
 .contact-card {
-    background: linear-gradient(
-        145deg,
-        rgba(15,23,42,0.96) 0%,
-        rgba(30,41,59,0.96) 100%
-    );
-    border: 1px solid rgba(96,165,250,0.15);
+    background: linear-gradient(145deg,
+            rgba(15, 23, 42, 0.96) 0%,
+            rgba(30, 41, 59, 0.96) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.15);
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .contact-card h2 {
@@ -2144,10 +2018,10 @@ FORM
 }
 
 .contact-form fieldset {
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 1.5rem;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .contact-form legend {
@@ -2168,8 +2042,8 @@ FORM
     width: 100%;
     padding: 1rem;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
     color: white;
     font-size: 1rem;
 }
@@ -2184,7 +2058,7 @@ FORM
 .contact-form textarea:focus {
     outline: none;
     border-color: #60a5fa;
-    box-shadow: 0 0 0 3px rgba(96,165,250,0.2);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
 }
 
 /*
@@ -2255,9 +2129,11 @@ TABLET
         grid-template-columns: 1fr 360px;
         max-width: 100%;
     }
+
     .form-actions {
         flex-direction: row;
     }
+
     .radio-group,
     .checkbox-group {
         flex-direction: row;
@@ -2379,3 +2255,132 @@ fieldset {
             repeat(2, 1fr);
     }
 }
+
+/*Unused code(old or not correct)*/
+
+/*.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+}*/
+
+/* ======================
+   АНІМАЦІЯ ЗАВАНТАЖЕННЯ
+====================== */
+
+/*.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}*/
+
+/*.loading-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}*/
+
+/*Fixes for index.html with mobile-first style */
+/*@media (max-width: 768px) {
+    .sticky-note {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+        position: relative;
+        top: 0;
+    }
+}*/
+
+/*.btn-secondary {
+    background-color: transparent;
+    color: #2c5aa0;
+    border: 2px solid #2c5aa0;
+}*/
+
+/*.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}*/
+
+/*.card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}*/
+
+/* Sticky елементи */
+/*.sticky-sidebar {
+    position: sticky;
+    top: 20px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}*/
+
+/* ======================
+   КОНТЕНТ З БІЧНОЮ ПАНЕЛЛЮ
+====================== */
+/*.content-layout {
+    display: block;
+    margin: 2rem 0;
+}
+
+.sticky-sidebar {
+    width: 250px;
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-content {
+    margin-right: 270px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sticky-sidebar a {
+    display: block;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-sidebar a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}*/
+
+/*.loading-demo {
+    text-align: center;
+}*/
