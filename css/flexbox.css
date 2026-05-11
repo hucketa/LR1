@@ -1142,6 +1142,9 @@ PORTFOLIO PAGE
     transform: translateY(-5px);
 }
 
+/* Телефоны */
+
+
 /* IMAGE */
 
 .portfolio-image {
@@ -1577,6 +1580,41 @@ header {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Телефоны и планшеты */
+@media (max-width: 1024px) {
+
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .portfolio-item.large,
+    .portfolio-item.horizontal,
+    .portfolio-item.vertical {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
 }
 
 /*Unused code(old or not correct)*/
