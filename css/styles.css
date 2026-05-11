@@ -1260,6 +1260,15 @@ h2::before {
     background: #60a5fa;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /*Unused code(old or not correct)*/
 
 /* ======================
