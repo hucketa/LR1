@@ -15,6 +15,17 @@
     <title>Про мене - Мій особистий сайт</title>
     <meta name="theme-color" content="#111827">
     <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif
+        }
+    
+        img {
+            max-width: 100%;
+            height: auto
+        }
+    </style>
 </head>
     <script src="js/script.js"></script>
     <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
@@ -85,7 +96,7 @@
 <main>
     <section id="bio">
         <h2>Біографія</h2>
-        <img src="images/photo2.jpg" alt="Моє фото" width="150" height="200">
+        <img src="images/photo2.jpg" alt="Моє фото" width="150" height="200" loading="lazy">
         <p>Мене звати Ярослав, мені 20 років. Я студент та вивчаю веб-технології.</p>
         <p>Мій шлях у веб-розробці почався з цікавості до того, як створюються сайти. Зараз я активно вивчаю HTML, CSS та планую
 освоїти JavaScript.</p>

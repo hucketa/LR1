@@ -16,6 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/grid.css">
+          <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif
+        }
+    
+        img {
+            max-width: 100%;
+            height: auto
+        }
+    </style>
 </head>
 <script src="js/script.js" defer></script>
 <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
@@ -95,7 +106,7 @@
             <div class="mini-gallery">
 
                 <div class="gallery-card">
-                    <img src="images/gallery3.jpg" alt="HTML Project">
+                    <img src="images/gallery3.jpg" alt="HTML Project" loading="lazy">
 
                     <div class="gallery-info">
                         <h3>HTML Основи</h3>
@@ -108,7 +119,7 @@
                 </div>
 
                 <div class="gallery-card">
-                    <img src="images/gallery1.jpg" alt="CSS Project">
+                    <img src="images/gallery1.jpg" alt="CSS Project" loading="lazy">
 
                     <div class="gallery-info">
                         <h3>CSS Flexbox</h3>
@@ -121,7 +132,7 @@
                 </div>
 
                 <div class="gallery-card">
-                    <img src="images/gallery2.jpg" alt="Gallery Project">
+                    <img src="images/gallery2.jpg" alt="Gallery Project" loading="lazy">
 
                     <div class="gallery-info">
                         <h3>Інтерактивна галерея</h3>
@@ -176,7 +187,7 @@
 
                     <div class="portfolio-image">
 
-                        <img src="images/photo1.jpg" alt="HTML Project">
+                        <img src="images/photo1.jpg" alt="HTML Project" loading="lazy">
 
                         <div class="portfolio-overlay">
 
@@ -222,7 +233,7 @@
 
                     <div class="portfolio-image">
 
-                        <img src="images/photo2.jpg" alt="CSS Project">
+                        <img src="images/photo2.jpg" alt="CSS Project" loading="lazy">
 
                         <div class="portfolio-overlay">
 
@@ -268,7 +279,7 @@
 
                     <div class="portfolio-image">
 
-                        <img src="images/photo3.jpg" alt="Gallery Project">
+                        <img src="images/photo3.jpg" alt="Gallery Project" loading="lazy">
 
                         <div class="portfolio-overlay">
 
