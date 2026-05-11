@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
     <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body class="portfolio-mobile-body">
     <!-- Mobile-First Header -->
     <header class="portfolio-mobile-header">

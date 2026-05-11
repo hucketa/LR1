@@ -19,9 +19,22 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/flexbox.css">
     <title>Головна - ЛР2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <script src="js/script.js"></script>
-
+<script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body>
     <header class="modern-header">
         <div class="container">

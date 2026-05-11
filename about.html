@@ -17,6 +17,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
     <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body>
    <section class="loading-demo">
     <h2>Анімований прелоадер</h2>

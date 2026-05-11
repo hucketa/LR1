@@ -13,9 +13,9 @@
     <link rel="manifest" href="manifest.json">
     <script src="js/scripts.js" defer></script>
 </head>
-
-<body class="landing-body">
-    <!-- Hero Section з Grid -->
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
+    <body class="landing-body">
+<!-- Hero Section з Grid -->
     <section class="hero-grid">
         <div class="hero-content">
             <h1 class="hero-title">Освойте CSS Grid Layout</h1>
