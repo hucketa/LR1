@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Демонстрація - Основи</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+
+<body>
+    <header class="demo-header">
+        <div class="container">
+            <h1> JavaScript Демонстрація</h1>
+            <nav class="demo-nav">
+                <a href="index.html">Головна</a>
+                <a href="js-demo.html" class="active">JS Основи</a>
+                <a href="interactive-portfolio.html">Інтерактивне портфоліо</a>
+            </nav>
+        </div>
+    </header>
+    <main class="demo-main">
+        <!-- Секція 1: Змінні та типи даних -->
+        <section class="demo-section variables-section">
+            <div class="container">
+                <h2> Змінні та типи даних</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Калькулятор</h3>
+                        <div class="calculator">
+                            <input type="number" id="num1" placeholder="Число 1" value="10">
+                            <select id="operator">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">×</option>
+                                <option value="/">÷</option>
+                            </select>
+                            <input type="number" id="num2" placeholder="Число 2" value="5">
+                            <button onclick="calculate()" class="btn-calculate">Обчислити</button>
+                            <div id="calcResult" class="result"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function calculate() {
+const num1 = parseFloat(document.getElementById('num1').value);
+const num2 = parseFloat(document.getElementById('num2').value);
+const operator = document.getElementById('operator').value;
+let result;
+switch(operator) {
+case '+': result = num1 + num2; break;
+case '-': result = num1 - num2; break;
+case '*': result = num1 * num2; break;
+case '/': result = num1 / num2; break;
+}
+document.getElementById('calcResult').textContent =
+`Результат: ${result}`;
+}</code></pre>
+                        </details>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Робота з текстом</h3>
+                        <div class="text-demo">
+                            <input type="text" id="textInput" placeholder="Введіть текст">
+                            <button onclick="analyzeText()" class="btn-analyze">Аналізувати</button>
+                            <div id="textResult" class="result"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function analyzeText() {
+const text = document.getElementById('textInput').value;
+const length = text.length;
+const words = text.split(' ').length;
+const upper = text.toUpperCase();
+const lower = text.toLowerCase();
+document.getElementById('textResult').innerHTML = `
+&lt;p&gt;Символів: ${length}&lt;/p&gt;
+&lt;p&gt;Слів: ${words}&lt;/p&gt;
+&lt;p&gt;Великі літери: ${upper}&lt;/p&gt;
+&lt;p&gt;Малі літери: ${lower}&lt;/p&gt;
+`;
+}</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секція 2: DOM маніпуляції -->
+        <section class="demo-section dom-section">
+            <div class="container">
+                <h2> Робота з DOM</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Зміна стилів</h3>
+                        <div class="style-demo">
+                            <div id="colorBox" class="color-box"></div>
+                            <div class="controls">
+                                <button onclick="changeColor('red')">Червоний</button>
+                                <button onclick="changeColor('blue')">Синій</button>
+                                <button onclick="changeColor('green')">Зелений</button>
+                                <button onclick="randomColor()">Випадковий</button>
+                            </div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function changeColor(color) {
+const box = document.getElementById('colorBox');
+box.style.backgroundColor = color;
+}
+function randomColor() {
+const r = Math.floor(Math.random() * 256);
+const g = Math.floor(Math.random() * 256);
+const b = Math.floor(Math.random() * 256);
+const box = document.getElementById('colorBox');
+box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}</code></pre>
+                        </details>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Додавання елементів</h3>
+                        <div class="list-demo">
+                            <input type="text" id="itemInput" placeholder="Новий елемент">
+                            <button onclick="addItem()">Додати</button>
+                            <ul id="dynamicList"></ul>
+                            <button onclick="clearList()" class="btn-clear">Очистити список</button>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function addItem() {
+const input = document.getElementById('itemInput');
+const list = document.getElementById('dynamicList');
+if (input.value.trim() !== '') {
+const li = document.createElement('li');
+li.textContent = input.value;
+li.onclick = function() {
+this.remove();
+};
+list.appendChild(li);
+input.value = '';
+}
+}
+function clearList() {
+document.getElementById('dynamicList').innerHTML = '';
+}</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секція 3: Події -->
+        <section class="demo-section events-section">
+            <div class="container">
+                <h2> Обробка подій</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Лічильник кліків</h3>
+                        <div class="counter-demo">
+                            <div id="counterDisplay" class="counter-display">0</div>
+                            <div class="counter-controls">
+                                <button onclick="incrementCounter()">+1</button>
+                                <button onclick="decrementCounter()">-1</button>
+                                <button onclick="resetCounter()">Скинути</button>
+                            </div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>let counter = 0;
+function incrementCounter() {
+counter++;
+updateDisplay();
+}
+function decrementCounter() {
+counter--;
+updateDisplay();
+}
+function resetCounter() {
+counter = 0;
+updateDisplay();
+}
+function updateDisplay() {
+const display = document.getElementById('counterDisplay');
+display.textContent = counter;
+// Анімація
+display.classList.remove('pulse');
+void display.offsetWidth; // Trigger reflow
+display.classList.add('pulse');
+}</code></pre>
+                        </details>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Інтерактивна форма</h3>
+                        <div class="form-demo">
+                            <form id="demoForm" onsubmit="handleSubmit(event)">
+                                <input type="text" id="nameInput" placeholder="Ваше ім'я" required>
+                                <input type="email" id="emailInput" placeholder="Email" required>
+                                <button type="submit">Відправити</button>
+                            </form>
+                            <div id="formResult"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function handleSubmit(event) {
+event.preventDefault(); // Запобігти відправці форми
+const name = document.getElementById('nameInput').value;
+const email = document.getElementById('emailInput').value;
+document.getElementById('formResult').innerHTML = `
+&lt;div class="success-message"&gt;
+&lt;h4&gt;Дані отримано!&lt;/h4&gt;
+&lt;p&gt;Ім'я: ${name}&lt;/p&gt;
+&lt;p&gt;Email: ${email}&lt;/p&gt;
+&lt;/div&gt;
+`;
+document.getElementById('demoForm').reset();
+}</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секція 4: Умови та цикли -->
+        <section class="demo-section logic-section">
+            <div class="container">
+                <h2> Логіка та цикли</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Перевірка віку</h3>
+                        <div class="age-demo">
+                            <input type="number" id="ageInput" placeholder="Введіть ваш вік" min="0" max="120">
+                            <button onclick="checkAge()">Перевірити</button>
+                            <div id="ageResult"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function checkAge() {
+const age = parseInt(document.getElementById('ageInput').value);
+const result = document.getElementById('ageResult');
+if (age < 0 || isNaN(age)) {
+result.innerHTML = '❌ Введіть коректний вік';
+result.className = 'error-message';
+} else if (age < 18) {
+result.innerHTML = ' Ви неповнолітній';
+result.className = 'info-message';
+} else if (age < 65) {
+result.innerHTML = ' Ви дорослий';
+result.className = 'success-message';
+} else {
+result.innerHTML = ' Ви пенсіонер';
+result.className = 'info-message';
+}
+}</code></pre>
+                        </details>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Генератор таблиці множення</h3>
+                        <div class="table-demo">
+                            <input type="number" id="tableNumber" placeholder="Число" value="5" min="1" max="20">
+                            <button onclick="generateTable()">Створити таблицю</button>
+                            <div id="tableResult"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>function generateTable() {
+const num = parseInt(document.getElementById('tableNumber').value);
+let html = '&lt;table class="multiplication-table"&gt;';
+for (let i = 1; i <= 10; i++) {
+const result = num * i;
+html += `
+&lt;tr&gt;
+&lt;td&gt;${num} × ${i}&lt;/td&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;${result}&lt;/td&gt;
+&lt;/tr&gt;
+`;
+}
+html += '&lt;/table&gt;';
+document.getElementById('tableResult').innerHTML = html;
+}</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секція 5: Масиви та об'єкти -->
+        <section class="demo-section arrays-section">
+            <div class="container">
+                <h2> Масиви та об'єкти</h2>
+                <div class="demo-grid">
+                    <div class="demo-card">
+                        <h3>Список завдань (Todo List)</h3>
+                        <div class="todo-demo">
+                            <div class="todo-input">
+                                <input type="text" id="todoInput" placeholder="Нове завдання">
+                                <button onclick="addTodo()">Додати</button>
+                            </div>
+                            <ul id="todoList"></ul>
+                            <div class="todo-stats">
+                                <span>Всього: <span id="totalTodos">0</span></span>
+                                <span>Виконано: <span id="completedTodos">0</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-card">
+                        <h3>Студентська база даних</h3>
+                        <div class="students-demo">
+                            <button onclick="showStudents()">Показати студентів</button>
+                            <button onclick="addStudent()">Додати студента</button>
+                            <div id="studentsResult"></div>
+                        </div>
+                        <details>
+                            <summary>Показати код</summary>
+                            <pre><code>const students = [
+{ name: 'Іван', grade: 85 },
+{ name: 'Марія', grade: 92 },
+{ name: 'Петро', grade: 78 }
+];
+function showStudents() {
+let html = '&lt;ul class="students-list"&gt;';
+students.forEach(student => {
+html += `
+&lt;li&gt;
+${student.name} - Оцінка: ${student.grade}
+${student.grade >= 90 ? ' ' : ''}
+&lt;/li&gt;
+`;
+});
+html += '&lt;/ul&gt;';
+document.getElementById('studentsResult').innerHTML = html;
+}</code></pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="demo-footer">
+        <div class="container">
+            <p>&copy; 2024 JavaScript Навчальний проект</p>
+        </div>
+    </footer>
+    <script src="js/dom-basics.js"></script>
+</body>
+
+</html>
