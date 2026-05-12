@@ -422,3 +422,119 @@ window.addEventListener('load', () => {
         '--dynamic-columns',
         `repeat(${cols}, 1fr)`
     );}
+
+// ==========================================
+// ЗАГАЛЬНІ ФУНКЦІЇ ДЛЯ ВСЬОГО САЙТУ
+// ==========================================
+// Плавна прокрутка до секцій
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Анімація появи елементів при прокрутці
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Спостерігати за елементами
+document.addEventListener('DOMContentLoaded', function () {
+    const animatedElements = document.querySelectorAll('.skill-card, .project-card, .card');
+    animatedElements.forEach(el => observer.observe(el));
+});
+
+// Кнопка "Вгору"
+window.addEventListener('scroll', function () {
+    const scrollTop = document.documentElement.scrollTop;
+    let backToTop = document.getElementById('backToTop');
+    if (!backToTop) {
+        backToTop = document.createElement('button');
+        backToTop.id = 'backToTop';
+        backToTop.innerHTML = '↑';
+        backToTop.className = 'back-to-top';
+        backToTop.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        document.body.appendChild(backToTop);
+    }
+    if (scrollTop > 300) {
+        backToTop.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+    }
+});
+
+// Валідація форм
+function validateForm(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return true;
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.style.borderColor = '#ff5252';
+            isValid = false;
+        } else {
+            input.style.borderColor = '#4caf50';
+        }
+    });
+    return isValid;
+}
+
+// Лічильник символів для textarea
+document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
+    const maxLength = textarea.getAttribute('maxlength');
+    const counter = document.createElement('div');
+    counter.className = 'char-counter';
+    counter.textContent = `0 / ${maxLength}`;
+    textarea.parentNode.insertBefore(counter, textarea.nextSibling);
+    textarea.addEventListener('input', function () {
+        const length = this.value.length;
+        counter.textContent = `${length} / ${maxLength}`;
+        counter.style.color = length >= maxLength * 0.9 ? '#ff5252' : '#666';
+    });
+});
+
+// Темна тема (опціонально)
+//function toggleDarkMode() {
+//    document.body.classList.toggle('dark-mode');
+//    const isDark = document.body.classList.contains('dark-mode');
+//    localStorage.setItem('darkMode', isDark);
+//}
+
+// Перевірити збережені налаштування теми
+//if (localStorage.getItem('darkMode') === 'true') {
+//    document.body.classList.add('dark-mode');
+//}
+
+// Копіювання коду з прикладів
+document.querySelectorAll('pre code').forEach(code => {
+    const button = document.createElement('button');
+    button.className = 'copy-code-btn';
+    button.textContent = 'Копіювати';
+    button.onclick = function () {
+        navigator.clipboard.writeText(code.textContent);
+        this.textContent = 'Скопійовано!';
+        setTimeout(() => this.textContent = 'Копіювати', 2000);
+    };
+    code.parentElement.style.position = 'relative';
+    code.parentElement.appendChild(button);
+});
+console.log('✨ Сайт завантажено успішно!');
