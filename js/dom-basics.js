@@ -283,3 +283,337 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function filterCalculatorInput(inputId) {
+
+    const input =
+        document.getElementById(inputId);
+
+    /*
+    Разрешено:
+    - цифры
+    - точка
+    - минус
+    */
+
+    input.value = input.value.replace(
+        /[^0-9.-]/g,
+        ""
+    );
+}
+
+/* ========================= */
+/* ФИЛЬТР ЧИСЕЛ */
+/* ========================= */
+
+function filterGuessInput() {
+
+    const input =
+        document.getElementById("guessInput");
+
+    /* Только цифры */
+
+    input.value = input.value.replace(
+        /[^0-9]/g,
+        ""
+    );
+
+    /* Максимум 100 */
+
+    if (Number(input.value) > 100) {
+
+        input.value = 100;
+    }
+}
+
+/* ========================= */
+/* ВГАДАЙ ЧИСЛО */
+/* ========================= */
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let tries = 0;
+
+function checkGuess() {
+    const userGuess = Number(document.getElementById("guessInput").value);
+
+    tries++;
+
+    document.getElementById("attempts").innerText =
+        `Спроб: ${tries}`;
+
+    if (userGuess === randomNumber) {
+        document.getElementById("guessMessage").innerText =
+            "Вітаю! Ви вгадали число!";
+    }
+    else if (userGuess < randomNumber) {
+        document.getElementById("guessMessage").innerText =
+            "Більше";
+    }
+    else {
+        document.getElementById("guessMessage").innerText =
+            "Менше";
+    }
+}
+
+/* ========================= */
+/* ТАЙМЕР */
+/* ========================= */
+
+let startTime = 60 * 60 * 1000; // 1 час
+
+let remainingTime = startTime;
+
+let timer = null;
+
+let paused = false;
+
+function updateTimerDisplay() {
+
+    const days = Math.floor(
+        remainingTime / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (remainingTime % (1000 * 60)) / 1000
+    );
+
+    document.getElementById("countdown").innerHTML =
+        `${days}д : ${hours}г : ${minutes}хв : ${seconds}с`;
+}
+
+function startTimer() {
+
+    if (timer) return;
+
+    timer = setInterval(() => {
+
+        if (!paused) {
+
+            remainingTime -= 1000;
+
+            updateTimerDisplay();
+
+            if (remainingTime <= 0) {
+
+                clearInterval(timer);
+
+                timer = null;
+
+                document.getElementById("countdown").innerHTML =
+                    "Час вийшов!";
+            }
+        }
+
+    }, 1000);
+}
+
+function pauseTimer() {
+
+    paused = !paused;
+}
+
+function resetTimer() {
+
+    remainingTime = startTime;
+
+    updateTimerDisplay();
+}
+
+updateTimerDisplay();
+
+startTimer();
+
+/* ========================= */
+/* СЛАЙДЕР */
+/* ========================= */
+
+const slides = [
+    "images/gallery1.jpg",
+    "images/gallery2.jpg",
+    "images/gallery3.jpg"
+];
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    document.getElementById("sliderImage").src = slides[index];
+
+    const dots = document.querySelectorAll(".dot");
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    dots[index].classList.add("active");
+}
+
+function nextSlide() {
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000);
+
+function filterPasswordInput() {
+
+    const input =
+        document.getElementById("passwordInput");
+
+    /*
+    Разрешено:
+    - a-z
+    - A-Z
+    - 0-9
+    - !@#$%^&*()
+    */
+
+    input.value = input.value.replace(
+        /[^a-zA-Z0-9!@#$%^&*()]/g,
+        ""
+    );
+
+    validatePassword();
+}
+
+/* ========================= */
+/* ВАЛІДАТОР ПАРОЛЯ */
+/* ========================= */
+
+function validatePassword() {
+    const password =
+        document.getElementById("passwordInput").value;
+    const tooltip =
+        document.getElementById("passwordTooltip");
+    const lengthRule =
+        document.getElementById("lengthRule");
+    const upperRule =
+        document.getElementById("upperRule");
+    const numberRule =
+        document.getElementById("numberRule");
+    const specialRule =
+        document.getElementById("specialRule");
+    const strengthFill =
+        document.getElementById("strengthFill");
+    let strength = 0;
+
+    /* ===================== */
+    /* ДЛИНА */
+    /* ===================== */
+
+    if (password.length >= 8) {
+        lengthRule.classList.add("valid");
+        lengthRule.innerHTML =
+            "✅ Мінімум 8 символів";
+        strength++;
+    } else {
+        lengthRule.classList.remove("valid");
+        lengthRule.innerHTML =
+            "❌ Мінімум 8 символів";
+    }
+
+    /* ===================== */
+    /* БОЛЬШИЕ И МАЛЕНЬКИЕ */
+    /* ===================== */
+
+    if (/[a-z]/.test(password) &&
+        /[A-Z]/.test(password)) {
+        upperRule.classList.add("valid");
+        upperRule.innerHTML =
+            "✅ Великі та малі літери";
+        strength++;
+
+    } else {
+        upperRule.classList.remove("valid");
+        upperRule.innerHTML =
+            "❌ Великі та малі літери";
+    }
+
+    /* ===================== */
+    /* ЦИФРЫ */
+    /* ===================== */
+
+    if (/[0-9]/.test(password)) {
+        numberRule.classList.add("valid");
+        numberRule.innerHTML =
+            "✅ Цифри";
+        strength++;
+    } else {
+        numberRule.classList.remove("valid");
+        numberRule.innerHTML =
+            "❌ Цифри";
+    }
+    /* ===================== */
+    /* СПЕЦСИМВОЛЫ */
+    /* ===================== */
+    if (/[^A-Za-z0-9]/.test(password)) {
+        specialRule.classList.add("valid");
+        specialRule.innerHTML =
+            "✅ Спецсимволи";
+        strength++;
+    } else {
+        specialRule.classList.remove("valid");
+        specialRule.innerHTML =
+            "❌ Спецсимволи";
+    }
+    /* ===================== */
+    /* СБРОС */
+    /* ===================== */
+    strengthFill.style.width = "0%";
+    strengthFill.style.background = "transparent";
+    /* ===================== */
+    /* СОСТОЯНИЯ */
+    /* ===================== */
+    if (password.length === 0) {
+        tooltip.innerText =
+            "Введіть пароль";
+        tooltip.style.borderLeftColor =
+            "#667eea";
+    }
+    else if (strength < 4) {
+        strengthFill.style.width =
+            `${strength * 25}%`;
+        strengthFill.style.background =
+            "orange";
+        tooltip.innerText =
+            "Пароль не відповідає всім вимогам";
+        tooltip.style.borderLeftColor =
+            "orange";
+    }
+    else {
+        strengthFill.style.width = "100%";
+        strengthFill.style.background =
+            "#22c55e";
+        tooltip.innerText =
+            "Пароль повністю підходить";
+        tooltip.style.borderLeftColor =
+            "#22c55e";
+    }
+}

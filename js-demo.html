@@ -30,14 +30,14 @@
                     <div class="demo-card">
                         <h3>Калькулятор</h3>
                         <div class="calculator">
-                            <input type="number" id="num1" placeholder="Число 1" value="10">
+                            <input type="text" id="num1"oninput="filterCalculatorInput('num1')" placeholder="Число 1" value="10">
                             <select id="operator">
                                 <option value="+">+</option>
                                 <option value="-">-</option>
                                 <option value="*">×</option>
                                 <option value="/">÷</option>
                             </select>
-                            <input type="number" id="num2" placeholder="Число 2" value="5">
+                            <input type="text" id="num2" oninput="filterCalculatorInput('num2')" placeholder="Число 2" value="5">
                             <button onclick="calculate()" class="btn-calculate">Обчислити</button>
                             <div id="calcResult" class="result"></div>
                         </div>
@@ -332,6 +332,93 @@ document.getElementById('studentsResult').innerHTML = html;
                 </div>
             </div>
         </section>
+        <!-- ========================= -->
+        <!-- ТАЙМЕР ЗВОРОТНОГО ВІДЛІКУ -->
+        <!-- ========================= -->
+        <section class="demo-section">
+            <div class="container">
+                <h2>Таймер зворотного відліку</h2>
+        
+                <div class="timer-box">
+                    <div class="timer-display" id="countdown">
+                        00 : 00 : 00 : 00
+                    </div>
+        
+                    <div class="timer-buttons">
+                        <button onclick="pauseTimer()">Пауза</button>
+                        <button onclick="resetTimer()">Скидання</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================= -->
+        <!-- СЛАЙДЕР -->
+        <!-- ========================= -->
+        <section class="demo-section">
+            <div class="container">
+                <h2>Слайдер зображень</h2>
+        
+                <div class="slider">
+                    <img id="sliderImage" src="images/gallery1.jpg" alt="slider image">
+        
+                    <div class="slider-buttons">
+                        <button onclick="prevSlide()">◀</button>
+                        <button onclick="nextSlide()">▶</button>
+                    </div>
+        
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================= -->
+        <!-- ГРА ВГАДАЙ ЧИСЛО -->
+        <!-- ========================= -->
+        <section class="demo-section">
+            <div class="container">
+                <h2>Гра «Вгадай число»</h2>
+        
+                <div class="guess-box">
+                    <input type="text" id="guessInput" placeholder="Введіть число від 1 до 100" oninput="filterGuessInput()">
+        
+                    <button onclick="checkGuess()">
+                        Перевірити
+                    </button>
+        
+                    <p id="guessMessage"></p>
+                    <p id="attempts">Спроб: 0</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="password-box">
+            <input type="password" id="passwordInput" placeholder="Введіть пароль" oninput="filterPasswordInput()">
+            <div id="passwordTooltip" class="password-tooltip">
+                Введіть пароль
+            </div>
+            <div class="strength-bar">
+                <div id="strengthFill"></div>
+            </div>
+                <ul class="password-rules">
+                    <li id="lengthRule">
+                        ❌ Мінімум 8 символів
+                    </li>
+                    <li id="upperRule">
+                        ❌ Великі та малі літери
+                    </li>
+                    <li id="numberRule">
+                        ❌ Цифри
+                    </li>
+                    <li id="specialRule">
+                        ❌ Спецсимволи
+                    </li>
+                </ul>
+        </div>
     </main>
     <footer class="demo-footer">
         <div class="container">
