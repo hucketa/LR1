@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерактивне портфоліо - JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+
+<body>
+    <header class="portfolio-header">
+        <div class="container">
+            <h1> Інтерактивне портфоліо</h1>
+            <nav>
+                <a href="index.html">Головна</a>
+                <a href="js-demo.html">JS Основи</a>
+                <a href="interactive-portfolio.html" class="active">Портфоліо</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Фільтр проектів -->
+        <section class="filter-section">
+            <div class="container">
+                <h2>Фільтрувати проекти</h2>
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">Всі</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+            </div>
+        </section>
+        <!-- Сітка проектів -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Проекти будуть додані через JavaScript -->
+                </div>
+                <div id="projectCount" class="project-count"></div>
+            </div>
+        </section>
+        <!-- Пошук проектів -->
+        <section class="search-section">
+            <div class="container">
+                <h2>Пошук проектів</h2>
+                <input type="text" id="searchInput" placeholder="Введіть назву проекту або технологію..."
+                    class="search-input">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </section>
+        <!-- Модальне вікно для деталей проекту -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+        <!-- Форма додавання проекту -->
+        <section class="add-project-section">
+            <div class="container">
+                <h2>Додати новий проект</h2>
+                <form id="addProjectForm" class="project-form">
+                    <div class="form-group">
+                        <label for="projectName">Назва проекту:</label>
+                        <input type="text" id="projectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription">Опис:</label>
+                        <textarea id="projectDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectCategory">Категорія:</label>
+                        <select id="projectCategory" required>
+                            <option value="web">Web</option>
+                            <option value="mobile">Mobile</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="projectTechnologies">Технології (через кому):</label>
+                        <input type="text" id="projectTechnologies" placeholder="HTML, CSS, JavaScript" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Додати проект</button>
+                </form>
+            </div>
+        </section>
+        <!-- Статистика -->
+        <section class="stats-section">
+            <div class="container">
+                <h2>Статистика портфоліо</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalProjects">0</div>
+                        <div class="stat-label">Всього проектів</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="webProjects">0</div>
+                        <div class="stat-label">Web проектів</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="mobileProjects">0</div>
+                        <div class="stat-label">Mobile проектів</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="designProjects">0</div>
+                        <div class="stat-label">Design проектів</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Інтерактивне портфоліо з JavaScript</p>
+        </div>
+    </footer>
+    <script src="js/portfolio-interactive.js"></script>
+</body>
+
+</html>
