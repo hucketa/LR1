@@ -513,16 +513,16 @@ document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
 });
 
 // Темна тема (опціонально)
-//function toggleDarkMode() {
-//    document.body.classList.toggle('dark-mode');
-//    const isDark = document.body.classList.contains('dark-mode');
-//    localStorage.setItem('darkMode', isDark);
-//}
+function toggleDarkMode() {
+   document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDark);
+}
 
 // Перевірити збережені налаштування теми
-//if (localStorage.getItem('darkMode') === 'true') {
-//    document.body.classList.add('dark-mode');
-//}
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+}
 
 // Копіювання коду з прикладів
 document.querySelectorAll('pre code').forEach(code => {
