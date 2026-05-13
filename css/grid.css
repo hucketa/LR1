@@ -477,7 +477,7 @@ LANDING PAGE СТИЛІ
     border-radius: 12px;
     font-weight: bold;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: float 3s ease-in-out infinite;
+    animation: float 10s ease-in-out infinite;
 }
 
 .card-1 {
@@ -600,7 +600,7 @@ LANDING PAGE СТИЛІ
 /* Portfolio Grid Gallery */
 .portfolio-grid-section {
     padding: 4rem 2rem;
-    background: white;
+    background: rgb(255, 0, 0);
 }
 
 .portfolio-grid {
@@ -3185,14 +3185,55 @@ DESKTOP
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  .floating-card{
+    animation: none !important;
   }
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #1e293b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    inset: 0;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    z-index: 2;
+}
 /*Unused code(old or not correct)*/
 
 /*.comparison-card {

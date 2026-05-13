@@ -109,7 +109,7 @@ if (gapDemo) {
 // Анімація при скролі
 // ===============================
 
-const observerOptions = {
+const revealObserver = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
@@ -121,7 +121,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 
-}, observerOptions);
+}, revealObserver);
 
 // Спостерігаємо за елементами
 document
@@ -441,7 +441,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Анімація появи елементів при прокрутці
-const observerOptions = {
+/*const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
@@ -454,11 +454,11 @@ const observer = new IntersectionObserver(function (entries) {
     });
 }, observerOptions);
 
-// Спостерігати за елементами
+
 document.addEventListener('DOMContentLoaded', function () {
     const animatedElements = document.querySelectorAll('.skill-card, .project-card, .card');
     animatedElements.forEach(el => observer.observe(el));
-});
+});*/
 
 // Кнопка "Вгору"
 window.addEventListener('scroll', function () {
