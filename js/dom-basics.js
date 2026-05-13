@@ -360,77 +360,54 @@ function checkGuess() {
 /* ========================= */
 
 let startTime = 60 * 60 * 1000; // 1 час
-
 let remainingTime = startTime;
-
 let timer = null;
-
 let paused = false;
-
 function updateTimerDisplay() {
-
     const days = Math.floor(
         remainingTime / (1000 * 60 * 60 * 24)
     );
-
     const hours = Math.floor(
         (remainingTime % (1000 * 60 * 60 * 24)) /
         (1000 * 60 * 60)
     );
-
     const minutes = Math.floor(
         (remainingTime % (1000 * 60 * 60)) /
         (1000 * 60)
     );
-
     const seconds = Math.floor(
         (remainingTime % (1000 * 60)) / 1000
     );
-
     document.getElementById("countdown").innerHTML =
         `${days}д : ${hours}г : ${minutes}хв : ${seconds}с`;
 }
 
 function startTimer() {
-
     if (timer) return;
-
     timer = setInterval(() => {
-
         if (!paused) {
-
             remainingTime -= 1000;
-
             updateTimerDisplay();
-
             if (remainingTime <= 0) {
-
                 clearInterval(timer);
-
                 timer = null;
-
                 document.getElementById("countdown").innerHTML =
                     "Час вийшов!";
             }
         }
-
     }, 1000);
 }
 
 function pauseTimer() {
-
     paused = !paused;
 }
 
 function resetTimer() {
-
     remainingTime = startTime;
-
     updateTimerDisplay();
 }
 
 updateTimerDisplay();
-
 startTimer();
 
 /* ========================= */
@@ -447,31 +424,24 @@ let currentSlide = 0;
 
 function showSlide(index) {
     document.getElementById("sliderImage").src = slides[index];
-
     const dots = document.querySelectorAll(".dot");
-
     dots.forEach(dot => dot.classList.remove("active"));
-
     dots[index].classList.add("active");
 }
 
 function nextSlide() {
     currentSlide++;
-
     if (currentSlide >= slides.length) {
         currentSlide = 0;
     }
-
     showSlide(currentSlide);
 }
 
 function prevSlide() {
     currentSlide--;
-
     if (currentSlide < 0) {
         currentSlide = slides.length - 1;
     }
-
     showSlide(currentSlide);
 }
 
@@ -483,10 +453,8 @@ function goToSlide(index) {
 setInterval(nextSlide, 3000);
 
 function filterPasswordInput() {
-
     const input =
         document.getElementById("passwordInput");
-
     /*
     Разрешено:
     - a-z
@@ -494,12 +462,10 @@ function filterPasswordInput() {
     - 0-9
     - !@#$%^&*()
     */
-
     input.value = input.value.replace(
         /[^a-zA-Z0-9!@#$%^&*()]/g,
         ""
     );
-
     validatePassword();
 }
 
