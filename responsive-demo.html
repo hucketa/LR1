@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <meta name="theme-color" content="#111827">
     <link rel="manifest" href="manifest.json">
-    <script src="js/script.js"></script>
 </head>
-<script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body class="responsive-body">
     <!-- Адаптивний Header -->
     <header class="modern-header">
@@ -583,6 +581,7 @@ initial-scale=1.0"&gt;</code>
             </div>
         </div>
     </footer>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>

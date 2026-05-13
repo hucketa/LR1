@@ -12,8 +12,6 @@
     <meta name="theme-color" content="#111827">
     <link rel="manifest" href="manifest.json">
 </head>
-    <script src="js/script.js"></script>
-    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body>
     <header class="modern-header">
         <div class="container">
@@ -424,6 +422,9 @@
     <footer>
         <p>&copy; 2024 Ім'я Прізвище. Усі права захищені.</p>
     </footer>
+        <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
+
 </body>
 
 </html>

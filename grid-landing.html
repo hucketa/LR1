@@ -13,9 +13,7 @@
     <meta name="theme-color" content="#111827">
     <link rel="manifest" href="manifest.json">
 </head>
-    <script src="js/script.js"></script>
-    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
-    <body class="landing-body">
+<body class="landing-body">
 <!-- Hero Section з Grid -->
     <section class="hero-grid">
         <div class="hero-content">
@@ -299,6 +297,8 @@
             <p>&copy; 2024 Grid Master. Всі права захищені.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script> 
 </body>
 
 </html>

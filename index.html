@@ -32,8 +32,6 @@
         }
     </style>
 </head>
-<script src="js/script.js"></script>
-<script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 <body>
     <header class="modern-header">
         <div class="container">
@@ -352,6 +350,8 @@
             Email: <a href="mailto:gunenkoym@gmail.com">gunenkoym@gmail.com</a>
         </address>
     </footer>
+    <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
 </body>
 
 </html>

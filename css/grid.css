@@ -3237,6 +3237,13 @@ DESKTOP
     color: white;
     z-index: 2;
 }
+
+.variable-grid-demo {
+    display: grid;
+    grid-template-columns: var(--dynamic-columns);
+    gap: 20px;
+}
+
 /*Unused code(old or not correct)*/
 
 /*.comparison-card {

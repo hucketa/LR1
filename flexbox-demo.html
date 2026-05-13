@@ -12,9 +12,6 @@
     <meta name="theme-color" content="#111827">
     <link rel="manifest" href="manifest.json">
 </head>
-    <script src="js/script.js"></script>
-    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
-<body>
 <header class="modern-header">
         <div class="container">
             <div class="header-content">
@@ -290,6 +287,9 @@ basis-150">flex-basis: 150px</div>
             </div>
         </div>
     </footer>
+     <script src="js/script.js"></script>
+    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
+<body>
 </body>
 
 </html>
