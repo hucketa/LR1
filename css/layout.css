@@ -1387,7 +1387,7 @@ summary[data-tooltip]:focus {
 .sticky-note,
 .sticky-sidebar {
     position: sticky;
-    top: 600px;
+    top: 120px;
     z-index: 95;
     width: 260px;
     float: right;
