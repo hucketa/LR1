@@ -114,6 +114,7 @@ const revealObserver = {
     rootMargin: '0px 0px -50px 0px'
 };
 
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -123,19 +124,18 @@ const observer = new IntersectionObserver((entries) => {
 
 }, revealObserver);
 
-// Спостерігаємо за елементами
-document
-    .querySelectorAll(
-        '.feature-card, .portfolio-item, .price-card'
-    )
-    .forEach(el => {
-        observer.observe(el);
-    });
 
+document.querySelectorAll(
+    '.feature-card, .portfolio-item, .price-card'
+).forEach(el => {
 
-// ===============================
-// Спостереження за елементами
-// ===============================
+    console.log('FOUND:', el);
+
+    setTimeout(() => {
+        el.classList.add('visible');
+    }, 1000);
+
+});
 
 document
     .querySelectorAll(
@@ -144,7 +144,6 @@ document
     .forEach((el) => {
         observer.observe(el);
     });
-
 
 // ===============================
 // Функції для Grid Controls
