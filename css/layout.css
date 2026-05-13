@@ -2260,11 +2260,10 @@ fieldset {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0.00ms !important;
+    transition-duration: 0.00ms !important;
   }
 }
-
 /*Unused code(old or not correct)*/
 
 /*.gallery-grid {

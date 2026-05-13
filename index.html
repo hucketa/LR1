@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/flexbox.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
-    
+    <link rel="stylesheet" href="css/flexbox.css">
     <title>Головна - ЛР2</title>
     <style>
         body {
@@ -34,10 +32,10 @@
         }
     </style>
 </head>
-    <script src="js/script.js"></script>
-    <script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
-<body class="advanced-page">
-   <header class="modern-header">
+<script src="js/script.js"></script>
+<script> if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js') .then(() => console.log('Service Worker Registered')) .catch(err => console.log('SW Error', err)); }); } </script>
+<body>
+    <header class="modern-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
@@ -45,7 +43,7 @@
                     <span class="logo-subtitle">Веб-розробник</span>
                 </div>
                 <nav class="main-nav">
-                    <ul class="nav-list">
+                        <ul class="nav-list">
                             <li><a href="index.html">Головна</a></li>
                             <li><a href="about.html">Про мене</a></li>
                             <li><a href="portfolio.html">Портфоліо</a></li>
@@ -60,7 +58,7 @@
 
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="contact.html">Контакти</a></li>
-                    </ul>
+                        </ul>
                 </nav>
                 <button class="mobile-nav-toggle"
                     onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
@@ -82,16 +80,14 @@
                     <li><a href="mobile-portfolio.html">Mobile</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Контакти</a></li>
-                    <li><a href="js-demo.html">JavaScript</a></li>
-                    <li><a href="interactive-portfolio.html">Інтерактивне Портфоліо</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <aside class="sticky-note">
-        <h4>Навігація</h4>
-        <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
-    </aside>
+                        <aside class="sticky-note">
+                            <h4>Навігація</h4>
+                            <p>Цей блок використовує sticky-позиціонування і залишається видимим під час прокрутки сторінки.</p>
+                        </aside>
     <div class="page-wrapper">
         <main>
             <section id="welcome">
