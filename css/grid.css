@@ -1708,7 +1708,7 @@ LIGHTBOX
 .feature-card.visible,
 .portfolio-item.visible,
 .price-card.visible {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(0);
 }
 

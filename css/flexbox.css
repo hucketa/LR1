@@ -1133,7 +1133,7 @@ PORTFOLIO PAGE
     flex-direction: column;
     background-color: white;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
 }
@@ -1175,7 +1175,7 @@ PORTFOLIO PAGE
     align-items: center;
     justify-content: center;
 
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s ease;
 }
 
